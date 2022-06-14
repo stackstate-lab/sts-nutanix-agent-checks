@@ -1,0 +1,500 @@
+{
+    "metadata": {
+      "grand_total_entities": 8,
+      "total_entities": 8,
+      "page": 1,
+      "count": 1000,
+      "start_index": 1,
+      "end_index": 8
+    },
+    "entities": [
+      {
+        "id": "6ce59370-5957-4362-b176-7e6719d9cadf",
+        "alert_type_uuid": "A15037",
+        "check_id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::15037",
+        "resolved": false,
+        "auto_resolved": false,
+        "acknowledged": false,
+        "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::7",
+        "node_uuid": "d4992e15-8a67-4b8f-a4d5-e8e6b6abdb1f",
+        "created_time_stamp_in_usecs": 1655096101209515,
+        "last_occurrence_time_stamp_in_usecs": 1655096101209515,
+        "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+        "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+        "severity": "kCritical",
+        "impact_types": [
+          "Configuration"
+        ],
+        "classifications": [
+          "Cluster"
+        ],
+        "acknowledged_by_username": "",
+        "message": "Please update the default password on IPMI devices for user(s): {users} to harden the security on the clusters. Nutanix highly recommends not using default passwords for clusters.",
+        "detailed_message": "",
+        "alert_title": "IPMI {ipmi_ip} is using default password",
+        "operation_type": "kCreate",
+        "acknowledged_time_stamp_in_usecs": 0,
+        "resolved_time_stamp_in_usecs": 0,
+        "resolved_by_username": "",
+        "user_defined": false,
+        "affected_entities": [
+          {
+            "entity_type": "node",
+            "entity_type_display_name": "node",
+            "entity_name": "dm3-poc090-2",
+            "uuid": "d4992e15-8a67-4b8f-a4d5-e8e6b6abdb1f",
+            "id": ""
+          }
+        ],
+        "context_types": [
+          "ipmi_ip",
+          "users",
+          "service_vm_id",
+          "ncc_version",
+          "nos_version",
+          "node_uuid",
+          "node_serial",
+          "block_serial"
+        ],
+        "context_values": [
+          "10.55.90.34",
+          "ADMIN",
+          "7",
+          "4.5.0.2-3e590441",
+          "6.1",
+          "d4992e15-8a67-4b8f-a4d5-e8e6b6abdb1f",
+          "HM201S006809",
+          "20SM6K250199"
+        ],
+        "possible_causes": [],
+        "alert_details": null
+      },
+      {
+        "id": "7029c6af-66a7-4a5e-96d8-e64a42c9c283",
+        "alert_type_uuid": "A6214",
+        "check_id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::6214",
+        "resolved": false,
+        "auto_resolved": false,
+        "acknowledged": false,
+        "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::7",
+        "node_uuid": "d4992e15-8a67-4b8f-a4d5-e8e6b6abdb1f",
+        "created_time_stamp_in_usecs": 1655096101186057,
+        "last_occurrence_time_stamp_in_usecs": 1655096101186057,
+        "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+        "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+        "severity": "kCritical",
+        "impact_types": [
+          "Configuration"
+        ],
+        "classifications": [
+          "Cluster"
+        ],
+        "acknowledged_by_username": "",
+        "message": "Please update the default password on host for user(s): {users} to harden the security on the clusters. Nutanix highly recommends not using default passwords for clusters.",
+        "detailed_message": "",
+        "alert_title": "Host {host_ip} is using default password",
+        "operation_type": "kCreate",
+        "acknowledged_time_stamp_in_usecs": 0,
+        "resolved_time_stamp_in_usecs": 0,
+        "resolved_by_username": "",
+        "user_defined": false,
+        "affected_entities": [
+          {
+            "entity_type": "node",
+            "entity_type_display_name": "node",
+            "entity_name": "dm3-poc090-2",
+            "uuid": "d4992e15-8a67-4b8f-a4d5-e8e6b6abdb1f",
+            "id": ""
+          }
+        ],
+        "context_types": [
+          "host_ip",
+          "users",
+          "service_vm_id",
+          "ncc_version",
+          "nos_version",
+          "node_uuid",
+          "node_serial",
+          "block_serial"
+        ],
+        "context_values": [
+          "10.55.90.26",
+          "nutanix",
+          "7",
+          "4.5.0.2-3e590441",
+          "6.1",
+          "d4992e15-8a67-4b8f-a4d5-e8e6b6abdb1f",
+          "HM201S006809",
+          "20SM6K250199"
+        ],
+        "possible_causes": [],
+        "alert_details": null
+      },
+      {
+        "id": "00b8827e-5cd8-41fb-8531-ebc4bff5609a",
+        "alert_type_uuid": "A15037",
+        "check_id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::15037",
+        "resolved": false,
+        "auto_resolved": false,
+        "acknowledged": false,
+        "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::9",
+        "node_uuid": "254e54f7-a5a6-4543-a916-0c1699be1b75",
+        "created_time_stamp_in_usecs": 1655094589118718,
+        "last_occurrence_time_stamp_in_usecs": 1655098675876162,
+        "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+        "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+        "severity": "kCritical",
+        "impact_types": [
+          "Configuration"
+        ],
+        "classifications": [
+          "Cluster"
+        ],
+        "acknowledged_by_username": "",
+        "message": "Please update the default password on IPMI devices for user(s): {users} to harden the security on the clusters. Nutanix highly recommends not using default passwords for clusters.",
+        "detailed_message": "",
+        "alert_title": "IPMI {ipmi_ip} is using default password",
+        "operation_type": "kCreate",
+        "acknowledged_time_stamp_in_usecs": 0,
+        "resolved_time_stamp_in_usecs": 0,
+        "resolved_by_username": "",
+        "user_defined": false,
+        "affected_entities": [
+          {
+            "entity_type": "node",
+            "entity_type_display_name": "node",
+            "entity_name": "dm3-poc090-4",
+            "uuid": "254e54f7-a5a6-4543-a916-0c1699be1b75",
+            "id": ""
+          }
+        ],
+        "context_types": [
+          "ipmi_ip",
+          "users",
+          "service_vm_id",
+          "ncc_version",
+          "nos_version",
+          "node_uuid",
+          "node_serial",
+          "block_serial"
+        ],
+        "context_values": [
+          "10.55.90.36",
+          "ADMIN",
+          "9",
+          "4.4.0-11444cbd",
+          "6.1",
+          "254e54f7-a5a6-4543-a916-0c1699be1b75",
+          "HM201S007330",
+          "20SM6K250199"
+        ],
+        "possible_causes": [],
+        "alert_details": null
+      },
+      {
+        "id": "bb8f108e-ca37-4522-b8a5-0847fa80ab0f",
+        "alert_type_uuid": "A6214",
+        "check_id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::6214",
+        "resolved": false,
+        "auto_resolved": false,
+        "acknowledged": false,
+        "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::9",
+        "node_uuid": "254e54f7-a5a6-4543-a916-0c1699be1b75",
+        "created_time_stamp_in_usecs": 1655094589096706,
+        "last_occurrence_time_stamp_in_usecs": 1655098675855947,
+        "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+        "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+        "severity": "kCritical",
+        "impact_types": [
+          "Configuration"
+        ],
+        "classifications": [
+          "Cluster"
+        ],
+        "acknowledged_by_username": "",
+        "message": "Please update the default password on host for user(s): {users} to harden the security on the clusters. Nutanix highly recommends not using default passwords for clusters.",
+        "detailed_message": "",
+        "alert_title": "Host {host_ip} is using default password",
+        "operation_type": "kCreate",
+        "acknowledged_time_stamp_in_usecs": 0,
+        "resolved_time_stamp_in_usecs": 0,
+        "resolved_by_username": "",
+        "user_defined": false,
+        "affected_entities": [
+          {
+            "entity_type": "node",
+            "entity_type_display_name": "node",
+            "entity_name": "dm3-poc090-4",
+            "uuid": "254e54f7-a5a6-4543-a916-0c1699be1b75",
+            "id": ""
+          }
+        ],
+        "context_types": [
+          "host_ip",
+          "users",
+          "service_vm_id",
+          "ncc_version",
+          "nos_version",
+          "node_uuid",
+          "node_serial",
+          "block_serial"
+        ],
+        "context_values": [
+          "10.55.90.28",
+          "nutanix",
+          "9",
+          "4.4.0-11444cbd",
+          "6.1",
+          "254e54f7-a5a6-4543-a916-0c1699be1b75",
+          "HM201S007330",
+          "20SM6K250199"
+        ],
+        "possible_causes": [],
+        "alert_details": null
+      },
+      {
+        "id": "5fec240c-7101-43b5-bed7-11853f6836fa",
+        "alert_type_uuid": "A15037",
+        "check_id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::15037",
+        "resolved": false,
+        "auto_resolved": false,
+        "acknowledged": false,
+        "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::8",
+        "node_uuid": "da249120-a63b-4050-990a-2d00b4cb1255",
+        "created_time_stamp_in_usecs": 1655094156155481,
+        "last_occurrence_time_stamp_in_usecs": 1655096152795098,
+        "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+        "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+        "severity": "kCritical",
+        "impact_types": [
+          "Configuration"
+        ],
+        "classifications": [
+          "Cluster"
+        ],
+        "acknowledged_by_username": "",
+        "message": "Please update the default password on IPMI devices for user(s): {users} to harden the security on the clusters. Nutanix highly recommends not using default passwords for clusters.",
+        "detailed_message": "",
+        "alert_title": "IPMI {ipmi_ip} is using default password",
+        "operation_type": "kCreate",
+        "acknowledged_time_stamp_in_usecs": 0,
+        "resolved_time_stamp_in_usecs": 0,
+        "resolved_by_username": "",
+        "user_defined": false,
+        "affected_entities": [
+          {
+            "entity_type": "node",
+            "entity_type_display_name": "node",
+            "entity_name": "dm3-poc090-3",
+            "uuid": "da249120-a63b-4050-990a-2d00b4cb1255",
+            "id": ""
+          }
+        ],
+        "context_types": [
+          "ipmi_ip",
+          "users",
+          "service_vm_id",
+          "ncc_version",
+          "nos_version",
+          "node_uuid",
+          "node_serial",
+          "block_serial"
+        ],
+        "context_values": [
+          "10.55.90.35",
+          "ADMIN",
+          "8",
+          "4.4.0-11444cbd",
+          "6.1",
+          "da249120-a63b-4050-990a-2d00b4cb1255",
+          "HM201S007306",
+          "20SM6K250199"
+        ],
+        "possible_causes": [],
+        "alert_details": null
+      },
+      {
+        "id": "17e55009-1c0c-4b58-8cc6-c93a3fc7c0b0",
+        "alert_type_uuid": "A6214",
+        "check_id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::6214",
+        "resolved": false,
+        "auto_resolved": false,
+        "acknowledged": false,
+        "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::8",
+        "node_uuid": "da249120-a63b-4050-990a-2d00b4cb1255",
+        "created_time_stamp_in_usecs": 1655094156134293,
+        "last_occurrence_time_stamp_in_usecs": 1655096152777446,
+        "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+        "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+        "severity": "kCritical",
+        "impact_types": [
+          "Configuration"
+        ],
+        "classifications": [
+          "Cluster"
+        ],
+        "acknowledged_by_username": "",
+        "message": "Please update the default password on host for user(s): {users} to harden the security on the clusters. Nutanix highly recommends not using default passwords for clusters.",
+        "detailed_message": "",
+        "alert_title": "Host {host_ip} is using default password",
+        "operation_type": "kCreate",
+        "acknowledged_time_stamp_in_usecs": 0,
+        "resolved_time_stamp_in_usecs": 0,
+        "resolved_by_username": "",
+        "user_defined": false,
+        "affected_entities": [
+          {
+            "entity_type": "node",
+            "entity_type_display_name": "node",
+            "entity_name": "dm3-poc090-3",
+            "uuid": "da249120-a63b-4050-990a-2d00b4cb1255",
+            "id": ""
+          }
+        ],
+        "context_types": [
+          "host_ip",
+          "users",
+          "service_vm_id",
+          "ncc_version",
+          "nos_version",
+          "node_uuid",
+          "node_serial",
+          "block_serial"
+        ],
+        "context_values": [
+          "10.55.90.27",
+          "nutanix",
+          "8",
+          "4.4.0-11444cbd",
+          "6.1",
+          "da249120-a63b-4050-990a-2d00b4cb1255",
+          "HM201S007306",
+          "20SM6K250199"
+        ],
+        "possible_causes": [],
+        "alert_details": null
+      },
+      {
+        "id": "a669e91a-c2a7-48d9-98e4-c39446e0249b",
+        "alert_type_uuid": "A15037",
+        "check_id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::15037",
+        "resolved": false,
+        "auto_resolved": false,
+        "acknowledged": false,
+        "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::6",
+        "node_uuid": "ed5edbbb-7428-4066-ae90-1270dcca2f37",
+        "created_time_stamp_in_usecs": 1655093682079830,
+        "last_occurrence_time_stamp_in_usecs": 1655098717466046,
+        "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+        "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+        "severity": "kCritical",
+        "impact_types": [
+          "Configuration"
+        ],
+        "classifications": [
+          "Cluster"
+        ],
+        "acknowledged_by_username": "",
+        "message": "Please update the default password on IPMI devices for user(s): {users} to harden the security on the clusters. Nutanix highly recommends not using default passwords for clusters.",
+        "detailed_message": "",
+        "alert_title": "IPMI {ipmi_ip} is using default password",
+        "operation_type": "kCreate",
+        "acknowledged_time_stamp_in_usecs": 0,
+        "resolved_time_stamp_in_usecs": 0,
+        "resolved_by_username": "",
+        "user_defined": false,
+        "affected_entities": [
+          {
+            "entity_type": "node",
+            "entity_type_display_name": "node",
+            "entity_name": "dm3-poc090-1",
+            "uuid": "ed5edbbb-7428-4066-ae90-1270dcca2f37",
+            "id": ""
+          }
+        ],
+        "context_types": [
+          "ipmi_ip",
+          "users",
+          "service_vm_id",
+          "ncc_version",
+          "nos_version",
+          "node_uuid",
+          "node_serial",
+          "block_serial"
+        ],
+        "context_values": [
+          "10.55.90.33",
+          "ADMIN",
+          "6",
+          "4.4.0-11444cbd",
+          "6.1",
+          "ed5edbbb-7428-4066-ae90-1270dcca2f37",
+          "HMF198S000501",
+          "20SM6K250199"
+        ],
+        "possible_causes": [],
+        "alert_details": null
+      },
+      {
+        "id": "69a83266-bba9-4bfe-ab7f-918fa87926c1",
+        "alert_type_uuid": "A6214",
+        "check_id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::6214",
+        "resolved": false,
+        "auto_resolved": false,
+        "acknowledged": false,
+        "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::6",
+        "node_uuid": "ed5edbbb-7428-4066-ae90-1270dcca2f37",
+        "created_time_stamp_in_usecs": 1655093682045669,
+        "last_occurrence_time_stamp_in_usecs": 1655098717449619,
+        "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+        "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+        "severity": "kCritical",
+        "impact_types": [
+          "Configuration"
+        ],
+        "classifications": [
+          "Cluster"
+        ],
+        "acknowledged_by_username": "",
+        "message": "Please update the default password on host for user(s): {users} to harden the security on the clusters. Nutanix highly recommends not using default passwords for clusters.",
+        "detailed_message": "",
+        "alert_title": "Host {host_ip} is using default password",
+        "operation_type": "kCreate",
+        "acknowledged_time_stamp_in_usecs": 0,
+        "resolved_time_stamp_in_usecs": 0,
+        "resolved_by_username": "",
+        "user_defined": false,
+        "affected_entities": [
+          {
+            "entity_type": "node",
+            "entity_type_display_name": "node",
+            "entity_name": "dm3-poc090-1",
+            "uuid": "ed5edbbb-7428-4066-ae90-1270dcca2f37",
+            "id": ""
+          }
+        ],
+        "context_types": [
+          "host_ip",
+          "users",
+          "service_vm_id",
+          "ncc_version",
+          "nos_version",
+          "node_uuid",
+          "node_serial",
+          "block_serial"
+        ],
+        "context_values": [
+          "10.55.90.25",
+          "nutanix",
+          "6",
+          "4.4.0-11444cbd",
+          "6.1",
+          "ed5edbbb-7428-4066-ae90-1270dcca2f37",
+          "HMF198S000501",
+          "20SM6K250199"
+        ],
+        "possible_causes": [],
+        "alert_details": null
+      }
+    ]
+  }

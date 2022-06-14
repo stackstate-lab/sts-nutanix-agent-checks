@@ -1,0 +1,5479 @@
+{
+  "metadata": {
+    "grand_total_entities": 112,
+    "total_entities": 112,
+    "page": 1,
+    "count": 1000,
+    "start_index": 1,
+    "end_index": 112
+  },
+  "entities": [
+    {
+      "id": "2cfe0587-59a0-4aee-9da9-eaac6478224f",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655136289833657,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User admin has logged in from 10.55.240.100: v3",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655136289833657,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.55.240.100",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:101.0) Gecko/20100101 Firefox/101.0"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "a8017574-dc15-4df9-b832-4cdf45fad8e7",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655136288859210,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655136288859210,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.55.240.100",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:101.0) Gecko/20100101 Firefox/101.0"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "4c3f92fa-fd33-4fdb-bcb5-9c91af23770e",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655136120037173,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User admin has logged out from 10.55.240.100: v3",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655136120037173,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.55.240.100",
+        ""
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "ded64697-9e29-4c74-841b-708474ff26c3",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655136118753906,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged out from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655136118753906,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.55.240.100",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:101.0) Gecko/20100101 Firefox/101.0"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "610bf7a8-bb6f-4044-b103-9e2954f4caf0",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655135157840788,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User admin has logged in from 10.55.240.100: v3",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655135157840788,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.55.240.100",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:101.0) Gecko/20100101 Firefox/101.0"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "986fbd8c-d986-4ba4-8cb2-ab36bada4d17",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655135156915025,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655135156915025,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.55.240.100",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:101.0) Gecko/20100101 Firefox/101.0"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "e5ce4c18-a9c0-459f-a03b-bf3ec836e487",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655133361182815,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User admin has logged out from 10.40.40.164: v3",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655133361182815,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.40.40.164",
+        ""
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "8fde43cf-28bb-4aed-be07-b27ea5c5bdaa",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655133359274002,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged out from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655133359274002,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.40.40.164",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:100.0) Gecko/20100101 Firefox/100.0"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "765efb1c-2e57-4979-acdc-5c6b36ce1c1f",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655132818642548,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User admin has logged in from 10.40.40.33: v3",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655132818642548,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.40.40.33",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "7812a889-401d-4506-b073-e3ea7307227a",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655132817890839,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655132817890839,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.40.40.33",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "999ac194-5c9b-4902-9360-51698b2301fc",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655132354175256,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User admin has logged in from 10.40.40.164: v3",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655132354175256,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.40.40.164",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:100.0) Gecko/20100101 Firefox/100.0"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "2533df75-345f-4d31-a880-7a8c897e7053",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655132353235579,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655132353235579,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.40.40.164",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:100.0) Gecko/20100101 Firefox/100.0"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "3e669cca-b915-4445-8757-45ab371a1395",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655130697040244,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User admin has logged out from 10.55.240.100: v3",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655130697040244,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.55.240.100",
+        ""
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "737b6b23-6e53-4956-92ef-686c8fbaf36d",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655130695724161,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged out from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655130695724161,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.55.240.100",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:101.0) Gecko/20100101 Firefox/101.0"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "39c58ce9-f994-4ce1-ab31-84bfe5072f89",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655129729217548,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User admin has logged in from 10.55.240.100: v3",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655129729217548,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.55.240.100",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:101.0) Gecko/20100101 Firefox/101.0"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "e99e4f19-658a-4e1d-98c3-e80d4b7cd9f6",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655129728588199,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655129728588199,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.55.240.100",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:101.0) Gecko/20100101 Firefox/101.0"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "21469385-4afd-427c-b352-40fea35d0bd7",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655129523934823,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User admin has logged out from 10.55.240.100: v3",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655129523934823,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.55.240.100",
+        ""
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "a4d116cb-e0b5-4560-8c08-70d202720073",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655129523071001,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged out from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655129523071001,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.55.240.100",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:101.0) Gecko/20100101 Firefox/101.0"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "40d25deb-c89c-46af-b6a6-3df1d9db7ab5",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655128499489040,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User admin has logged out from 10.42.202.145: v3",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655128499489040,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.42.202.145",
+        ""
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "289e8329-ccbf-4b8c-a35c-cf0c1c636817",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655128498745309,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged out from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655128498745309,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.42.202.145",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:101.0) Gecko/20100101 Firefox/101.0"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "42c3754c-4177-4667-bcf1-a07e0eedea2d",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655128479956537,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User admin has logged in from 10.55.240.100: v3",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655128479956537,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.55.240.100",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:101.0) Gecko/20100101 Firefox/101.0"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "bae64e6a-6786-4f5e-8ae1-28a6dfd29ced",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655128479087465,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655128479087465,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.55.240.100",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:101.0) Gecko/20100101 Firefox/101.0"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "fd670431-ff76-49cd-86e0-3ec4ee695004",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655126395074676,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User admin has logged in from 10.42.202.145: v3",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655126395074676,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.42.202.145",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:101.0) Gecko/20100101 Firefox/101.0"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "6616a45e-a3c8-47fd-b695-3d1f05839f9c",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655126393463301,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655126393463301,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.42.202.145",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:101.0) Gecko/20100101 Firefox/101.0"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "61e7960a-73d5-4d0b-9c87-3dac948ac2f3",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655126278090723,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has failed to log in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655126278090723,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.42.202.145",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:101.0) Gecko/20100101 Firefox/101.0"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "85f2c801-c3cf-4a8d-80f7-c60e344b181e",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655126250714156,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has failed to log in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655126250714156,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.42.202.145",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:101.0) Gecko/20100101 Firefox/101.0"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "64e26474-cf7d-4d2a-89f7-00ae193c9fce",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655125152487457,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User admin has logged out from 10.55.240.100: v3",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655125152487457,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.55.240.100",
+        ""
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "519c3465-d500-498d-9f8a-e8b6b6937526",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655125151650334,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged out from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655125151650334,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.55.240.100",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:101.0) Gecko/20100101 Firefox/101.0"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "a85c35f1-cba1-4b33-95ab-c00768625582",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655124180548595,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655124180548595,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.55.240.100",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:101.0) Gecko/20100101 Firefox/101.0"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "c8a8f04a-c9d9-4582-b1ea-ba332927e484",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655124119437647,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User admin has logged out from 10.55.240.100: v3",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655124119437647,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.55.240.100",
+        ""
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "7bd56454-caff-4cf9-a069-e341c97812c9",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655124118540594,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged out from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655124118540594,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.55.240.100",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:101.0) Gecko/20100101 Firefox/101.0"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "70633487-e9de-4ee5-a327-23561078de9a",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655122741435521,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User admin has logged in from 10.55.240.100: v3",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655122741435521,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.55.240.100",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:101.0) Gecko/20100101 Firefox/101.0"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "c8fc16c0-5926-4a74-8b0b-ca088138d295",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655122740504172,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655122740504172,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.55.240.100",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:101.0) Gecko/20100101 Firefox/101.0"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "a34bc429-8479-4f61-b95e-4d05090983bb",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655121845752559,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User admin has logged out from 10.55.240.100: v3",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655121845752559,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.55.240.100",
+        ""
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "6a0df445-64c9-4b35-b330-313da0362d0d",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655121844863030,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged out from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655121844863030,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.55.240.100",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:101.0) Gecko/20100101 Firefox/101.0"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "1adbc99b-c73c-4cc5-b9e2-137a5b64639e",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655121446966630,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User admin has logged in from 10.66.20.248: v3",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655121446966630,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.66.20.248",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:100.0) Gecko/20100101 Firefox/100.0"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "1617a03d-52d6-4071-bac6-eeb356f2adcf",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655121446396338,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655121446396338,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.66.20.248",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:100.0) Gecko/20100101 Firefox/100.0"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "722d3394-a54d-4b78-b58b-3b16fdd2ddef",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655120875169816,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User admin has logged in from 10.55.240.100: v3",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655120875169816,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.55.240.100",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:101.0) Gecko/20100101 Firefox/101.0"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "058314c4-bb36-4797-b208-8f3c1579196b",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655120874554429,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655120874554429,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.55.240.100",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:101.0) Gecko/20100101 Firefox/101.0"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "a6d96c02-4045-4496-bdc1-d65f609e675d",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655120665265533,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User admin has logged out from 10.42.202.145: v3",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655120665265533,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.42.202.145",
+        ""
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "6db78d02-2fd8-4db6-aada-77b49b5775ca",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655120664504021,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged out from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655120664504021,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.42.202.145",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:101.0) Gecko/20100101 Firefox/101.0"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "65312f95-ae81-4052-8ad3-598166d4dee0",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655120338159903,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User admin has logged in from 10.66.20.145: v3",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655120338159903,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.66.20.145",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "598350d2-0811-4203-a1ad-37ff1e2fb0ca",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655120336950366,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655120336950366,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.66.20.145",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "0f915ae0-7f0d-4a46-bdc2-943090884dcf",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655120322252023,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has failed to log in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655120322252023,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "nutanix",
+        "10.66.20.145",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "de43473e-6a09-4bed-8d22-6fc7320f06d8",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655120313608370,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User admin has logged out from 10.66.20.248: v3",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655120313608370,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.66.20.248",
+        ""
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "417a4918-1252-477b-9821-2b8a0a4f4b7d",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655120312299869,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged out from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655120312299869,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.66.20.248",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:100.0) Gecko/20100101 Firefox/100.0"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "0923fefa-ad0c-45ff-8215-192a1a030318",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655119697247067,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User admin has logged in from 10.42.202.145: v3",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655119697247067,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.42.202.145",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:101.0) Gecko/20100101 Firefox/101.0"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "4a04e7a3-214b-4fa4-a8b2-f1b887c9309e",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655119695549142,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655119695549142,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.42.202.145",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:101.0) Gecko/20100101 Firefox/101.0"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "e0ffb6da-8bf2-4ae0-bf57-63de06bdce33",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655119349349092,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User admin has logged in from 10.66.20.248: v3",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655119349349092,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.66.20.248",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:100.0) Gecko/20100101 Firefox/100.0"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "c10d7637-9eb7-4a9a-96cd-79eb1036ac93",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655119348215427,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655119348215427,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.66.20.248",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:100.0) Gecko/20100101 Firefox/100.0"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "a1a22ab6-3f75-4f93-a57e-19094e5ed9bf",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655118658193853,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has failed to log in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655118658193853,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.42.202.145",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:101.0) Gecko/20100101 Firefox/101.0"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "7c383526-241e-4c4c-834e-d2342e4743ac",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655115657034085,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User admin has logged out from 10.55.240.100: v3",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655115657034085,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.55.240.100",
+        ""
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "e4bd78c1-7588-4ce8-afca-e1c9c9b398a4",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655115656163662,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged out from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655115656163662,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.55.240.100",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:101.0) Gecko/20100101 Firefox/101.0"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "8740787b-77b5-41bc-a7d5-c517b15705b4",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655114653621549,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User admin has logged in from 10.55.240.100: v3",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655114653621549,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.55.240.100",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:101.0) Gecko/20100101 Firefox/101.0"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "e603b517-115e-4765-ace8-116907bebbbf",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655114652758555,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655114652758555,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.55.240.100",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:101.0) Gecko/20100101 Firefox/101.0"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "15aa8ec2-cfbf-4db2-a34c-3a91d1bd97d9",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655110208967365,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User admin has logged in from 10.55.240.100: v3",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655110208967365,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.55.240.100",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:101.0) Gecko/20100101 Firefox/101.0"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "c03ecb34-1387-4296-9a33-06fb4462374e",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655110208054348,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655110208054348,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.55.240.100",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:101.0) Gecko/20100101 Firefox/101.0"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "e02c868e-59f0-462a-baa4-5ee8451d4d91",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655105685360319,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User admin has logged out from 10.42.202.145: v3",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655105685360319,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.42.202.145",
+        ""
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "1a5d0a66-11be-4418-9ea2-0094f7237245",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655105684610047,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged out from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655105684610047,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.42.202.145",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:101.0) Gecko/20100101 Firefox/101.0"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "861173b1-7ed2-4b1a-b688-e1a732fef902",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655104705588544,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User admin has logged in from 10.42.202.145: v3",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655104705588544,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.42.202.145",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:101.0) Gecko/20100101 Firefox/101.0"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "5fbfaf27-e4ed-419f-b80f-f6a41da0eb37",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655104704091534,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655104704091534,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "10.42.202.145",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:101.0) Gecko/20100101 Firefox/101.0"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "73a327b7-6e99-4bfb-bdda-910b6f11995e",
+      "alert_type_uuid": "DirectoryRoleMappingAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655097646716281,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "RoleMapping for Role {role_name} and Entity type {entity_type} has been created for Directory {directory_name}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655097646716281,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "directory_name",
+        "role_name",
+        "entity_type",
+        "audit_user"
+      ],
+      "context_values": [
+        "ntnxlab",
+        "ROLE_CLUSTER_ADMIN",
+        "GROUP",
+        "amazing_colden"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "48d98f34-81b4-46c7-b505-d07a2f9b4960",
+      "alert_type_uuid": "DirectoryConfigAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655097645764454,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "Directory config {directory_name} added",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655097645764454,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "directory_name",
+        "audit_user"
+      ],
+      "context_values": [
+        "ntnxlab",
+        "amazing_colden"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "b4f94363-645e-4889-9a2e-18e690d2808c",
+      "alert_type_uuid": "NameServersAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655097644423453,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "Name Servers updated",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655097644423453,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user"
+      ],
+      "context_values": [
+        "amazing_colden"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "6de26f77-a6e0-4f94-a963-7651f344b692",
+      "alert_type_uuid": "NameServersAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655097643318541,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "Name Servers updated",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655097643318541,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user"
+      ],
+      "context_values": [
+        "amazing_colden"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "3fcdb1e4-0b90-4ada-a51e-bba0e04a2c98",
+      "alert_type_uuid": "SoftwareReleaseAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655095647281254,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "Software {software_type} {software_name} upload started",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655095647281254,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "software_name",
+        "software_type",
+        "audit_user"
+      ],
+      "context_values": [
+        "prism_central_deploy",
+        "pc.2022.1",
+        "admin"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "9ad5f58e-9515-4dd5-a8d7-14e9013c100b",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655095397909577,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655095397909577,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "127.0.0.1",
+        "Apache-CXF/3.3.3"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "aae75512-34a2-4562-aeee-d64ea742a038",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655095397409460,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655095397409460,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "127.0.0.1",
+        "Apache-CXF/3.3.3"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "6c1e6cde-af0f-473e-9f5f-87a18a16e434",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655095396220866,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655095396220866,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "127.0.0.1",
+        "Apache-CXF/3.3.3"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "3e737403-5dd9-4b7f-aa6c-2d612db6979e",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655095392374734,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655095392374734,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "127.0.0.1",
+        "Apache-CXF/3.3.3"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "c64c2f2c-854f-4f62-8d8a-3e7749f61ea4",
+      "alert_type_uuid": "ContainerAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655093130407209,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "Storage",
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "Added Storage Container {container_name} to storage pool {storage_pool_name}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655093130407209,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "container",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "c78fea63-deda-476d-a871-8ffd52cd0b1e",
+          "id": "c78fea63-deda-476d-a871-8ffd52cd0b1e"
+        },
+        {
+          "entity_type": "storage_pool",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "fc38b72f-141f-4dfe-a87c-d69d51b3422a",
+          "id": "fc38b72f-141f-4dfe-a87c-d69d51b3422a"
+        }
+      ],
+      "context_types": [
+        "container_uuid",
+        "container_name",
+        "storage_pool_uuid",
+        "storage_pool_name",
+        "audit_user"
+      ],
+      "context_values": [
+        "c78fea63-deda-476d-a871-8ffd52cd0b1e",
+        "Default",
+        "fc38b72f-141f-4dfe-a87c-d69d51b3422a",
+        "SP01",
+        "amazing_colden"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "7f94d8f1-07ff-48a7-93e8-4d209a0a69d3",
+      "alert_type_uuid": "StoragePoolAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655093129079181,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "Storage",
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "Storage Pool {storage_pool_name} updated",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655093129079181,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "storage_pool",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "fc38b72f-141f-4dfe-a87c-d69d51b3422a",
+          "id": "fc38b72f-141f-4dfe-a87c-d69d51b3422a"
+        }
+      ],
+      "context_types": [
+        "storage_pool_uuid",
+        "storage_pool_name",
+        "audit_user"
+      ],
+      "context_values": [
+        "fc38b72f-141f-4dfe-a87c-d69d51b3422a",
+        "SP01",
+        "amazing_colden"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "820a70a9-c373-4a93-a7da-fe22648704a4",
+      "alert_type_uuid": "ContainerAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655093125365748,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "Storage",
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "Marked Storage Container {container_name} for removal",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655093125365748,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "container",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "08051573-4386-43b8-a798-b023e28b5bee",
+          "id": "08051573-4386-43b8-a798-b023e28b5bee"
+        },
+        {
+          "entity_type": "storage_pool",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "fc38b72f-141f-4dfe-a87c-d69d51b3422a",
+          "id": "fc38b72f-141f-4dfe-a87c-d69d51b3422a"
+        }
+      ],
+      "context_types": [
+        "container_uuid",
+        "container_name",
+        "storage_pool_uuid",
+        "storage_pool_name",
+        "audit_user"
+      ],
+      "context_values": [
+        "08051573-4386-43b8-a798-b023e28b5bee",
+        "default-container-13525018365582",
+        "fc38b72f-141f-4dfe-a87c-d69d51b3422a",
+        "default-storage-pool-13525018365582",
+        "amazing_colden"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "d115579c-6ce0-44fc-a372-3466f8fafadb",
+      "alert_type_uuid": "NTPServersAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655093123332594,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "NTP Servers updated",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655093123332594,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user"
+      ],
+      "context_values": [
+        "amazing_colden"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "1a98cb50-697c-4fc3-8c64-643aa5908728",
+      "alert_type_uuid": "NTPServersAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655093122271570,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "NTP Servers updated",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655093122271570,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user"
+      ],
+      "context_values": [
+        "amazing_colden"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "121fb230-aa42-42eb-a5dd-4c7871949427",
+      "alert_type_uuid": "NameServersAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655093120318433,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "Name Servers updated",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655093120318433,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user"
+      ],
+      "context_values": [
+        "amazing_colden"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "1dc91152-9288-4db7-9799-742f049c4086",
+      "alert_type_uuid": "ClusterParamsAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655093119082755,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "Cluster parameters have been updated",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655093119082755,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "dto_class_name",
+        "audit_user"
+      ],
+      "context_values": [
+        "com.nutanix.prism.dto.appliance.configuration.ClusterDTO",
+        "amazing_colden"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "dc88aee6-dd46-4ad3-b008-45945122212b",
+      "alert_type_uuid": "PulseAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655093106578470,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "Pulse configuration updated",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655093106578470,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "dto_class_name",
+        "audit_user"
+      ],
+      "context_values": [
+        "com.nutanix.prism.dto.appliance.configuration.PulseConfigDTO",
+        "amazing_colden"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "65d798d7-28e0-41b0-b90f-29590397c036",
+      "alert_type_uuid": "UserAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655093101906958,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {username} added",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655093101906958,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "username",
+        "audit_user"
+      ],
+      "context_values": [
+        "amazing_colden",
+        "admin"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "8b2b36b1-1695-42d8-84c4-4f8b731390c3",
+      "alert_type_uuid": "SnmpInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655093036584954,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "SNMP user rxuser added",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655093036584954,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user"
+      ],
+      "context_values": [
+        "admin"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "d4e78e6a-9985-4085-a48f-2ecf926d9d48",
+      "alert_type_uuid": "SnmpInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655093007001224,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "SNMP transport(s) added",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655093007001224,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user"
+      ],
+      "context_values": [
+        "admin"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "62eb3b78-66f4-46bf-9349-b0ad8c71354b",
+      "alert_type_uuid": "SMTPServerAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655092989865068,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "SMTP Server configuration updated",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655092989865068,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user"
+      ],
+      "context_values": [
+        "admin"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "5dec55bf-86ec-424c-aef5-cb280879fa20",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655092989611057,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655092989611057,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "127.0.0.1",
+        "Apache-CXF/3.3.3"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "8d5d79ac-0220-4bd0-9a8f-7b09836f5a27",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655092985822990,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655092985822990,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "127.0.0.1",
+        "Apache-CXF/3.3.3"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "197acb5b-aad5-4a76-a99a-461164c9272a",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655092984567809,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655092984567809,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "127.0.0.1",
+        "Apache-CXF/3.3.3"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "c2652f28-2c1e-4c58-9de9-06c0f73052c6",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655092980571389,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655092980571389,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "127.0.0.1",
+        "Apache-CXF/3.3.3"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "29fe0834-dd4e-4b8d-bd1c-24f3fd60e236",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655092979378199,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655092979378199,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "127.0.0.1",
+        "Apache-CXF/3.3.3"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "d78192cd-26c9-489e-9d94-23f0502f59db",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655092979351454,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655092979351454,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "127.0.0.1",
+        "Apache-CXF/3.3.3"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "14394eb9-5e31-4186-8a87-98fbd97961f0",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655092979320699,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655092979320699,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "127.0.0.1",
+        "Apache-CXF/3.3.3"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "072adfdc-06a7-4961-b9e4-ee1ef4f1c754",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655092975450655,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655092975450655,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "127.0.0.1",
+        "Apache-CXF/3.3.3"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "d5d65238-a1b8-4a68-a87f-3fe1139f79a3",
+      "alert_type_uuid": "UserAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655092974182742,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {username} added",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655092974182742,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "username",
+        "audit_user"
+      ],
+      "context_values": [
+        "xray_automation",
+        "admin"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "4180dff6-4990-412c-b3d1-f7fc83368c76",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655092974160705,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655092974160705,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "127.0.0.1",
+        "Apache-CXF/3.3.3"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "4261640b-fde0-4249-af89-07f2169518bc",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655092970304868,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655092970304868,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "127.0.0.1",
+        "Apache-CXF/3.3.3"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "1de18ead-3d37-4ed4-8399-f4eda9bec10b",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655092969163707,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655092969163707,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "127.0.0.1",
+        "Apache-CXF/3.3.3"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "f7e5bc5d-e4a7-4b83-b730-2ab273312832",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655092969128596,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655092969128596,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "127.0.0.1",
+        "Apache-CXF/3.3.3"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "13fc89ce-b76b-4207-9ae8-60b3507fa1ec",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655092969096034,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655092969096034,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "127.0.0.1",
+        "Apache-CXF/3.3.3"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "c6e08680-6321-4148-82d2-ae8a6a7c1ebd",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655092965281285,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655092965281285,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "127.0.0.1",
+        "Apache-CXF/3.3.3"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "c273428d-9338-4469-a2fe-bd5ce1f436ca",
+      "alert_type_uuid": "UserAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655092964151322,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {username} added",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655092964151322,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "username",
+        "audit_user"
+      ],
+      "context_values": [
+        "rx_automation",
+        "admin"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "15b2a5db-bafc-4db0-9eb8-2f932969be4a",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655092964117686,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655092964117686,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "127.0.0.1",
+        "Apache-CXF/3.3.3"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "96aa21c1-f21b-4ea3-90dc-e5ea5da39943",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655092959960729,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655092959960729,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "127.0.0.1",
+        "Apache-CXF/3.3.3"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "f5a4fb5e-51c9-48c6-a858-b9694141a15e",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655092958813449,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655092958813449,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "127.0.0.1",
+        "Apache-CXF/3.3.3"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "701d93e1-dcff-4a48-9f4b-e5ea14576ab2",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655092958784610,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655092958784610,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "127.0.0.1",
+        "Apache-CXF/3.3.3"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "8416af34-b8e1-4269-ba3f-e2f772aa4bab",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655092958748643,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655092958748643,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "127.0.0.1",
+        "Apache-CXF/3.3.3"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "2cb09beb-e0c3-478c-8f89-f2911d5273b8",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655092954868155,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655092954868155,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "127.0.0.1",
+        "Apache-CXF/3.3.3"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "af358dbc-1ec1-4bfb-b857-3cea331dd6b1",
+      "alert_type_uuid": "UserAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655092953459408,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {username} added",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655092953459408,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "username",
+        "audit_user"
+      ],
+      "context_values": [
+        "hpoc",
+        "admin"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "0fba1628-4d47-4988-8703-e32352d54b62",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655092953335994,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655092953335994,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "127.0.0.1",
+        "Apache-CXF/3.3.3"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "ff472185-88fa-405e-9621-23a4e926411c",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655092949261187,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655092949261187,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "127.0.0.1",
+        "Apache-CXF/3.3.3"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "53ae8519-1088-4161-9bdf-bd7696558d29",
+      "alert_type_uuid": "PasswordAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655092948106599,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "Password reset for user {username}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655092948106599,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "username",
+        "audit_user"
+      ],
+      "context_values": [
+        "admin",
+        "admin"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "6f9677ee-d61d-4cab-aa94-f40c9782c6d7",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655092947518478,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655092947518478,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "127.0.0.1",
+        "Apache-CXF/3.3.3"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "a92c7962-de78-4b0a-808b-2ccd345e9b62",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655092943635829,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655092943635829,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "127.0.0.1",
+        "Apache-CXF/3.3.3"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "ff5e2f6a-1923-43db-a79f-f14858cd3137",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655092834359141,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655092834359141,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "127.0.0.1",
+        "Apache-CXF/3.3.3"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    },
+    {
+      "id": "79577618-d859-42fb-a9ef-4fed805bd9dc",
+      "alert_type_uuid": "LoginInfoAudit",
+      "check_id": null,
+      "resolved": true,
+      "auto_resolved": false,
+      "acknowledged": true,
+      "service_vmid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0",
+      "node_uuid": "0",
+      "created_time_stamp_in_usecs": 1655092829686039,
+      "last_occurrence_time_stamp_in_usecs": 0,
+      "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "originating_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+      "severity": "kAudit",
+      "impact_types": [],
+      "classifications": [
+        "UserAction"
+      ],
+      "acknowledged_by_username": "",
+      "message": "User {audit_user} has logged in from {ip_address}",
+      "detailed_message": "",
+      "alert_title": "",
+      "operation_type": "kCreate",
+      "acknowledged_time_stamp_in_usecs": 1655092829686039,
+      "resolved_time_stamp_in_usecs": 0,
+      "resolved_by_username": "",
+      "user_defined": false,
+      "affected_entities": [
+        {
+          "entity_type": "cluster",
+          "entity_type_display_name": null,
+          "entity_name": null,
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::0"
+        }
+      ],
+      "context_types": [
+        "audit_user",
+        "ip_address",
+        "browser_info"
+      ],
+      "context_values": [
+        "admin",
+        "127.0.0.1",
+        "Apache-CXF/3.3.3"
+      ],
+      "possible_causes": [],
+      "alert_details": null
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+    "api_version": "3.1",
+    "metadata": {
+      "total_matches": 2,
+      "kind": "subnet",
+      "length": 2,
+      "offset": 0
+    },
+    "entities": [
+      {
+        "status": {
+          "state": "COMPLETE",
+          "name": "Primary",
+          "resources": {
+            "subnet_type": "VLAN",
+            "virtual_switch_uuid": "e2f795db-0605-40b0-bb68-f2102cd6c282",
+            "vswitch_name": "br0",
+            "ip_usage_stats": {
+              "num_free_ips": 113,
+              "num_macs": 11,
+              "num_assigned_ips": 15,
+              "ip_pools_stats": [
+                {
+                  "num_total_ips": 82,
+                  "range": "10.55.90.44 10.55.90.125",
+                  "num_free_ips": 73
+                }
+              ]
+            },
+            "ip_config": {
+              "default_gateway_ip": "10.55.90.1",
+              "dhcp_server_address": {
+                "ip": "10.55.90.126"
+              },
+              "pool_list": [
+                {
+                  "range": "10.55.90.44 10.55.90.125"
+                }
+              ],
+              "prefix_length": 25,
+              "subnet_ip": "10.55.90.0",
+              "dhcp_options": {
+                "domain_name_server_list": [
+                  "10.55.90.41"
+                ]
+              }
+            },
+            "vlan_id": 0
+          },
+          "cluster_reference": {
+            "kind": "cluster",
+            "name": "DM3-POC090",
+            "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8"
+          }
+        },
+        "spec": {
+          "name": "Primary",
+          "resources": {
+            "vswitch_name": "br0",
+            "subnet_type": "VLAN",
+            "ip_config": {
+              "default_gateway_ip": "10.55.90.1",
+              "dhcp_server_address": {
+                "ip": "10.55.90.126"
+              },
+              "pool_list": [
+                {
+                  "range": "10.55.90.44 10.55.90.125"
+                }
+              ],
+              "prefix_length": 25,
+              "subnet_ip": "10.55.90.0",
+              "dhcp_options": {
+                "domain_name_server_list": [
+                  "10.55.90.41"
+                ]
+              }
+            },
+            "vlan_id": 0,
+            "virtual_switch_uuid": "e2f795db-0605-40b0-bb68-f2102cd6c282"
+          },
+          "cluster_reference": {
+            "kind": "cluster",
+            "name": "DM3-POC090",
+            "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8"
+          }
+        },
+        "metadata": {
+          "last_update_time": "2022-06-13T07:19:24Z",
+          "kind": "subnet",
+          "uuid": "ddf5a608-59e2-413c-9a8b-8c64efa1315b",
+          "spec_version": 0,
+          "creation_time": "2022-06-13T07:19:24Z",
+          "spec_hash": "00000000000000000000000000000000000000000000000000",
+          "categories_mapping": {},
+          "categories": {}
+        }
+      },
+      {
+        "status": {
+          "state": "COMPLETE",
+          "name": "Secondary",
+          "resources": {
+            "vswitch_name": "br0",
+            "subnet_type": "VLAN",
+            "virtual_switch_uuid": "e2f795db-0605-40b0-bb68-f2102cd6c282",
+            "vlan_id": 901,
+            "ip_usage_stats": {
+              "num_macs": 0
+            }
+          },
+          "cluster_reference": {
+            "kind": "cluster",
+            "name": "DM3-POC090",
+            "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8"
+          }
+        },
+        "spec": {
+          "name": "Secondary",
+          "resources": {
+            "vswitch_name": "br0",
+            "subnet_type": "VLAN",
+            "virtual_switch_uuid": "e2f795db-0605-40b0-bb68-f2102cd6c282",
+            "vlan_id": 901
+          },
+          "cluster_reference": {
+            "kind": "cluster",
+            "name": "DM3-POC090",
+            "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8"
+          }
+        },
+        "metadata": {
+          "last_update_time": "2022-06-13T07:19:24Z",
+          "kind": "subnet",
+          "uuid": "f84c65e9-962e-424c-9f54-93b8b352c1c2",
+          "spec_version": 0,
+          "creation_time": "2022-06-13T07:19:24Z",
+          "spec_hash": "00000000000000000000000000000000000000000000000000",
+          "categories_mapping": {},
+          "categories": {}
+        }
+      }
+    ]
+  }

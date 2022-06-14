@@ -1,0 +1,29 @@
+[
+  {
+    "id": 24,
+    "rackable_unit_uuid": "bf1583dc-e6cc-42de-97d2-c6419c9e4a72",
+    "model": "UseLayout",
+    "model_name": "NX-3060-G7",
+    "location": null,
+    "serial": "20SM6K250199",
+    "positions": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "nodes": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "node_uuids": [
+      "ed5edbbb-7428-4066-ae90-1270dcca2f37",
+      "d4992e15-8a67-4b8f-a4d5-e8e6b6abdb1f",
+      "da249120-a63b-4050-990a-2d00b4cb1255",
+      "254e54f7-a5a6-4543-a916-0c1699be1b75"
+    ]
+  }
+]
+

@@ -1,0 +1,7 @@
+{
+    "messages": [
+        "Logging: Logging unhealthy Max retries done: Max retries done: Expecting 1 instance(s) of elasticsearch. Currently running: 0",
+        "Monitoring: Monitoring unhealthy Max retries done: monitoring addon is not healthy: expecting 1 available replica of prometheus-operator deployment in ntnx-system namespace. Currently running: 0"
+    ],
+    "status": false
+}

@@ -1,0 +1,93 @@
+[
+    {
+        "ahv_config": {
+            "cpu": 8,
+            "disk_mib": 512000,
+            "memory_mib": 32768,
+            "network_name": "Primary",
+            "network_uuid": "ddf5a608-59e2-413c-9a8b-8c64efa1315b",
+            "prism_element_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8"
+        },
+        "assigned_gpu_config_list": [],
+        "category": "worker",
+        "default": true,
+        "labels": {
+            "karbon-default": "true"
+        },
+        "name": "stackstate97feb9e61d5c-worker-pool",
+        "node_os_version": "ntnx-1.2",
+        "nodes": [
+            {
+                "hostname": "karbon-stackstate-c9a026-k8s-worker-0",
+                "ipv4_address": "10.55.90.124"
+            },
+            {
+                "hostname": "karbon-stackstate-c9a026-k8s-worker-1",
+                "ipv4_address": "10.55.90.95"
+            },
+            {
+                "hostname": "karbon-stackstate-c9a026-k8s-worker-2",
+                "ipv4_address": "10.55.90.90"
+            },
+            {
+                "hostname": "karbon-stackstate-c9a026-k8s-worker-3",
+                "ipv4_address": "10.55.90.62"
+            }
+        ],
+        "num_instances": 4
+    },
+    {
+        "ahv_config": {
+            "cpu": 4,
+            "disk_mib": 122880,
+            "memory_mib": 4096,
+            "network_name": "Primary",
+            "network_uuid": "ddf5a608-59e2-413c-9a8b-8c64efa1315b",
+            "prism_element_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8"
+        },
+        "assigned_gpu_config_list": [],
+        "category": "master",
+        "name": "stackstate97feb9e61d5c-master-pool",
+        "node_os_version": "ntnx-1.2",
+        "nodes": [
+            {
+                "hostname": "karbon-stackstate-c9a026-k8s-master-0",
+                "ipv4_address": "10.55.90.119"
+            },
+            {
+                "hostname": "karbon-stackstate-c9a026-k8s-master-1",
+                "ipv4_address": "10.55.90.67"
+            }
+        ],
+        "num_instances": 2
+    },
+    {
+        "ahv_config": {
+            "cpu": 4,
+            "disk_mib": 40960,
+            "memory_mib": 8192,
+            "network_name": "Primary",
+            "network_uuid": "ddf5a608-59e2-413c-9a8b-8c64efa1315b",
+            "prism_element_cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8"
+        },
+        "assigned_gpu_config_list": [],
+        "category": "etcd",
+        "name": "stackstate97feb9e61d5c-etcd-pool",
+        "node_os_version": "ntnx-1.2",
+        "nodes": [
+            {
+                "hostname": "karbon-stackstate-5f525a-etcd-0",
+                "ipv4_address": "10.55.90.64"
+            },
+            {
+                "hostname": "karbon-stackstate-5f525a-etcd-1",
+                "ipv4_address": "10.55.90.76"
+            },
+            {
+                "hostname": "karbon-stackstate-5f525a-etcd-2",
+                "ipv4_address": "10.55.90.72"
+            }
+        ],
+        "num_instances": 3
+    }
+]

@@ -1,0 +1,31 @@
+[
+    {
+        "cni_config": {
+            "flannel_config": null,
+            "node_cidr_mask_size": 24,
+            "pod_ipv4_cidr": "172.20.0.0/16",
+            "service_ipv4_cidr": "172.19.0.0/16"
+        },
+        "etcd_config": {
+            "node_pools": [
+                "stackstate97feb9e61d5c-etcd-pool"
+            ]
+        },
+        "kubeapi_server_ipv4_address": "10.55.90.2",
+        "master_config": {
+            "deployment_type": "multi-master-active-passive",
+            "node_pools": [
+                "stackstate97feb9e61d5c-master-pool"
+            ]
+        },
+        "name": "stackstate",
+        "status": "kActive",
+        "uuid": "c9a0262f-c7da-456e-531b-708abd5cb8ba",
+        "version": "1.21.8-0",
+        "worker_config": {
+            "node_pools": [
+                "stackstate97feb9e61d5c-worker-pool"
+            ]
+        }
+    }
+]

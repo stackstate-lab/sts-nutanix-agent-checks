@@ -1,0 +1,17 @@
+init_config:
+
+instances:
+  - instance_url: "localvm"
+    instance_type: nutanix
+    collection_interval: 300
+    nutanix:
+      url: "https://10.55.90.37:9440"
+      prism_central_url: "https://10.55.90.39:9440"
+      username: "admin"
+      password: "nx2Tech081!"
+    domain: "Nutanix"
+    layer: "Machines"
+    etl:
+      refs:
+        - "module_dir://sts_nutanix_impl.templates"
+

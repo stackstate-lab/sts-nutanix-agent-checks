@@ -1,0 +1,127 @@
+{
+    "entities": [
+        {
+            "metadata": {
+                "creation_time": "0001-01-01",
+                "name": "elasticsearch-logging-data-elasticsearch-logging-0",
+                "namespace": "ntnx-system",
+                "uuid": "dd0ae0c0-6de5-4280-8d1a-492e54038f7d"
+            },
+            "status": {
+                "access_mode": "ReadWriteOnce",
+                "phase": "Bound",
+                "pv_name": "pvc-dd0ae0c0-6de5-4280-8d1a-492e54038f7d",
+                "size": 96,
+                "storage_class_name": "default-storageclass"
+            }
+        },
+        {
+            "metadata": {
+                "creation_time": "0001-01-01",
+                "name": "prometheus-k8s-db-prometheus-k8s-0",
+                "namespace": "ntnx-system",
+                "uuid": "817d4377-d698-41db-be83-0dc213a92cc0"
+            },
+            "status": {
+                "access_mode": "ReadWriteOnce",
+                "phase": "Bound",
+                "pv_name": "pvc-817d4377-d698-41db-be83-0dc213a92cc0",
+                "size": 30,
+                "storage_class_name": "default-storageclass"
+            }
+        },
+        {
+            "metadata": {
+                "creation_time": "0001-01-01",
+                "name": "prometheus-k8s-db-prometheus-k8s-1",
+                "namespace": "ntnx-system",
+                "uuid": "7bc07b99-65a9-4ad1-a2df-954925663e1a"
+            },
+            "status": {
+                "access_mode": "ReadWriteOnce",
+                "phase": "Bound",
+                "pv_name": "pvc-7bc07b99-65a9-4ad1-a2df-954925663e1a",
+                "size": 30,
+                "storage_class_name": "default-storageclass"
+            }
+        },
+        {
+            "metadata": {
+                "creation_time": "0001-01-01",
+                "name": "data-stackstate-elasticsearch-master-0",
+                "namespace": "stackstate",
+                "uuid": "702db4d8-97dc-43c3-bf5c-3abc0d66242b"
+            },
+            "status": {
+                "access_mode": "ReadWriteOnce",
+                "phase": "Bound",
+                "pv_name": "pvc-702db4d8-97dc-43c3-bf5c-3abc0d66242b",
+                "size": 250,
+                "storage_class_name": "default-storageclass"
+            }
+        },
+        {
+            "metadata": {
+                "creation_time": "0001-01-01",
+                "name": "data-stackstate-hbase-hdfs-dn-0",
+                "namespace": "stackstate",
+                "uuid": "5c722489-07a4-4e4d-af4f-8e24f1795bb1"
+            },
+            "status": {
+                "access_mode": "ReadWriteOnce",
+                "phase": "Bound",
+                "pv_name": "pvc-5c722489-07a4-4e4d-af4f-8e24f1795bb1",
+                "size": 250,
+                "storage_class_name": "default-storageclass"
+            }
+        },
+        {
+            "metadata": {
+                "creation_time": "0001-01-01",
+                "name": "data-stackstate-hbase-hdfs-nn-0",
+                "namespace": "stackstate",
+                "uuid": "87261a7e-96f3-40aa-bb29-f96a9c62c8f4"
+            },
+            "status": {
+                "access_mode": "ReadWriteOnce",
+                "phase": "Bound",
+                "pv_name": "pvc-87261a7e-96f3-40aa-bb29-f96a9c62c8f4",
+                "size": 20,
+                "storage_class_name": "default-storageclass"
+            }
+        },
+        {
+            "metadata": {
+                "creation_time": "0001-01-01",
+                "name": "data-stackstate-kafka-0",
+                "namespace": "stackstate",
+                "uuid": "e08ce826-0f4d-4e48-b9c3-0c429748238b"
+            },
+            "status": {
+                "access_mode": "ReadWriteOnce",
+                "phase": "Bound",
+                "pv_name": "pvc-e08ce826-0f4d-4e48-b9c3-0c429748238b",
+                "size": 50,
+                "storage_class_name": "default-storageclass"
+            }
+        },
+        {
+            "metadata": {
+                "creation_time": "0001-01-01",
+                "name": "data-stackstate-zookeeper-0",
+                "namespace": "stackstate",
+                "uuid": "c989dee9-79e2-41e7-a272-2b08e602f87e"
+            },
+            "status": {
+                "access_mode": "ReadWriteOnce",
+                "phase": "Bound",
+                "pv_name": "pvc-c989dee9-79e2-41e7-a272-2b08e602f87e",
+                "size": 8,
+                "storage_class_name": "default-storageclass"
+            }
+        }
+    ],
+    "list_metadata": {
+        "length": 20
+    }
+}

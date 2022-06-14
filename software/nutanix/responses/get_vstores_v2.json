@@ -1,0 +1,47 @@
+{
+    "metadata": {
+      "grand_total_entities": 3,
+      "total_entities": 0,
+      "count": 3
+    },
+    "entities": [
+      {
+        "id": 12,
+        "name": "NutanixManagementShare",
+        "storage_container_id": 12,
+        "storage_container_uuid": "7361cee2-c91d-4b86-b628-267dfcddd51e",
+        "backedup": false,
+        "is_backup": null,
+        "protection_domain": null,
+        "marked_for_removal": false,
+        "vm_level_consistent": null,
+        "uuid": "7361cee2-c91d-4b86-b628-267dfcddd51e"
+      },
+      {
+        "id": 717,
+        "name": "SelfServiceContainer",
+        "storage_container_id": 717,
+        "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+        "backedup": false,
+        "is_backup": null,
+        "protection_domain": null,
+        "marked_for_removal": false,
+        "vm_level_consistent": null,
+        "uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3"
+      },
+      {
+        "id": 1367,
+        "name": "Default",
+        "storage_container_id": 1367,
+        "storage_container_uuid": "c78fea63-deda-476d-a871-8ffd52cd0b1e",
+        "backedup": false,
+        "is_backup": null,
+        "protection_domain": null,
+        "marked_for_removal": false,
+        "vm_level_consistent": null,
+        "uuid": "c78fea63-deda-476d-a871-8ffd52cd0b1e"
+      }
+    ]
+  }
+  
+  Response C

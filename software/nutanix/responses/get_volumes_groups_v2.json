@@ -1,0 +1,626 @@
+{
+    "metadata": {
+      "grand_total_entities": 19,
+      "total_entities": 0,
+      "count": 19
+    },
+    "entities": [
+      {
+        "uuid": "fb3c8287-0064-4f22-bc0c-8f3a09b1872a",
+        "name": "pvc-e08ce826-0f4d-4e48-b9c3-0c429748238b",
+        "description": "default-storageclass, PVC:data-stackstate-kafka-0, NS:stackstate, POD:stackstate-kafka-0, SA:stackstate-kafka",
+        "logical_timestamp": 3,
+        "disk_list": [
+          {
+            "index": 0,
+            "vmdisk_uuid": "3d760ff1-7bfe-437b-83c0-2801b9e894a6",
+            "container_id": 1367,
+            "storage_container_id": 1367,
+            "container_uuid": "c78fea63-deda-476d-a871-8ffd52cd0b1e",
+            "storage_container_uuid": "c78fea63-deda-476d-a871-8ffd52cd0b1e",
+            "vmdisk_size_mb": 51200,
+            "vmdisk_size_bytes": 53687091200,
+            "vmdisk_path": "/Default/.acropolis/vmdisk/3d760ff1-7bfe-437b-83c0-2801b9e894a6",
+            "flash_mode_enabled": false
+          }
+        ],
+        "iscsi_target": "ntnx-k8s-fb3c8287-0064-4f22-bc0c-8f3a09b1872a",
+        "attachment_list": [
+          {
+            "client_uuid": "3516adc1-a2f2-48b5-b0af-391633067003",
+            "iscsi_initiator_name": "iqn.2009-09.com.nutanix:6e7502f5485e"
+          }
+        ],
+        "flash_mode_enabled": false,
+        "enabled_authentications": [
+          {
+            "auth_type": "chap"
+          }
+        ],
+        "usage_type": "UNKNOWN",
+        "is_shared": true
+      },
+      {
+        "uuid": "e7fd74d3-0e9c-4cd4-9cf4-780ba01e6cae",
+        "name": "pvc-b659ebde-0a1b-45b6-b30e-3c61da2e98eb",
+        "description": "default-storageclass, PVC:data-stackstate-kafka-0, NS:stackstate, POD:stackstate-kafka-0, SA:stackstate-kafka",
+        "logical_timestamp": 3,
+        "disk_list": [
+          {
+            "index": 0,
+            "vmdisk_uuid": "d4aa258c-4fba-4d4c-abd3-cad62f1f667d",
+            "container_id": 1367,
+            "storage_container_id": 1367,
+            "container_uuid": "c78fea63-deda-476d-a871-8ffd52cd0b1e",
+            "storage_container_uuid": "c78fea63-deda-476d-a871-8ffd52cd0b1e",
+            "vmdisk_size_mb": 51200,
+            "vmdisk_size_bytes": 53687091200,
+            "vmdisk_path": "/Default/.acropolis/vmdisk/d4aa258c-4fba-4d4c-abd3-cad62f1f667d",
+            "flash_mode_enabled": false
+          }
+        ],
+        "iscsi_target": "ntnx-k8s-e7fd74d3-0e9c-4cd4-9cf4-780ba01e6cae",
+        "attachment_list": [
+          {
+            "client_uuid": "38a861eb-9453-4cdd-86ba-cf7f08ff3d3d",
+            "iscsi_initiator_name": "iqn.2009-09.com.nutanix:6949fdb6e289"
+          }
+        ],
+        "flash_mode_enabled": false,
+        "enabled_authentications": [
+          {
+            "auth_type": "chap"
+          }
+        ],
+        "usage_type": "UNKNOWN",
+        "is_shared": true
+      },
+      {
+        "uuid": "ecc6c660-9a5a-418b-9b93-0b2e48fe9f2c",
+        "name": "etcd-5f525a2b-f8ca-4e8d-576e-3c6b752f8f70-2",
+        "logical_timestamp": 4,
+        "disk_list": [
+          {
+            "index": 0,
+            "vmdisk_uuid": "a849b431-d792-4b28-ad64-2e913fc40b44",
+            "container_id": 1367,
+            "storage_container_id": 1367,
+            "container_uuid": "c78fea63-deda-476d-a871-8ffd52cd0b1e",
+            "storage_container_uuid": "c78fea63-deda-476d-a871-8ffd52cd0b1e",
+            "vmdisk_size_mb": 40960,
+            "vmdisk_size_bytes": 42949672960,
+            "vmdisk_path": "/Default/.acropolis/vmdisk/a849b431-d792-4b28-ad64-2e913fc40b44"
+          }
+        ],
+        "iscsi_target": "20aec6de286c4d2470e3ae57ecfe600c8bf9c8de80fceda1757d75d35022bb02:nutanix-docker-volume-plugin",
+        "attachment_list": [
+          {
+            "client_uuid": "cae09f0b-e2ec-47d1-9f47-fafa0d5f1b45",
+            "iscsi_initiator_name": "iqn.1994-05.com.redhat:f56e5ce18fc"
+          }
+        ],
+        "usage_type": "UNKNOWN",
+        "is_shared": false
+      },
+      {
+        "uuid": "0c8e091a-4650-4911-b6d6-7bb2959f2a73",
+        "name": "pvc-dd0ae0c0-6de5-4280-8d1a-492e54038f7d",
+        "description": "default-storageclass, PVC:elasticsearch-logging-data-elasticsearch-logging-0, NS:ntnx-system, POD:elasticsearch-logging-0, SA:elasticsearch-logging",
+        "logical_timestamp": 3,
+        "disk_list": [
+          {
+            "index": 0,
+            "vmdisk_uuid": "06e139f5-26d2-4823-9867-174923a3afe5",
+            "container_id": 1367,
+            "storage_container_id": 1367,
+            "container_uuid": "c78fea63-deda-476d-a871-8ffd52cd0b1e",
+            "storage_container_uuid": "c78fea63-deda-476d-a871-8ffd52cd0b1e",
+            "vmdisk_size_mb": 98304,
+            "vmdisk_size_bytes": 103079215104,
+            "vmdisk_path": "/Default/.acropolis/vmdisk/06e139f5-26d2-4823-9867-174923a3afe5",
+            "flash_mode_enabled": false
+          }
+        ],
+        "iscsi_target": "ntnx-k8s-0c8e091a-4650-4911-b6d6-7bb2959f2a73",
+        "attachment_list": [
+          {
+            "client_uuid": "edd1ce5c-21f6-4270-9164-1f46f8f29a2a",
+            "iscsi_initiator_name": "iqn.2009-09.com.nutanix:52313c4edf8e"
+          }
+        ],
+        "flash_mode_enabled": false,
+        "enabled_authentications": [
+          {
+            "auth_type": "chap"
+          }
+        ],
+        "usage_type": "UNKNOWN",
+        "is_shared": true
+      },
+      {
+        "uuid": "21d8dbd6-01b1-4184-b5e6-a4beb13b96a1",
+        "name": "pvc-c989dee9-79e2-41e7-a272-2b08e602f87e",
+        "description": "default-storageclass, PVC:data-stackstate-zookeeper-0, NS:stackstate, POD:stackstate-zookeeper-0, SA:default",
+        "logical_timestamp": 3,
+        "disk_list": [
+          {
+            "index": 0,
+            "vmdisk_uuid": "ddd1b10c-8171-43f2-83ba-16341b0ee5df",
+            "container_id": 1367,
+            "storage_container_id": 1367,
+            "container_uuid": "c78fea63-deda-476d-a871-8ffd52cd0b1e",
+            "storage_container_uuid": "c78fea63-deda-476d-a871-8ffd52cd0b1e",
+            "vmdisk_size_mb": 8192,
+            "vmdisk_size_bytes": 8589934592,
+            "vmdisk_path": "/Default/.acropolis/vmdisk/ddd1b10c-8171-43f2-83ba-16341b0ee5df",
+            "flash_mode_enabled": false
+          }
+        ],
+        "iscsi_target": "ntnx-k8s-21d8dbd6-01b1-4184-b5e6-a4beb13b96a1",
+        "attachment_list": [
+          {
+            "client_uuid": "edd1ce5c-21f6-4270-9164-1f46f8f29a2a",
+            "iscsi_initiator_name": "iqn.2009-09.com.nutanix:52313c4edf8e"
+          }
+        ],
+        "flash_mode_enabled": false,
+        "enabled_authentications": [
+          {
+            "auth_type": "chap"
+          }
+        ],
+        "usage_type": "UNKNOWN",
+        "is_shared": true
+      },
+      {
+        "uuid": "346499a7-0a8e-41ee-a2ad-0ccc76f5aa3f",
+        "name": "etcd-068094f8-7344-485e-6cd4-5762553015c9-2",
+        "logical_timestamp": 4,
+        "disk_list": [
+          {
+            "index": 0,
+            "vmdisk_uuid": "7f67aa29-9bae-4e59-a258-5615b2d28f4b",
+            "container_id": 1367,
+            "storage_container_id": 1367,
+            "container_uuid": "c78fea63-deda-476d-a871-8ffd52cd0b1e",
+            "storage_container_uuid": "c78fea63-deda-476d-a871-8ffd52cd0b1e",
+            "vmdisk_size_mb": 40960,
+            "vmdisk_size_bytes": 42949672960,
+            "vmdisk_path": "/Default/.acropolis/vmdisk/7f67aa29-9bae-4e59-a258-5615b2d28f4b"
+          }
+        ],
+        "iscsi_target": "6c5f9d8d47c3466102a344d815ce9749000aeae47458fd18ca5252b909de1c80:nutanix-docker-volume-plugin",
+        "attachment_list": [
+          {
+            "client_uuid": "cae09f0b-e2ec-47d1-9f47-fafa0d5f1b45",
+            "iscsi_initiator_name": "iqn.1994-05.com.redhat:f56e5ce18fc"
+          }
+        ],
+        "usage_type": "UNKNOWN",
+        "is_shared": false
+      },
+      {
+        "uuid": "3e391e82-3b28-4c12-8e9a-d41463191063",
+        "name": "pvc-859e5807-b890-4d8a-91b8-426be85a7176",
+        "description": "default-storageclass, PVC:prometheus-k8s-db-prometheus-k8s-0, NS:ntnx-system, POD:prometheus-k8s-0, SA:prometheus-k8s",
+        "logical_timestamp": 3,
+        "disk_list": [
+          {
+            "index": 0,
+            "vmdisk_uuid": "d4d172f1-84a9-4d14-9a94-a10c28d7436f",
+            "container_id": 1367,
+            "storage_container_id": 1367,
+            "container_uuid": "c78fea63-deda-476d-a871-8ffd52cd0b1e",
+            "storage_container_uuid": "c78fea63-deda-476d-a871-8ffd52cd0b1e",
+            "vmdisk_size_mb": 30720,
+            "vmdisk_size_bytes": 32212254720,
+            "vmdisk_path": "/Default/.acropolis/vmdisk/d4d172f1-84a9-4d14-9a94-a10c28d7436f",
+            "flash_mode_enabled": false
+          }
+        ],
+        "iscsi_target": "ntnx-k8s-3e391e82-3b28-4c12-8e9a-d41463191063",
+        "attachment_list": [
+          {
+            "client_uuid": "fa440b9b-af18-474d-a401-8bcc7ab32ae7",
+            "iscsi_initiator_name": "iqn.2009-09.com.nutanix:064179525fa9"
+          }
+        ],
+        "flash_mode_enabled": false,
+        "enabled_authentications": [
+          {
+            "auth_type": "chap"
+          }
+        ],
+        "usage_type": "UNKNOWN",
+        "is_shared": true
+      },
+      {
+        "uuid": "49ad3e34-1df2-4c19-948c-f0379109f3e6",
+        "name": "pvc-87261a7e-96f3-40aa-bb29-f96a9c62c8f4",
+        "description": "default-storageclass, PVC:data-stackstate-hbase-hdfs-nn-0, NS:stackstate, POD:stackstate-hbase-hdfs-nn-0, SA:stackstate-hbase-hdfs",
+        "logical_timestamp": 3,
+        "disk_list": [
+          {
+            "index": 0,
+            "vmdisk_uuid": "b27230fe-5b1e-480f-a43d-20bc1518b330",
+            "container_id": 1367,
+            "storage_container_id": 1367,
+            "container_uuid": "c78fea63-deda-476d-a871-8ffd52cd0b1e",
+            "storage_container_uuid": "c78fea63-deda-476d-a871-8ffd52cd0b1e",
+            "vmdisk_size_mb": 20480,
+            "vmdisk_size_bytes": 21474836480,
+            "vmdisk_path": "/Default/.acropolis/vmdisk/b27230fe-5b1e-480f-a43d-20bc1518b330",
+            "flash_mode_enabled": false
+          }
+        ],
+        "iscsi_target": "ntnx-k8s-49ad3e34-1df2-4c19-948c-f0379109f3e6",
+        "attachment_list": [
+          {
+            "client_uuid": "5e4da528-f0b0-4530-888d-7cab63b0ea9a",
+            "iscsi_initiator_name": "iqn.2009-09.com.nutanix:81faf0f353ab"
+          }
+        ],
+        "flash_mode_enabled": false,
+        "enabled_authentications": [
+          {
+            "auth_type": "chap"
+          }
+        ],
+        "usage_type": "UNKNOWN",
+        "is_shared": true
+      },
+      {
+        "uuid": "4ae993bc-221e-4297-961d-25136359cf9a",
+        "name": "pvc-a77235f7-2959-456b-8cfe-d5c693330e52",
+        "description": "default-storageclass, PVC:prometheus-k8s-db-prometheus-k8s-1, NS:ntnx-system, POD:prometheus-k8s-1, SA:prometheus-k8s",
+        "logical_timestamp": 3,
+        "disk_list": [
+          {
+            "index": 0,
+            "vmdisk_uuid": "71c0cd7e-0072-4eee-8850-eb1d7b93c4d0",
+            "container_id": 1367,
+            "storage_container_id": 1367,
+            "container_uuid": "c78fea63-deda-476d-a871-8ffd52cd0b1e",
+            "storage_container_uuid": "c78fea63-deda-476d-a871-8ffd52cd0b1e",
+            "vmdisk_size_mb": 30720,
+            "vmdisk_size_bytes": 32212254720,
+            "vmdisk_path": "/Default/.acropolis/vmdisk/71c0cd7e-0072-4eee-8850-eb1d7b93c4d0",
+            "flash_mode_enabled": false
+          }
+        ],
+        "iscsi_target": "ntnx-k8s-4ae993bc-221e-4297-961d-25136359cf9a",
+        "attachment_list": [
+          {
+            "client_uuid": "9c9a7fc8-ade3-489d-979d-b4ec509fbec5",
+            "iscsi_initiator_name": "iqn.2009-09.com.nutanix:084e35fe4310"
+          }
+        ],
+        "flash_mode_enabled": false,
+        "enabled_authentications": [
+          {
+            "auth_type": "chap"
+          }
+        ],
+        "usage_type": "UNKNOWN",
+        "is_shared": true
+      },
+      {
+        "uuid": "4db14bce-9497-4dd8-9c58-8f5fe34e1876",
+        "name": "etcd-068094f8-7344-485e-6cd4-5762553015c9-1",
+        "logical_timestamp": 4,
+        "disk_list": [
+          {
+            "index": 0,
+            "vmdisk_uuid": "f9682c68-434f-4b9c-b16b-b666b4680fb6",
+            "container_id": 1367,
+            "storage_container_id": 1367,
+            "container_uuid": "c78fea63-deda-476d-a871-8ffd52cd0b1e",
+            "storage_container_uuid": "c78fea63-deda-476d-a871-8ffd52cd0b1e",
+            "vmdisk_size_mb": 40960,
+            "vmdisk_size_bytes": 42949672960,
+            "vmdisk_path": "/Default/.acropolis/vmdisk/f9682c68-434f-4b9c-b16b-b666b4680fb6"
+          }
+        ],
+        "iscsi_target": "18feb4be5995eb5c40e9b076562e821141a56cf38bac3f6a945343dc2b109adc:nutanix-docker-volume-plugin",
+        "attachment_list": [
+          {
+            "client_uuid": "cae09f0b-e2ec-47d1-9f47-fafa0d5f1b45",
+            "iscsi_initiator_name": "iqn.1994-05.com.redhat:f56e5ce18fc"
+          }
+        ],
+        "usage_type": "UNKNOWN",
+        "is_shared": false
+      },
+      {
+        "uuid": "5e5ce572-86d6-462b-87e4-5b5f31b5d00a",
+        "name": "pvc-3a307855-96d2-4101-b2e3-f8ffdf171ea2",
+        "description": "default-storageclass, PVC:data-stackstate-zookeeper-0, NS:stackstate, POD:stackstate-zookeeper-0, SA:default",
+        "logical_timestamp": 3,
+        "disk_list": [
+          {
+            "index": 0,
+            "vmdisk_uuid": "aab7f668-21f8-4a95-8dc1-91c8eb490b88",
+            "container_id": 1367,
+            "storage_container_id": 1367,
+            "container_uuid": "c78fea63-deda-476d-a871-8ffd52cd0b1e",
+            "storage_container_uuid": "c78fea63-deda-476d-a871-8ffd52cd0b1e",
+            "vmdisk_size_mb": 8192,
+            "vmdisk_size_bytes": 8589934592,
+            "vmdisk_path": "/Default/.acropolis/vmdisk/aab7f668-21f8-4a95-8dc1-91c8eb490b88",
+            "flash_mode_enabled": false
+          }
+        ],
+        "iscsi_target": "ntnx-k8s-5e5ce572-86d6-462b-87e4-5b5f31b5d00a",
+        "attachment_list": [
+          {
+            "client_uuid": "7cdb405c-3c65-4658-a841-c01444d42cf6",
+            "iscsi_initiator_name": "iqn.2009-09.com.nutanix:bb07956338e7"
+          }
+        ],
+        "flash_mode_enabled": false,
+        "enabled_authentications": [
+          {
+            "auth_type": "chap"
+          }
+        ],
+        "usage_type": "UNKNOWN",
+        "is_shared": true
+      },
+      {
+        "uuid": "763e2077-fcdf-4b39-bb5b-d2b4219ca389",
+        "name": "etcd-5f525a2b-f8ca-4e8d-576e-3c6b752f8f70-0",
+        "logical_timestamp": 4,
+        "disk_list": [
+          {
+            "index": 0,
+            "vmdisk_uuid": "1a551ec7-de99-4385-bd72-05d3a9b773c6",
+            "container_id": 1367,
+            "storage_container_id": 1367,
+            "container_uuid": "c78fea63-deda-476d-a871-8ffd52cd0b1e",
+            "storage_container_uuid": "c78fea63-deda-476d-a871-8ffd52cd0b1e",
+            "vmdisk_size_mb": 40960,
+            "vmdisk_size_bytes": 42949672960,
+            "vmdisk_path": "/Default/.acropolis/vmdisk/1a551ec7-de99-4385-bd72-05d3a9b773c6"
+          }
+        ],
+        "iscsi_target": "03b317614aa1bfa6434ff8a622955895dcd6e9112409e2897fb1900e9eee3656:nutanix-docker-volume-plugin",
+        "attachment_list": [
+          {
+            "client_uuid": "cae09f0b-e2ec-47d1-9f47-fafa0d5f1b45",
+            "iscsi_initiator_name": "iqn.1994-05.com.redhat:f56e5ce18fc"
+          }
+        ],
+        "usage_type": "UNKNOWN",
+        "is_shared": false
+      },
+      {
+        "uuid": "7c2198da-4a70-4d37-8434-0b081554bf6c",
+        "name": "pvc-817d4377-d698-41db-be83-0dc213a92cc0",
+        "description": "default-storageclass, PVC:prometheus-k8s-db-prometheus-k8s-0, NS:ntnx-system, POD:prometheus-k8s-0, SA:prometheus-k8s",
+        "logical_timestamp": 3,
+        "disk_list": [
+          {
+            "index": 0,
+            "vmdisk_uuid": "4fce371a-e157-4091-8fb9-24a791c3a885",
+            "container_id": 1367,
+            "storage_container_id": 1367,
+            "container_uuid": "c78fea63-deda-476d-a871-8ffd52cd0b1e",
+            "storage_container_uuid": "c78fea63-deda-476d-a871-8ffd52cd0b1e",
+            "vmdisk_size_mb": 30720,
+            "vmdisk_size_bytes": 32212254720,
+            "vmdisk_path": "/Default/.acropolis/vmdisk/4fce371a-e157-4091-8fb9-24a791c3a885",
+            "flash_mode_enabled": false
+          }
+        ],
+        "iscsi_target": "ntnx-k8s-7c2198da-4a70-4d37-8434-0b081554bf6c",
+        "attachment_list": [
+          {
+            "client_uuid": "3516adc1-a2f2-48b5-b0af-391633067003",
+            "iscsi_initiator_name": "iqn.2009-09.com.nutanix:6e7502f5485e"
+          }
+        ],
+        "flash_mode_enabled": false,
+        "enabled_authentications": [
+          {
+            "auth_type": "chap"
+          }
+        ],
+        "usage_type": "UNKNOWN",
+        "is_shared": true
+      },
+      {
+        "uuid": "826918b0-f755-41ef-9545-5d4eaa9ac12a",
+        "name": "pvc-702db4d8-97dc-43c3-bf5c-3abc0d66242b",
+        "description": "default-storageclass, PVC:data-stackstate-elasticsearch-master-0, NS:stackstate, POD:stackstate-elasticsearch-master-0, SA:default",
+        "logical_timestamp": 3,
+        "disk_list": [
+          {
+            "index": 0,
+            "vmdisk_uuid": "9e895e38-0529-4f54-80a3-7201c6ee01bd",
+            "container_id": 1367,
+            "storage_container_id": 1367,
+            "container_uuid": "c78fea63-deda-476d-a871-8ffd52cd0b1e",
+            "storage_container_uuid": "c78fea63-deda-476d-a871-8ffd52cd0b1e",
+            "vmdisk_size_mb": 256000,
+            "vmdisk_size_bytes": 268435456000,
+            "vmdisk_path": "/Default/.acropolis/vmdisk/9e895e38-0529-4f54-80a3-7201c6ee01bd",
+            "flash_mode_enabled": false
+          }
+        ],
+        "iscsi_target": "ntnx-k8s-826918b0-f755-41ef-9545-5d4eaa9ac12a",
+        "attachment_list": [
+          {
+            "client_uuid": "3516adc1-a2f2-48b5-b0af-391633067003",
+            "iscsi_initiator_name": "iqn.2009-09.com.nutanix:6e7502f5485e"
+          }
+        ],
+        "flash_mode_enabled": false,
+        "enabled_authentications": [
+          {
+            "auth_type": "chap"
+          }
+        ],
+        "usage_type": "UNKNOWN",
+        "is_shared": true
+      },
+      {
+        "uuid": "a16f3cd4-7728-49a2-ae4b-eb1aed68ecb8",
+        "name": "pvc-7bc07b99-65a9-4ad1-a2df-954925663e1a",
+        "description": "default-storageclass, PVC:prometheus-k8s-db-prometheus-k8s-1, NS:ntnx-system, POD:prometheus-k8s-1, SA:prometheus-k8s",
+        "logical_timestamp": 3,
+        "disk_list": [
+          {
+            "index": 0,
+            "vmdisk_uuid": "a642f91c-7224-4c48-9586-b3ed94298740",
+            "container_id": 1367,
+            "storage_container_id": 1367,
+            "container_uuid": "c78fea63-deda-476d-a871-8ffd52cd0b1e",
+            "storage_container_uuid": "c78fea63-deda-476d-a871-8ffd52cd0b1e",
+            "vmdisk_size_mb": 30720,
+            "vmdisk_size_bytes": 32212254720,
+            "vmdisk_path": "/Default/.acropolis/vmdisk/a642f91c-7224-4c48-9586-b3ed94298740",
+            "flash_mode_enabled": false
+          }
+        ],
+        "iscsi_target": "ntnx-k8s-a16f3cd4-7728-49a2-ae4b-eb1aed68ecb8",
+        "attachment_list": [
+          {
+            "client_uuid": "5e4da528-f0b0-4530-888d-7cab63b0ea9a",
+            "iscsi_initiator_name": "iqn.2009-09.com.nutanix:81faf0f353ab"
+          }
+        ],
+        "flash_mode_enabled": false,
+        "enabled_authentications": [
+          {
+            "auth_type": "chap"
+          }
+        ],
+        "usage_type": "UNKNOWN",
+        "is_shared": true
+      },
+      {
+        "uuid": "a2043d90-56cc-4986-986c-22008c4b605b",
+        "name": "pvc-a8d78207-27a4-48ef-bb66-5477909031b0",
+        "description": "default-storageclass, PVC:elasticsearch-logging-data-elasticsearch-logging-0, NS:ntnx-system, POD:elasticsearch-logging-0, SA:elasticsearch-logging",
+        "logical_timestamp": 3,
+        "disk_list": [
+          {
+            "index": 0,
+            "vmdisk_uuid": "d2bf21b3-1850-4734-a7a8-4436a82c037c",
+            "container_id": 1367,
+            "storage_container_id": 1367,
+            "container_uuid": "c78fea63-deda-476d-a871-8ffd52cd0b1e",
+            "storage_container_uuid": "c78fea63-deda-476d-a871-8ffd52cd0b1e",
+            "vmdisk_size_mb": 98304,
+            "vmdisk_size_bytes": 103079215104,
+            "vmdisk_path": "/Default/.acropolis/vmdisk/d2bf21b3-1850-4734-a7a8-4436a82c037c",
+            "flash_mode_enabled": false
+          }
+        ],
+        "iscsi_target": "ntnx-k8s-a2043d90-56cc-4986-986c-22008c4b605b",
+        "attachment_list": [
+          {
+            "client_uuid": "f5c2ac40-9fd5-478a-96a3-87518fb7349f",
+            "iscsi_initiator_name": "iqn.2009-09.com.nutanix:13582e2c980e"
+          }
+        ],
+        "flash_mode_enabled": false,
+        "enabled_authentications": [
+          {
+            "auth_type": "chap"
+          }
+        ],
+        "usage_type": "UNKNOWN",
+        "is_shared": true
+      },
+      {
+        "uuid": "a24ea680-566f-4088-b132-265a9fa67789",
+        "name": "etcd-068094f8-7344-485e-6cd4-5762553015c9-0",
+        "logical_timestamp": 4,
+        "disk_list": [
+          {
+            "index": 0,
+            "vmdisk_uuid": "f5b2b4a4-4558-4125-abd3-c9519bce2265",
+            "container_id": 1367,
+            "storage_container_id": 1367,
+            "container_uuid": "c78fea63-deda-476d-a871-8ffd52cd0b1e",
+            "storage_container_uuid": "c78fea63-deda-476d-a871-8ffd52cd0b1e",
+            "vmdisk_size_mb": 40960,
+            "vmdisk_size_bytes": 42949672960,
+            "vmdisk_path": "/Default/.acropolis/vmdisk/f5b2b4a4-4558-4125-abd3-c9519bce2265"
+          }
+        ],
+        "iscsi_target": "b034434d96a5bcefa331299f353aef4e3d120a90e65efb270b8a7bb1d16120bc:nutanix-docker-volume-plugin",
+        "attachment_list": [
+          {
+            "client_uuid": "cae09f0b-e2ec-47d1-9f47-fafa0d5f1b45",
+            "iscsi_initiator_name": "iqn.1994-05.com.redhat:f56e5ce18fc"
+          }
+        ],
+        "usage_type": "UNKNOWN",
+        "is_shared": false
+      },
+      {
+        "uuid": "a9ccab2a-feb6-4dd7-aee6-f0fb264f56cc",
+        "name": "etcd-5f525a2b-f8ca-4e8d-576e-3c6b752f8f70-1",
+        "logical_timestamp": 4,
+        "disk_list": [
+          {
+            "index": 0,
+            "vmdisk_uuid": "389e4de9-2a12-46fe-8cc7-bdfd78008b88",
+            "container_id": 1367,
+            "storage_container_id": 1367,
+            "container_uuid": "c78fea63-deda-476d-a871-8ffd52cd0b1e",
+            "storage_container_uuid": "c78fea63-deda-476d-a871-8ffd52cd0b1e",
+            "vmdisk_size_mb": 40960,
+            "vmdisk_size_bytes": 42949672960,
+            "vmdisk_path": "/Default/.acropolis/vmdisk/389e4de9-2a12-46fe-8cc7-bdfd78008b88"
+          }
+        ],
+        "iscsi_target": "9c391cd76d8750b346c8cfa040d4a68dd251e7acf9f3f22fb0a8287f6e59c1ce:nutanix-docker-volume-plugin",
+        "attachment_list": [
+          {
+            "client_uuid": "cae09f0b-e2ec-47d1-9f47-fafa0d5f1b45",
+            "iscsi_initiator_name": "iqn.1994-05.com.redhat:f56e5ce18fc"
+          }
+        ],
+        "usage_type": "UNKNOWN",
+        "is_shared": false
+      },
+      {
+        "uuid": "ce468804-e55a-4a04-b87f-b16b5cf03223",
+        "name": "pvc-5c722489-07a4-4e4d-af4f-8e24f1795bb1",
+        "description": "default-storageclass, PVC:data-stackstate-hbase-hdfs-dn-0, NS:stackstate, POD:stackstate-hbase-hdfs-dn-0, SA:stackstate-hbase-hdfs",
+        "logical_timestamp": 3,
+        "disk_list": [
+          {
+            "index": 0,
+            "vmdisk_uuid": "4e9219c7-20a2-48bd-a21d-e33f5689d4f6",
+            "container_id": 1367,
+            "storage_container_id": 1367,
+            "container_uuid": "c78fea63-deda-476d-a871-8ffd52cd0b1e",
+            "storage_container_uuid": "c78fea63-deda-476d-a871-8ffd52cd0b1e",
+            "vmdisk_size_mb": 256000,
+            "vmdisk_size_bytes": 268435456000,
+            "vmdisk_path": "/Default/.acropolis/vmdisk/4e9219c7-20a2-48bd-a21d-e33f5689d4f6",
+            "flash_mode_enabled": false
+          }
+        ],
+        "iscsi_target": "ntnx-k8s-ce468804-e55a-4a04-b87f-b16b5cf03223",
+        "attachment_list": [
+          {
+            "client_uuid": "edd1ce5c-21f6-4270-9164-1f46f8f29a2a",
+            "iscsi_initiator_name": "iqn.2009-09.com.nutanix:52313c4edf8e"
+          }
+        ],
+        "flash_mode_enabled": false,
+        "enabled_authentications": [
+          {
+            "auth_type": "chap"
+          }
+        ],
+        "usage_type": "UNKNOWN",
+        "is_shared": true
+      }
+    ]
+  }

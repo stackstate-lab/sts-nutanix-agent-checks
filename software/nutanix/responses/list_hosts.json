@@ -1,0 +1,382 @@
+{
+    "api_version": "3.1",
+    "metadata": {
+      "total_matches": 5,
+      "kind": "host"
+    },
+    "entities": [
+      {
+        "status": {
+          "state": "COMPLETE",
+          "name": "dm3-poc090-1",
+          "resources": {
+            "serial_number": "HMF198S000501",
+            "ipmi": {
+              "ip": "10.55.90.33"
+            },
+            "host_type": "HYPER_CONVERGED",
+            "cpu_model": "Intel(R) Xeon(R) Silver 4216 CPU @ 2.10GHz",
+            "host_nics_id_list": [],
+            "num_cpu_sockets": 2,
+            "gpu_list": [],
+            "num_cpu_cores": 32,
+            "rackable_unit_reference": {
+              "kind": "rackable_unit",
+              "uuid": "bf1583dc-e6cc-42de-97d2-c6419c9e4a72"
+            },
+            "controller_vm": {
+              "ip": "10.55.90.29",
+              "oplog_usage": {
+                "oplog_disk_pct": 11.876904697670907,
+                "oplog_disk_size": 429496729599
+              }
+            },
+            "cpu_capacity_hz": 2100000000,
+            "hypervisor": {
+              "num_vms": 7,
+              "ip": "10.55.90.25",
+              "hypervisor_full_name": "Nutanix 20201105.30142"
+            },
+            "memory_capacity_mib": 515384,
+            "block": {
+              "block_serial_number": "20SM6K250199",
+              "block_model": "NX-3060-G7"
+            },
+            "host_disks_reference_list": [
+              {
+                "kind": "disk",
+                "uuid": "321945fe-23d0-41f9-9343-648faf502dc8"
+              },
+              {
+                "kind": "disk",
+                "uuid": "722356fe-56db-47da-a1ea-5cd7b598224d"
+              }
+            ]
+          },
+          "cluster_reference": {
+            "kind": "cluster",
+            "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8"
+          }
+        },
+        "spec": {
+          "name": "dm3-poc090-1",
+          "resources": {
+            "controller_vm": {
+              "ip": "10.55.90.29",
+              "oplog_usage": {
+                "oplog_disk_pct": 11.876904697670907,
+                "oplog_disk_size": 429496729599
+              }
+            }
+          }
+        },
+        "metadata": {
+          "last_update_time": "2022-06-13T07:20:18Z",
+          "kind": "host",
+          "uuid": "ed5edbbb-7428-4066-ae90-1270dcca2f37",
+          "spec_version": 0,
+          "creation_time": "2022-06-13T07:20:18Z",
+          "spec_hash": "00000000000000000000000000000000000000000000000000",
+          "categories_mapping": {},
+          "categories": {}
+        }
+      },
+      {
+        "status": {
+          "state": "COMPLETE",
+          "name": "dm3-poc090-4",
+          "resources": {
+            "serial_number": "HM201S007330",
+            "ipmi": {
+              "ip": "10.55.90.36"
+            },
+            "host_type": "HYPER_CONVERGED",
+            "cpu_model": "Intel(R) Xeon(R) Silver 4216 CPU @ 2.10GHz",
+            "host_nics_id_list": [],
+            "num_cpu_sockets": 2,
+            "gpu_list": [],
+            "num_cpu_cores": 32,
+            "rackable_unit_reference": {
+              "kind": "rackable_unit",
+              "uuid": "bf1583dc-e6cc-42de-97d2-c6419c9e4a72"
+            },
+            "controller_vm": {
+              "ip": "10.55.90.32",
+              "oplog_usage": {
+                "oplog_disk_pct": 11.876904697670907,
+                "oplog_disk_size": 429496729599
+              }
+            },
+            "cpu_capacity_hz": 2100000000,
+            "hypervisor": {
+              "num_vms": 7,
+              "ip": "10.55.90.28",
+              "hypervisor_full_name": "Nutanix 20201105.30142"
+            },
+            "memory_capacity_mib": 515384,
+            "block": {
+              "block_serial_number": "20SM6K250199",
+              "block_model": "NX-3060-G7"
+            },
+            "host_disks_reference_list": [
+              {
+                "kind": "disk",
+                "uuid": "12e56b1b-3653-4d42-b06e-40d41a04969f"
+              },
+              {
+                "kind": "disk",
+                "uuid": "4a8e02e6-d144-4db5-9047-52be09806356"
+              }
+            ]
+          },
+          "cluster_reference": {
+            "kind": "cluster",
+            "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8"
+          }
+        },
+        "spec": {
+          "name": "dm3-poc090-4",
+          "resources": {
+            "controller_vm": {
+              "ip": "10.55.90.32",
+              "oplog_usage": {
+                "oplog_disk_pct": 11.876904697670907,
+                "oplog_disk_size": 429496729599
+              }
+            }
+          }
+        },
+        "metadata": {
+          "last_update_time": "2022-06-13T07:20:19Z",
+          "kind": "host",
+          "uuid": "254e54f7-a5a6-4543-a916-0c1699be1b75",
+          "spec_version": 0,
+          "creation_time": "2022-06-13T07:20:19Z",
+          "spec_hash": "00000000000000000000000000000000000000000000000000",
+          "categories_mapping": {},
+          "categories": {}
+        }
+      },
+      {
+        "status": {
+          "state": "COMPLETE",
+          "cluster_reference": {
+            "kind": "cluster",
+            "uuid": "ad0bd9e9-b727-4976-b518-5ad294d1bb5c"
+          },
+          "resources": {
+            "rackable_unit_reference": {
+              "kind": "rackable_unit",
+              "uuid": "4dd0765a-4d38-401a-a09d-a0972e599033"
+            },
+            "host_type": "HYPER_CONVERGED",
+            "host_nics_id_list": [],
+            "gpu_list": [],
+            "serial_number": "10-55-90-39",
+            "controller_vm": {
+              "ip": "10.55.90.39",
+              "oplog_usage": {
+                "oplog_disk_pct": -3.8251196528175245e-11,
+                "oplog_disk_size": -4
+              }
+            },
+            "block": {
+              "block_serial_number": "null",
+              "block_model": "null"
+            },
+            "host_disks_reference_list": [
+              {
+                "kind": "disk",
+                "uuid": "0d1cb997-7210-40c8-a488-b42d79bbed64"
+              },
+              {
+                "kind": "disk",
+                "uuid": "a3662241-77da-4dfe-a052-09aebd51ea3c"
+              },
+              {
+                "kind": "disk",
+                "uuid": "9d900164-c829-40fb-adf8-d8529f8581bf"
+              },
+              {
+                "kind": "disk",
+                "uuid": "cc77b0f4-977a-476c-8d30-8d4919f6326c"
+              }
+            ]
+          }
+        },
+        "spec": {
+          "resources": {
+            "controller_vm": {
+              "ip": "10.55.90.39",
+              "oplog_usage": {
+                "oplog_disk_pct": -3.8251196528175245e-11,
+                "oplog_disk_size": -4
+              }
+            }
+          }
+        },
+        "metadata": {
+          "last_update_time": "2022-06-13T07:20:19Z",
+          "kind": "host",
+          "uuid": "706955d8-ba38-4051-85b9-97071ac13092",
+          "spec_version": 0,
+          "creation_time": "2022-06-13T07:20:19Z",
+          "spec_hash": "00000000000000000000000000000000000000000000000000",
+          "categories_mapping": {},
+          "categories": {}
+        }
+      },
+      {
+        "status": {
+          "state": "COMPLETE",
+          "name": "dm3-poc090-2",
+          "resources": {
+            "serial_number": "HM201S006809",
+            "ipmi": {
+              "ip": "10.55.90.34"
+            },
+            "host_type": "HYPER_CONVERGED",
+            "cpu_model": "Intel(R) Xeon(R) Silver 4216 CPU @ 2.10GHz",
+            "host_nics_id_list": [],
+            "num_cpu_sockets": 2,
+            "gpu_list": [],
+            "num_cpu_cores": 32,
+            "rackable_unit_reference": {
+              "kind": "rackable_unit",
+              "uuid": "bf1583dc-e6cc-42de-97d2-c6419c9e4a72"
+            },
+            "controller_vm": {
+              "ip": "10.55.90.30",
+              "oplog_usage": {
+                "oplog_disk_pct": 11.876904697670907,
+                "oplog_disk_size": 429496729599
+              }
+            },
+            "cpu_capacity_hz": 2100000000,
+            "hypervisor": {
+              "num_vms": 4,
+              "ip": "10.55.90.26",
+              "hypervisor_full_name": "Nutanix 20201105.30142"
+            },
+            "memory_capacity_mib": 515384,
+            "block": {
+              "block_serial_number": "20SM6K250199",
+              "block_model": "NX-3060-G7"
+            },
+            "host_disks_reference_list": [
+              {
+                "kind": "disk",
+                "uuid": "3f61c62d-063e-43c2-a902-cc01533d4080"
+              },
+              {
+                "kind": "disk",
+                "uuid": "7aca583a-9bb3-4273-bff1-6382eb1f70a6"
+              }
+            ]
+          },
+          "cluster_reference": {
+            "kind": "cluster",
+            "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8"
+          }
+        },
+        "spec": {
+          "name": "dm3-poc090-2",
+          "resources": {
+            "controller_vm": {
+              "ip": "10.55.90.30",
+              "oplog_usage": {
+                "oplog_disk_pct": 11.876904697670907,
+                "oplog_disk_size": 429496729599
+              }
+            }
+          }
+        },
+        "metadata": {
+          "last_update_time": "2022-06-13T07:20:19Z",
+          "kind": "host",
+          "uuid": "d4992e15-8a67-4b8f-a4d5-e8e6b6abdb1f",
+          "spec_version": 0,
+          "creation_time": "2022-06-13T07:20:19Z",
+          "spec_hash": "00000000000000000000000000000000000000000000000000",
+          "categories_mapping": {},
+          "categories": {}
+        }
+      },
+      {
+        "status": {
+          "state": "COMPLETE",
+          "name": "dm3-poc090-3",
+          "resources": {
+            "serial_number": "HM201S007306",
+            "ipmi": {
+              "ip": "10.55.90.35"
+            },
+            "host_type": "HYPER_CONVERGED",
+            "cpu_model": "Intel(R) Xeon(R) Silver 4216 CPU @ 2.10GHz",
+            "host_nics_id_list": [],
+            "num_cpu_sockets": 2,
+            "gpu_list": [],
+            "num_cpu_cores": 32,
+            "rackable_unit_reference": {
+              "kind": "rackable_unit",
+              "uuid": "bf1583dc-e6cc-42de-97d2-c6419c9e4a72"
+            },
+            "controller_vm": {
+              "ip": "10.55.90.31",
+              "oplog_usage": {
+                "oplog_disk_pct": 11.876904697670907,
+                "oplog_disk_size": 429496729599
+              }
+            },
+            "cpu_capacity_hz": 2100000000,
+            "hypervisor": {
+              "num_vms": 6,
+              "ip": "10.55.90.27",
+              "hypervisor_full_name": "Nutanix 20201105.30142"
+            },
+            "memory_capacity_mib": 515384,
+            "block": {
+              "block_serial_number": "20SM6K250199",
+              "block_model": "NX-3060-G7"
+            },
+            "host_disks_reference_list": [
+              {
+                "kind": "disk",
+                "uuid": "0a7bf990-6ab0-407a-b1ac-5c99c029a03d"
+              },
+              {
+                "kind": "disk",
+                "uuid": "3f752031-68fc-4ea4-8785-8632cf3cd11c"
+              }
+            ]
+          },
+          "cluster_reference": {
+            "kind": "cluster",
+            "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8"
+          }
+        },
+        "spec": {
+          "name": "dm3-poc090-3",
+          "resources": {
+            "controller_vm": {
+              "ip": "10.55.90.31",
+              "oplog_usage": {
+                "oplog_disk_pct": 11.876904697670907,
+                "oplog_disk_size": 429496729599
+              }
+            }
+          }
+        },
+        "metadata": {
+          "last_update_time": "2022-06-13T07:20:19Z",
+          "kind": "host",
+          "uuid": "da249120-a63b-4050-990a-2d00b4cb1255",
+          "spec_version": 0,
+          "creation_time": "2022-06-13T07:20:19Z",
+          "spec_hash": "00000000000000000000000000000000000000000000000000",
+          "categories_mapping": {},
+          "categories": {}
+        }
+      }
+    ]
+  }

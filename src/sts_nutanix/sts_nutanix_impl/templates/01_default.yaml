@@ -1,0 +1,58 @@
+etl:
+  datasources:
+    - name: nutanix_client
+      module: sts_nutanix_impl.client.nutanix_client
+      cls: NutanixClient
+      constructor_arg: "conf.nutanix"
+  queries:
+    - name: nutanix_clusters
+      query: "nutanix_client.get_clusters()"
+      template_refs:
+        - nutanix_cluster_template
+    - name: karbon_k8s_clusters
+      query: "nutanix_client.get(nutanix_client.V1_BETA_KARBON, 'k8s/clusters')"
+      processor: |
+        k8s_clusters = factory.lookups.setdefault("k8s_clusters", [])
+        k8s_clusters.append(item["name"])
+      template_refs:
+        - k8s_cluster_template
+    - name: k8s_cluster_nodes
+      query: |
+          def fetch():
+            results = []
+            for cluster in factory.lookups.get("k8s_clusters", []):
+               pools = nutanix_client.get(nutanix_client.V1_ALPHA_KARBON, "k8s/clusters/%s/node-pools" % cluster)
+               nodes = []
+               for pool in pools:
+                  nodes.extend(pool["nodes"]) 
+               for node in nodes:
+                  node["cluster"] = cluster
+               results.extend(nodes)
+            return results
+          fetch()
+      template_refs:
+        - k8s_nodes_template
+  template:
+    components:
+      - name: nutanix_cluster_template
+        spec:
+          name: "$.name"
+          type: "nutanix-cluster"
+          uid: "|uid('nutanix', 'cluster', item['uuid'])"
+          layer: "Nutanix Clusters"
+      - name: k8s_cluster_template
+        spec:
+          name: "$.name"
+          type: "cluster"
+          uid: "|'urn:cluster:/kubernetes:%s' % item['name']"
+          layer: "K8s Clusters"
+      - name: k8s_nodes_template
+        spec:
+          name: "$.hostname"
+          type: "node"
+          uid: "|'urn:host:/%s' % item['hostname']"
+          identifiers: ["|'urn:ip:/stackstate:%s:%s' % (item['hostname'], item['ipv4_address'])"]
+
+
+
+

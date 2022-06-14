@@ -1,0 +1,140 @@
+[
+    {
+        "activeAt": "2022-06-13T13:23:13.567934885Z",
+        "annotations": {
+            "description": "The readiness status of node karbon-stackstate-c9a026-k8s-worker-0 has changed 4 times in the last 15 minutes.",
+            "runbook_url": "https://runbooks.prometheus-operator.dev/runbooks/kubernetes/kubenodereadinessflapping",
+            "summary": "Node readiness status is flapping."
+        },
+        "labels": {
+            "alertname": "KubeNodeReadinessFlapping",
+            "node": "karbon-stackstate-c9a026-k8s-worker-0",
+            "severity": "warning"
+        },
+        "state": "pending"
+    },
+    {
+        "activeAt": "2022-06-13T09:09:47.186985036Z",
+        "annotations": {
+            "description": "The API server is burning too much error budget.",
+            "runbook_url": "https://runbooks.prometheus-operator.dev/runbooks/kubernetes/kubeapierrorbudgetburn",
+            "summary": "The API server is burning too much error budget."
+        },
+        "labels": {
+            "alertname": "KubeAPIErrorBudgetBurn",
+            "long": "3d",
+            "severity": "warning",
+            "short": "6h"
+        },
+        "state": "firing"
+    },
+    {
+        "activeAt": "2022-06-13T13:19:43.468101384Z",
+        "annotations": {
+            "description": "29.82% throttling of CPU in namespace kube-system for container kube-proxy in pod kube-proxy-ds-df2gf.",
+            "runbook_url": "https://runbooks.prometheus-operator.dev/runbooks/kubernetes/cputhrottlinghigh",
+            "summary": "Processes experience elevated CPU throttling."
+        },
+        "labels": {
+            "alertname": "CPUThrottlingHigh",
+            "container": "kube-proxy",
+            "namespace": "kube-system",
+            "pod": "kube-proxy-ds-df2gf",
+            "severity": "info"
+        },
+        "state": "pending"
+    },
+    {
+        "activeAt": "2022-06-13T13:19:43.468101384Z",
+        "annotations": {
+            "description": "52.85% throttling of CPU in namespace kube-system for container kube-proxy in pod kube-proxy-ds-mmrg7.",
+            "runbook_url": "https://runbooks.prometheus-operator.dev/runbooks/kubernetes/cputhrottlinghigh",
+            "summary": "Processes experience elevated CPU throttling."
+        },
+        "labels": {
+            "alertname": "CPUThrottlingHigh",
+            "container": "kube-proxy",
+            "namespace": "kube-system",
+            "pod": "kube-proxy-ds-mmrg7",
+            "severity": "info"
+        },
+        "state": "pending"
+    },
+    {
+        "activeAt": "2022-06-13T13:19:43.468101384Z",
+        "annotations": {
+            "description": "45.69% throttling of CPU in namespace kube-system for container kube-proxy in pod kube-proxy-ds-xgmnc.",
+            "runbook_url": "https://runbooks.prometheus-operator.dev/runbooks/kubernetes/cputhrottlinghigh",
+            "summary": "Processes experience elevated CPU throttling."
+        },
+        "labels": {
+            "alertname": "CPUThrottlingHigh",
+            "container": "kube-proxy",
+            "namespace": "kube-system",
+            "pod": "kube-proxy-ds-xgmnc",
+            "severity": "info"
+        },
+        "state": "pending"
+    },
+    {
+        "activeAt": "2022-06-13T13:20:13.468101384Z",
+        "annotations": {
+            "description": "53.82% throttling of CPU in namespace kube-system for container kube-proxy in pod kube-proxy-ds-cp4pb.",
+            "runbook_url": "https://runbooks.prometheus-operator.dev/runbooks/kubernetes/cputhrottlinghigh",
+            "summary": "Processes experience elevated CPU throttling."
+        },
+        "labels": {
+            "alertname": "CPUThrottlingHigh",
+            "container": "kube-proxy",
+            "namespace": "kube-system",
+            "pod": "kube-proxy-ds-cp4pb",
+            "severity": "info"
+        },
+        "state": "pending"
+    },
+    {
+        "activeAt": "2022-06-13T13:19:43.468101384Z",
+        "annotations": {
+            "description": "62.11% throttling of CPU in namespace kube-system for container kube-proxy in pod kube-proxy-ds-frt2f.",
+            "runbook_url": "https://runbooks.prometheus-operator.dev/runbooks/kubernetes/cputhrottlinghigh",
+            "summary": "Processes experience elevated CPU throttling."
+        },
+        "labels": {
+            "alertname": "CPUThrottlingHigh",
+            "container": "kube-proxy",
+            "namespace": "kube-system",
+            "pod": "kube-proxy-ds-frt2f",
+            "severity": "info"
+        },
+        "state": "pending"
+    },
+    {
+        "activeAt": "2022-06-13T13:19:43.468101384Z",
+        "annotations": {
+            "description": "56.56% throttling of CPU in namespace kube-system for container kube-proxy in pod kube-proxy-ds-9qczg.",
+            "runbook_url": "https://runbooks.prometheus-operator.dev/runbooks/kubernetes/cputhrottlinghigh",
+            "summary": "Processes experience elevated CPU throttling."
+        },
+        "labels": {
+            "alertname": "CPUThrottlingHigh",
+            "container": "kube-proxy",
+            "namespace": "kube-system",
+            "pod": "kube-proxy-ds-9qczg",
+            "severity": "info"
+        },
+        "state": "pending"
+    },
+    {
+        "activeAt": "2022-06-13T09:08:20.495429517Z",
+        "annotations": {
+            "description": "This is an alert meant to ensure that the entire alerting pipeline is functional.\nThis alert is always firing, therefore it should always be firing in Alertmanager\nand always fire against a receiver. There are integrations with various notification\nmechanisms that send a notification when this alert is not firing. For example the\n\"DeadMansSnitch\" integration in PagerDuty.\n",
+            "runbook_url": "https://runbooks.prometheus-operator.dev/runbooks/general/watchdog",
+            "summary": "An alert that should always be firing to certify that Alertmanager is working properly."
+        },
+        "labels": {
+            "alertname": "Watchdog",
+            "severity": "none"
+        },
+        "state": "firing"
+    }
+]

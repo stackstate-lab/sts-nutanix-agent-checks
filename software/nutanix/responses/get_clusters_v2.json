@@ -1,0 +1,335 @@
+{
+    "metadata": {
+      "grand_total_entities": 1,
+      "total_entities": 1,
+      "filter_criteria": "",
+      "sort_criteria": "",
+      "page": 1,
+      "count": 1,
+      "start_index": 1,
+      "end_index": 1
+    },
+    "entities": [
+      {
+        "id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8::7430002736197487304",
+        "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+        "cluster_incarnation_id": 1655092369298463,
+        "cluster_uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+        "name": "DM3-POC090",
+        "cluster_external_ipaddress": "10.55.90.37",
+        "cluster_external_address": [
+          {
+            "ipv4": "10.55.90.37"
+          }
+        ],
+        "cluster_fully_qualified_domain_name": null,
+        "is_nsenabled": false,
+        "cluster_external_data_services_ipaddress": "10.55.90.38",
+        "cluster_external_data_services_address": {
+          "ipv4": "10.55.90.38"
+        },
+        "segmented_iscsi_data_services_ipaddress": null,
+        "segmented_iscsi_data_services_address": null,
+        "cluster_masquerading_ipaddress": null,
+        "cluster_masquerading_address": null,
+        "cluster_masquerading_port": null,
+        "timezone": "UTC",
+        "support_verbosity_type": "BASIC_COREDUMP",
+        "operation_mode": "Normal",
+        "encrypted": true,
+        "cluster_usage_warning_alert_threshold_pct": 75,
+        "cluster_usage_critical_alert_threshold_pct": 90,
+        "storage_type": "all_flash",
+        "cluster_functions": [
+          "NDFS"
+        ],
+        "is_lts": false,
+        "is_registered_to_pc": null,
+        "num_nodes": 4,
+        "block_serials": [
+          "20SM6K250199"
+        ],
+        "version": "6.1",
+        "full_version": "el7.3-release-fraser-6.1-stable-d0d01a21610008feb6f566fbfe4aa767bda26e0a",
+        "target_version": "6.1",
+        "external_subnet": "10.55.90.0/255.255.255.128",
+        "external_address": [
+          {
+            "ipv4": "10.55.90.0/255.255.255.128"
+          }
+        ],
+        "internal_subnet": "192.168.5.0/255.255.255.128",
+        "internal_address": [
+          {
+            "ipv4": "192.168.5.0/255.255.255.128"
+          }
+        ],
+        "ncc_version": "ncc-4.5.0.2",
+        "enable_lock_down": false,
+        "enable_password_remote_login_to_cluster": true,
+        "fingerprint_content_cache_percentage": 100,
+        "ssd_pinning_percentage_limit": 25,
+        "enable_shadow_clones": true,
+        "enable_rf1_container": false,
+        "enable_rebuild_reservation": false,
+        "global_nfs_white_list": [],
+        "global_nfs_white_list_address": [],
+        "name_servers": [
+          "10.55.90.41"
+        ],
+        "name_servers_list": [
+          {
+            "ipv4": "10.55.90.41"
+          }
+        ],
+        "ntp_servers": [
+          "216.239.35.0",
+          "216.239.35.4",
+          "216.239.35.8"
+        ],
+        "ntp_servers_list": [
+          {
+            "ipv4": "216.239.35.0"
+          },
+          {
+            "ipv4": "216.239.35.4"
+          },
+          {
+            "ipv4": "216.239.35.8"
+          }
+        ],
+        "service_centers": [],
+        "http_proxies": [],
+        "rackable_units": [
+          {
+            "id": 24,
+            "rackable_unit_uuid": "bf1583dc-e6cc-42de-97d2-c6419c9e4a72",
+            "model": "UseLayout",
+            "model_name": "NX-3060-G7",
+            "location": null,
+            "serial": "20SM6K250199",
+            "positions": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ],
+            "nodes": [
+              6,
+              7,
+              8,
+              9
+            ],
+            "node_uuids": [
+              "ed5edbbb-7428-4066-ae90-1270dcca2f37",
+              "d4992e15-8a67-4b8f-a4d5-e8e6b6abdb1f",
+              "da249120-a63b-4050-990a-2d00b4cb1255",
+              "254e54f7-a5a6-4543-a916-0c1699be1b75"
+            ]
+          }
+        ],
+        "public_keys": [],
+        "smtp_server": null,
+        "hypervisor_types": [
+          "kKvm"
+        ],
+        "cluster_redundancy_state": {
+          "current_redundancy_factor": 2,
+          "desired_redundancy_factor": 2,
+          "redundancy_status": {
+            "kCassandraPrepareDone": true,
+            "kZookeeperPrepareDone": true
+          }
+        },
+        "multicluster": false,
+        "cloudcluster": false,
+        "has_self_encrypting_drive": false,
+        "is_upgrade_in_progress": false,
+        "security_compliance_config": {
+          "schedule": "DAILY",
+          "enable_aide": false,
+          "enable_core": false,
+          "enable_high_strength_password": false,
+          "enable_banner": false,
+          "enable_kernel_mitigations": false,
+          "enable_kernel_core": false,
+          "ssh_security_level": "DEFAULT",
+          "enable_lock_status": false,
+          "enable_snmpv3_only": false
+        },
+        "hypervisor_security_compliance_config": {
+          "schedule": "DAILY",
+          "enable_aide": false,
+          "enable_core": false,
+          "enable_high_strength_password": false,
+          "enable_banner": false,
+          "enable_kernel_mitigations": null,
+          "enable_kernel_core": null,
+          "ssh_security_level": null,
+          "enable_lock_status": null
+        },
+        "hypervisor_lldp_config": {
+          "enable_lldp_tx": true
+        },
+        "cluster_arch": "X86_64",
+        "cluster_resiliency_preference": {
+          "current_resiliency_preference": "IMMEDIATE",
+          "desired_resiliency_preference": null
+        },
+        "iscsi_config": null,
+        "domain": null,
+        "nos_cluster_and_hosts_domain_joined": false,
+        "all_hyperv_nodes_in_failover_cluster": false,
+        "credential": null,
+        "stats": {
+          "hypervisor_avg_io_latency_usecs": "0",
+          "num_read_iops": "3",
+          "hypervisor_write_io_bandwidth_kBps": "0",
+          "timespan_usecs": "30000000",
+          "controller_num_read_iops": "0",
+          "read_io_ppm": "272237",
+          "controller_num_iops": "654",
+          "total_read_io_time_usecs": "-1",
+          "controller_total_read_io_time_usecs": "6112",
+          "replication_transmitted_bandwidth_kBps": "0",
+          "hypervisor_num_io": "0",
+          "controller_total_transformed_usage_bytes": "-1",
+          "hypervisor_cpu_usage_ppm": "93637",
+          "controller_num_write_io": "19639",
+          "avg_read_io_latency_usecs": "-1",
+          "content_cache_logical_ssd_usage_bytes": "0",
+          "controller_total_io_time_usecs": "12693866",
+          "controller_total_read_io_size_kbytes": "32",
+          "controller_num_seq_io": "-1",
+          "controller_read_io_ppm": "407",
+          "content_cache_num_lookups": "801545",
+          "controller_total_io_size_kbytes": "147422",
+          "content_cache_hit_ppm": "987943",
+          "controller_num_io": "19647",
+          "hypervisor_avg_read_io_latency_usecs": "0",
+          "content_cache_num_dedup_ref_count_pph": "100",
+          "num_write_iops": "9",
+          "controller_num_random_io": "-1",
+          "num_iops": "12",
+          "replication_received_bandwidth_kBps": "0",
+          "hypervisor_num_read_io": "0",
+          "hypervisor_total_read_io_time_usecs": "0",
+          "controller_avg_io_latency_usecs": "646",
+          "hypervisor_hyperv_cpu_usage_ppm": "-1",
+          "num_io": "371",
+          "controller_num_read_io": "8",
+          "hypervisor_num_write_io": "0",
+          "controller_seq_io_ppm": "-1",
+          "controller_read_io_bandwidth_kBps": "1",
+          "controller_io_bandwidth_kBps": "4914",
+          "hypervisor_hyperv_memory_usage_ppm": "-1",
+          "hypervisor_timespan_usecs": "29968320",
+          "hypervisor_num_write_iops": "0",
+          "replication_num_transmitted_bytes": "0",
+          "total_read_io_size_kbytes": "1099",
+          "hypervisor_total_io_size_kbytes": "0",
+          "avg_io_latency_usecs": "483",
+          "hypervisor_num_read_iops": "0",
+          "content_cache_saved_ssd_usage_bytes": "0",
+          "controller_write_io_bandwidth_kBps": "4913",
+          "controller_write_io_ppm": "999592",
+          "hypervisor_avg_write_io_latency_usecs": "0",
+          "hypervisor_total_read_io_size_kbytes": "0",
+          "read_io_bandwidth_kBps": "36",
+          "hypervisor_esx_memory_usage_ppm": "-1",
+          "hypervisor_memory_usage_ppm": "220650",
+          "hypervisor_num_iops": "0",
+          "hypervisor_io_bandwidth_kBps": "0",
+          "controller_num_write_iops": "654",
+          "total_io_time_usecs": "179279",
+          "hypervisor_kvm_cpu_usage_ppm": "93637",
+          "content_cache_physical_ssd_usage_bytes": "0",
+          "controller_random_io_ppm": "-1",
+          "controller_avg_read_io_size_kbytes": "4",
+          "total_transformed_usage_bytes": "-1",
+          "avg_write_io_latency_usecs": "-1",
+          "num_read_io": "101",
+          "write_io_bandwidth_kBps": "1879",
+          "hypervisor_read_io_bandwidth_kBps": "0",
+          "random_io_ppm": "-1",
+          "content_cache_num_hits": "791881",
+          "total_untransformed_usage_bytes": "-1",
+          "hypervisor_total_io_time_usecs": "0",
+          "num_random_io": "-1",
+          "hypervisor_kvm_memory_usage_ppm": "220650",
+          "controller_avg_write_io_size_kbytes": "7",
+          "controller_avg_read_io_latency_usecs": "764",
+          "num_write_io": "270",
+          "hypervisor_esx_cpu_usage_ppm": "-1",
+          "total_io_size_kbytes": "57475",
+          "io_bandwidth_kBps": "1915",
+          "content_cache_physical_memory_usage_bytes": "33561511796",
+          "replication_num_received_bytes": "0",
+          "controller_timespan_usecs": "30000000",
+          "num_seq_io": "-1",
+          "content_cache_saved_memory_usage_bytes": "0",
+          "seq_io_ppm": "-1",
+          "write_io_ppm": "727762",
+          "controller_avg_write_io_latency_usecs": "646",
+          "content_cache_logical_memory_usage_bytes": "33561511796"
+        },
+        "usage_stats": {
+          "data_reduction.overall.saving_ratio_ppm": "124621390",
+          "storage.reserved_free_bytes": "0",
+          "storage_tier.das-sata.usage_bytes": "0",
+          "data_reduction.compression.saved_bytes": "172359680",
+          "data_reduction.saving_ratio_ppm": "1000700",
+          "data_reduction.erasure_coding.post_reduction_bytes": "246013755392",
+          "storage_tier.ssd.pinned_usage_bytes": "0",
+          "storage.reserved_usage_bytes": "0",
+          "data_reduction.erasure_coding.saving_ratio_ppm": "1000000",
+          "data_reduction.thin_provision.saved_bytes": "30170781535232",
+          "storage_tier.das-sata.capacity_bytes": "0",
+          "storage_tier.das-sata.free_bytes": "0",
+          "storage.usage_bytes": "305828155392",
+          "data_reduction.erasure_coding.saved_bytes": "0",
+          "storage.recycle_bin_usage_bytes": "44030558208",
+          "data_reduction.compression.pre_reduction_bytes": "246186115072",
+          "storage.rebuild_capacity_bytes": "-1",
+          "storage_tier.das-sata.pinned_usage_bytes": "0",
+          "data_reduction.pre_reduction_bytes": "246186115072",
+          "storage_tier.ssd.capacity_bytes": "11930594548136",
+          "data_reduction.clone.saved_bytes": "241608643584",
+          "storage_tier.ssd.free_bytes": "11624762728790",
+          "data_reduction.dedup.pre_reduction_bytes": "242841834716",
+          "data_reduction.erasure_coding.pre_reduction_bytes": "246013755392",
+          "storage.capacity_bytes": "11930594548136",
+          "data_reduction.dedup.post_reduction_bytes": "242841834716",
+          "storage.snapshot_reclaimable_bytes": "36731166720",
+          "data_reduction.clone.saving_ratio_ppm": "1994921",
+          "storage.logical_usage_bytes": "344540119040",
+          "data_reduction.saved_bytes": "172359680",
+          "storage.free_bytes": "11624766392744",
+          "storage_tier.ssd.usage_bytes": "305831819346",
+          "data_reduction.compression.post_reduction_bytes": "246013755392",
+          "data_reduction.post_reduction_bytes": "246013755392",
+          "data_reduction.dedup.saved_bytes": "0",
+          "data_reduction.overall.saved_bytes": "30412562538496",
+          "data_reduction.thin_provision.post_reduction_bytes": "181045363712",
+          "data_reduction.thin_provision.saving_ratio_ppm": "167647634",
+          "data_reduction.compression.saving_ratio_ppm": "1000700",
+          "data_reduction.dedup.saving_ratio_ppm": "1000000",
+          "storage_tier.ssd.pinned_bytes": "0",
+          "storage.reserved_capacity_bytes": "0",
+          "data_reduction.thin_provision.pre_reduction_bytes": "30351826898944"
+        },
+        "enforce_rackable_unit_aware_placement": false,
+        "disable_degraded_node_monitoring": false,
+        "common_criteria_mode": false,
+        "enable_on_disk_dedup": null,
+        "management_servers": null,
+        "fault_tolerance_domain_type": "NODE",
+        "threshold_for_storage_thin_provision": null,
+        "recycle_bin_dto": {
+          "recycle_bin_ttlsecs": 86400,
+          "delete_intent_set": null
+        },
+        "data_in_transit_encryption_dto": null
+      }
+    ]
+  }

@@ -1,0 +1,76 @@
+{
+    "entity_type": "cluster_resiliency_info",
+    "filtered_group_count": 1,
+    "total_entity_count": 1,
+    "filtered_entity_count": 1,
+    "group_results": [
+        {
+            "entity_results": [
+                {
+                    "entity_id": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+                    "data": [
+                        {
+                            "values": [
+                                {
+                                    "values": [
+                                        "OK"
+                                    ],
+                                    "time": 1655092918096132
+                                }
+                            ],
+                            "name": "resiliency_status"
+                        },
+                        {
+                            "values": [
+                                {
+                                    "values": [
+                                        "20"
+                                    ],
+                                    "time": 1655092918096132
+                                }
+                            ],
+                            "name": "resiliency_status_priority"
+                        },
+                        {
+                            "values": [
+                                {
+                                    "values": [
+                                        "Node"
+                                    ],
+                                    "time": 1655092918096132
+                                }
+                            ],
+                            "name": "current_failure_domain"
+                        },
+                        {
+                            "values": [
+                                {
+                                    "values": [
+                                        "1"
+                                    ],
+                                    "time": 1655092918096132
+                                }
+                            ],
+                            "name": "current_fault_tolerance"
+                        },
+                        {
+                            "values": [
+                                {
+                                    "values": [
+                                        "false"
+                                    ],
+                                    "time": 1655092918096132
+                                }
+                            ],
+                            "name": "fault_tolerance_degraded"
+                        }
+                    ]
+                }
+            ],
+            "group_by_column_value": "",
+            "total_entity_count": 1,
+            "group_summaries": {}
+        }
+    ],
+    "total_group_count": 1
+}

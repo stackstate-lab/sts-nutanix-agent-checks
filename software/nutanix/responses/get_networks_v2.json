@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "grand_total_entities": 2,
+    "total_entities": 2
+  },
+  "entities": [
+    {
+      "logical_timestamp": 1,
+      "vlan_id": 901,
+      "ip_config": {
+        "prefix_length": 0,
+        "ipam_enabled": false,
+        "free_ips": -1,
+        "assigned_ips": -1,
+        "num_macs": 0,
+        "dhcp_options": {},
+        "pool": []
+      },
+      "uuid": "f84c65e9-962e-424c-9f54-93b8b352c1c2",
+      "virtual_switch_uuid": "e2f795db-0605-40b0-bb68-f2102cd6c282",
+      "name": "Secondary",
+      "vswitch_name": "br0"
+    },
+    {
+      "logical_timestamp": 73,
+      "vlan_id": 0,
+      "ip_config": {
+        "network_address": "10.55.90.0",
+        "prefix_length": 25,
+        "ipam_enabled": true,
+        "free_ips": 105,
+        "assigned_ips": 23,
+        "num_macs": 20,
+        "default_gateway": "10.55.90.1",
+        "dhcp_options": {
+          "domain_name_servers": "10.55.90.41"
+        },
+        "pool": [
+          {
+            "range": "10.55.90.44 10.55.90.125",
+            "num_free_ips": 64,
+            "num_total_ips": 82
+          }
+        ],
+        "dhcp_server_address": "10.55.90.126"
+      },
+      "uuid": "ddf5a608-59e2-413c-9a8b-8c64efa1315b",
+      "virtual_switch_uuid": "e2f795db-0605-40b0-bb68-f2102cd6c282",
+      "name": "Primary",
+      "vswitch_name": "br0"
+    }
+  ]
+}

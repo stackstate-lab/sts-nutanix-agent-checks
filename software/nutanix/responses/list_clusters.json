@@ -1,0 +1,320 @@
+{
+    "api_version": "3.1",
+    "metadata": {
+      "total_matches": 2,
+      "kind": "cluster"
+    },
+    "entities": [
+      {
+        "status": {
+          "state": "COMPLETE",
+          "name": "Unnamed",
+          "resources": {
+            "config": {
+              "software_map": {
+                "NCC": {
+                  "status": "INSTALLED",
+                  "version": "ncc-4.5.0.2",
+                  "software_type": "NCC"
+                },
+                "NOS": {
+                  "status": "INSTALLED",
+                  "version": "6.1",
+                  "software_type": "NOS"
+                }
+              },
+              "encryption_status": "NOT_SUPPORTED",
+              "service_list": [
+                "PRISM_CENTRAL"
+              ],
+              "redundancy_factor": 1,
+              "cluster_arch": "X86_64",
+              "domain_awareness_level": "NODE",
+              "is_available": true,
+              "build": {
+                "commit_id": "ba34723c17d278808d07448052749018ac06542e",
+                "full_version": "el7.3-release-fraser-6.1-stable-pc-0-ba34723c17d278808d07448052749018ac06542e",
+                "commit_date": "2021-08-22T03:50:20Z",
+                "version": "pc",
+                "short_commit_id": "ba3472",
+                "build_type": "release"
+              },
+              "enabled_feature_list": [
+                "PASSWORD_REMOTE_LOGIN_ENABLED",
+                "SHADOW_CLONES_ENABLED"
+              ],
+              "timezone": "America/Los_Angeles",
+              "operation_mode": "NORMAL"
+            },
+            "network": {
+              "external_subnet": "10.55.90.0/255.255.255.128",
+              "name_server_ip_list": [
+                "10.55.90.41"
+              ],
+              "ntp_server_ip_list": [
+                "216.239.35.0",
+                "216.239.35.4",
+                "216.239.35.8"
+              ],
+              "internal_subnet": "10.55.90.0/255.255.255.128",
+              "smtp_server": {
+                "email_address": "noreply@nutanix.com",
+                "type": "STARTTLS",
+                "server": {
+                  "credentials": {
+                    "username": "apikey"
+                  },
+                  "address": {
+                    "fqdn": "smtp.sendgrid.net",
+                    "port": 587
+                  }
+                }
+              }
+            },
+            "runtime_status_list": [
+              "SSP_CONFIG_OWNER"
+            ]
+          }
+        },
+        "spec": {
+          "name": "Unnamed",
+          "resources": {
+            "config": {
+              "software_map": {
+                "NCC": {
+                  "status": "INSTALLED",
+                  "version": "ncc-4.5.0.2",
+                  "software_type": "NCC"
+                },
+                "NOS": {
+                  "status": "INSTALLED",
+                  "version": "6.1",
+                  "software_type": "NOS"
+                }
+              },
+              "encryption_status": "NOT_SUPPORTED",
+              "redundancy_factor": 1,
+              "domain_awareness_level": "NODE",
+              "enabled_feature_list": [
+                "PASSWORD_REMOTE_LOGIN_ENABLED",
+                "SHADOW_CLONES_ENABLED"
+              ],
+              "timezone": "America/Los_Angeles",
+              "operation_mode": "NORMAL"
+            },
+            "network": {
+              "external_subnet": "10.55.90.0/255.255.255.128",
+              "name_server_ip_list": [
+                "10.55.90.41"
+              ],
+              "smtp_server": {
+                "email_address": "noreply@nutanix.com",
+                "type": "STARTTLS",
+                "server": {
+                  "credentials": {
+                    "username": "apikey"
+                  },
+                  "address": {
+                    "fqdn": "smtp.sendgrid.net",
+                    "port": 587
+                  }
+                }
+              },
+              "internal_subnet": "10.55.90.0/255.255.255.128",
+              "ntp_server_ip_list": [
+                "216.239.35.0",
+                "216.239.35.4",
+                "216.239.35.8"
+              ]
+            }
+          }
+        },
+        "metadata": {
+          "last_update_time": "2022-06-13T05:14:11Z",
+          "kind": "cluster",
+          "uuid": "ad0bd9e9-b727-4976-b518-5ad294d1bb5c",
+          "spec_version": 2,
+          "creation_time": "2022-06-13T05:14:11Z",
+          "spec_hash": "00000000000000000000000000000000000000000000000000",
+          "categories_mapping": {},
+          "categories": {}
+        }
+      },
+      {
+        "status": {
+          "state": "COMPLETE",
+          "name": "DM3-POC090",
+          "resources": {
+            "nodes": {
+              "hypervisor_server_list": [
+                {
+                  "ip": "10.55.90.25",
+                  "version": "el7.nutanix.20201105.30142",
+                  "type": "AHV"
+                },
+                {
+                  "ip": "127.0.0.1",
+                  "version": "",
+                  "type": "AHV"
+                },
+                {
+                  "ip": "10.55.90.27",
+                  "version": "el7.nutanix.20201105.30142",
+                  "type": "AHV"
+                },
+                {
+                  "ip": "10.55.90.26",
+                  "version": "el7.nutanix.20201105.30142",
+                  "type": "AHV"
+                },
+                {
+                  "ip": "10.55.90.28",
+                  "version": "el7.nutanix.20201105.30142",
+                  "type": "AHV"
+                }
+              ]
+            },
+            "config": {
+              "software_map": {
+                "NCC": {
+                  "status": "INSTALLED",
+                  "version": "ncc-4.5.0.2",
+                  "software_type": "NCC"
+                },
+                "NOS": {
+                  "status": "INSTALLED",
+                  "version": "6.1",
+                  "software_type": "NOS"
+                }
+              },
+              "encryption_status": "NOT_SUPPORTED",
+              "service_list": [
+                "AOS"
+              ],
+              "redundancy_factor": 2,
+              "supported_information_verbosity": "BASIC_PLUS_CORE_DUMP",
+              "cluster_arch": "X86_64",
+              "domain_awareness_level": "NODE",
+              "is_available": true,
+              "build": {
+                "commit_id": "d0d01a21610008feb6f566fbfe4aa767bda26e0a",
+                "full_version": "el7.3-release-fraser-6.1-stable-d0d01a21610008feb6f566fbfe4aa767bda26e0a",
+                "is_long_term_support": false,
+                "version": "6.1",
+                "short_commit_id": "d0d01a",
+                "build_type": "release"
+              },
+              "enabled_feature_list": [
+                "PASSWORD_REMOTE_LOGIN_ENABLED",
+                "SHADOW_CLONES_ENABLED"
+              ],
+              "timezone": "UTC",
+              "operation_mode": "NORMAL"
+            },
+            "network": {
+              "external_ip": "10.55.90.37",
+              "ntp_server_ip_list": [
+                "216.239.35.0",
+                "216.239.35.4",
+                "216.239.35.8"
+              ],
+              "smtp_server": {
+                "email_address": "noreply@nutanix.com",
+                "type": "STARTTLS",
+                "server": {
+                  "credentials": {
+                    "username": "apikey"
+                  },
+                  "address": {
+                    "fqdn": "smtp.sendgrid.net",
+                    "port": 587
+                  }
+                }
+              },
+              "external_subnet": "10.55.90.0/255.255.255.128",
+              "external_data_services_ip": "10.55.90.38",
+              "name_server_ip_list": [
+                "10.55.90.41"
+              ],
+              "internal_subnet": "192.168.5.0/255.255.255.128"
+            },
+            "analysis": {
+              "vm_efficiency_map": {
+                "dead_vm_num": "0",
+                "bully_vm_num": "0",
+                "constrained_vm_num": "0",
+                "inefficient_vm_num": "0",
+                "overprovisioned_vm_num": "0"
+              }
+            }
+          }
+        },
+        "spec": {
+          "name": "DM3-POC090",
+          "resources": {
+            "config": {
+              "software_map": {
+                "NCC": {
+                  "status": "INSTALLED",
+                  "version": "ncc-4.5.0.2",
+                  "software_type": "NCC"
+                },
+                "NOS": {
+                  "status": "INSTALLED",
+                  "version": "6.1",
+                  "software_type": "NOS"
+                }
+              },
+              "encryption_status": "NOT_SUPPORTED",
+              "supported_information_verbosity": "BASIC_PLUS_CORE_DUMP",
+              "redundancy_factor": 2,
+              "domain_awareness_level": "NODE",
+              "enabled_feature_list": [
+                "PASSWORD_REMOTE_LOGIN_ENABLED",
+                "SHADOW_CLONES_ENABLED"
+              ],
+              "timezone": "UTC",
+              "operation_mode": "NORMAL"
+            },
+            "network": {
+              "external_ip": "10.55.90.37",
+              "smtp_server": {
+                "email_address": "noreply@nutanix.com",
+                "type": "STARTTLS",
+                "server": {
+                  "credentials": {
+                    "username": "apikey"
+                  },
+                  "address": {
+                    "fqdn": "smtp.sendgrid.net",
+                    "port": 587
+                  }
+                }
+              },
+              "ntp_server_ip_list": [
+                "216.239.35.0",
+                "216.239.35.4",
+                "216.239.35.8"
+              ],
+              "external_subnet": "10.55.90.0/255.255.255.128",
+              "external_data_services_ip": "10.55.90.38",
+              "name_server_ip_list": [
+                "10.55.90.41"
+              ],
+              "internal_subnet": "192.168.5.0/255.255.255.128"
+            }
+          }
+        },
+        "metadata": {
+          "last_update_time": "2022-06-13T05:16:00Z",
+          "kind": "cluster",
+          "uuid": "0005e14c-38be-141f-671c-ac1f6b3b4ac8",
+          "spec_version": 1,
+          "creation_time": "2022-06-13T05:16:00Z",
+          "spec_hash": "00000000000000000000000000000000000000000000000000",
+          "categories_mapping": {},
+          "categories": {}
+        }
+      }
+    ]
+  }

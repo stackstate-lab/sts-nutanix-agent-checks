@@ -1,0 +1,208 @@
+{
+  "metadata": {
+    "grand_total_entities": 20,
+    "total_entities": 20
+  },
+  "entities": [
+    {
+      "mac_address": "50:6b:8d:d5:c6:51",
+      "ip_address": "10.55.90.41",
+      "network_uuid": null,
+      "entity_uuid": "83a87a10-0d85-42c5-a2f6-3467a0a602e2",
+      "vm_name": "AutoAD",
+      "overlay_network_id": null,
+      "type": "VM",
+      "deleted": null
+    },
+    {
+      "mac_address": "50:6b:8d:aa:68:29",
+      "ip_address": "10.55.90.39",
+      "network_uuid": null,
+      "entity_uuid": "0a47796c-4fc4-442e-89ca-25ff5ef8752d",
+      "vm_name": "Prism Central pc.2022.1",
+      "overlay_network_id": null,
+      "type": "VM",
+      "deleted": null
+    },
+    {
+      "mac_address": "50:6b:8d:c2:33:3f",
+      "ip_address": "10.55.90.76",
+      "network_uuid": null,
+      "entity_uuid": "8f26279d-7d67-438a-9080-0a18aafd514b",
+      "vm_name": "karbon-stackstate-5f525a-etcd-1",
+      "overlay_network_id": null,
+      "type": "VM",
+      "deleted": null
+    },
+    {
+      "mac_address": "50:6b:8d:fb:13:25",
+      "ip_address": "10.55.90.64",
+      "network_uuid": null,
+      "entity_uuid": "2add6e8d-6f99-42ff-94db-05483926eed0",
+      "vm_name": "karbon-stackstate-5f525a-etcd-0",
+      "overlay_network_id": null,
+      "type": "VM",
+      "deleted": null
+    },
+    {
+      "mac_address": "50:6b:8d:94:63:48",
+      "ip_address": "10.55.90.72",
+      "network_uuid": null,
+      "entity_uuid": "0d1145d9-e67e-425e-bcfb-a869d18b842c",
+      "vm_name": "karbon-stackstate-5f525a-etcd-2",
+      "overlay_network_id": null,
+      "type": "VM",
+      "deleted": null
+    },
+    {
+      "mac_address": "50:6b:8d:a0:1c:a4",
+      "ip_address": "10.55.90.119",
+      "network_uuid": null,
+      "entity_uuid": "7ccd0ba5-c998-4ecb-ae8a-05d2b3c6388f",
+      "vm_name": "karbon-stackstate-c9a026-k8s-master-0",
+      "overlay_network_id": null,
+      "type": "VM",
+      "deleted": null
+    },
+    {
+      "mac_address": "50:6b:8d:a7:3c:17",
+      "ip_address": "10.55.90.67",
+      "network_uuid": null,
+      "entity_uuid": "251ae818-431b-4c71-aa10-ec86e0291c11",
+      "vm_name": "karbon-stackstate-c9a026-k8s-master-1",
+      "overlay_network_id": null,
+      "type": "VM",
+      "deleted": null
+    },
+    {
+      "mac_address": "50:6b:8d:84:b6:55",
+      "ip_address": "10.55.90.95",
+      "network_uuid": null,
+      "entity_uuid": "e917f8e2-8491-40fc-81e1-af5c3365634d",
+      "vm_name": "karbon-stackstate-c9a026-k8s-worker-1",
+      "overlay_network_id": null,
+      "type": "VM",
+      "deleted": null
+    },
+    {
+      "mac_address": "50:6b:8d:80:06:d1",
+      "ip_address": "10.55.90.62",
+      "network_uuid": null,
+      "entity_uuid": "c38f0dae-0a19-4f71-a6dc-76cd524c74f3",
+      "vm_name": "karbon-stackstate-c9a026-k8s-worker-3",
+      "overlay_network_id": null,
+      "type": "VM",
+      "deleted": null
+    },
+    {
+      "mac_address": "50:6b:8d:86:57:d2",
+      "ip_address": "10.55.90.124",
+      "network_uuid": null,
+      "entity_uuid": "c81730a6-ad5f-4748-b909-d9352878545b",
+      "vm_name": "karbon-stackstate-c9a026-k8s-worker-0",
+      "overlay_network_id": null,
+      "type": "VM",
+      "deleted": null
+    },
+    {
+      "mac_address": "50:6b:8d:cc:06:25",
+      "ip_address": "10.55.90.90",
+      "network_uuid": null,
+      "entity_uuid": "ce68d149-2064-4fb3-8543-42ad6005fa2b",
+      "vm_name": "karbon-stackstate-c9a026-k8s-worker-2",
+      "overlay_network_id": null,
+      "type": "VM",
+      "deleted": null
+    },
+    {
+      "mac_address": "50:6b:8d:a7:01:81",
+      "ip_address": "10.55.90.111",
+      "network_uuid": null,
+      "entity_uuid": "bb02f5b3-2e57-458e-9b31-4eba3dea85b8",
+      "vm_name": "karbon-stackstatev4-bab92c-etcd-1",
+      "overlay_network_id": null,
+      "type": "VM",
+      "deleted": null
+    },
+    {
+      "mac_address": "50:6b:8d:b7:64:30",
+      "ip_address": "10.55.90.92",
+      "network_uuid": null,
+      "entity_uuid": "a35443a4-6d14-4e93-bc6c-56c9581a96a9",
+      "vm_name": "karbon-stackstatev4-bab92c-etcd-0",
+      "overlay_network_id": null,
+      "type": "VM",
+      "deleted": null
+    },
+    {
+      "mac_address": "50:6b:8d:df:ce:e0",
+      "ip_address": "10.55.90.106",
+      "network_uuid": null,
+      "entity_uuid": "ef7aa297-31b4-4263-a6cf-ccb559a5d28c",
+      "vm_name": "karbon-stackstatev4-bab92c-etcd-2",
+      "overlay_network_id": null,
+      "type": "VM",
+      "deleted": null
+    },
+    {
+      "mac_address": "50:6b:8d:89:a6:90",
+      "ip_address": "10.55.90.80",
+      "network_uuid": null,
+      "entity_uuid": "ea6469f2-29a4-4b35-b1ad-3615660f125c",
+      "vm_name": "karbon-stackstatev4-83d704-k8s-master-1",
+      "overlay_network_id": null,
+      "type": "VM",
+      "deleted": null
+    },
+    {
+      "mac_address": "50:6b:8d:e5:b8:db",
+      "ip_address": "10.55.90.93",
+      "network_uuid": null,
+      "entity_uuid": "d521083e-6935-4d47-b187-37761f355397",
+      "vm_name": "karbon-stackstatev4-83d704-k8s-master-0",
+      "overlay_network_id": null,
+      "type": "VM",
+      "deleted": null
+    },
+    {
+      "mac_address": "50:6b:8d:8f:98:52",
+      "ip_address": "10.55.90.56",
+      "network_uuid": null,
+      "entity_uuid": "d8f1d479-e7e2-4e2e-bbdf-c1cc03e84756",
+      "vm_name": "karbon-stackstatev4-83d704-k8s-worker-1",
+      "overlay_network_id": null,
+      "type": "VM",
+      "deleted": null
+    },
+    {
+      "mac_address": "50:6b:8d:c3:cf:7e",
+      "ip_address": "10.55.90.84",
+      "network_uuid": null,
+      "entity_uuid": "71f01a1c-70c9-4b44-afe4-0eaa873feb99",
+      "vm_name": "karbon-stackstatev4-83d704-k8s-worker-0",
+      "overlay_network_id": null,
+      "type": "VM",
+      "deleted": null
+    },
+    {
+      "mac_address": "50:6b:8d:b0:58:4e",
+      "ip_address": "10.55.90.123",
+      "network_uuid": null,
+      "entity_uuid": "61527059-33b4-48f8-9fd4-52f10690095d",
+      "vm_name": "karbon-stackstatev4-83d704-k8s-worker-3",
+      "overlay_network_id": null,
+      "type": "VM",
+      "deleted": null
+    },
+    {
+      "mac_address": "50:6b:8d:b4:66:18",
+      "ip_address": "10.55.90.74",
+      "network_uuid": null,
+      "entity_uuid": "16657e16-2ee1-4df9-8842-ef28dec35e41",
+      "vm_name": "karbon-stackstatev4-83d704-k8s-worker-2",
+      "overlay_network_id": null,
+      "type": "VM",
+      "deleted": null
+    }
+  ]
+}

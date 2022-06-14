@@ -1,0 +1,1912 @@
+{
+    "metadata": {
+      "grand_total_entities": 20,
+      "total_entities": 20,
+      "count": 20,
+      "start_index": 0,
+      "end_index": 20
+    },
+    "entities": [
+      {
+        "allow_live_migrate": true,
+        "gpus_assigned": false,
+        "boot": {
+          "disk_address": {
+            "device_bus": "scsi",
+            "device_index": 0
+          },
+          "boot_device_type": "disk",
+          "uefi_boot": false,
+          "secure_boot": false
+        },
+        "ha_priority": 0,
+        "host_uuid": "d4992e15-8a67-4b8f-a4d5-e8e6b6abdb1f",
+        "memory_mb": 32768,
+        "name": "karbon-stackstate-c9a026-k8s-worker-1",
+        "num_cores_per_vcpu": 1,
+        "num_vcpus": 8,
+        "power_state": "on",
+        "timezone": "UTC",
+        "uuid": "e917f8e2-8491-40fc-81e1-af5c3365634d",
+        "vm_disk_info": [
+          {
+            "disk_address": {
+              "device_bus": "scsi",
+              "device_index": 0,
+              "disk_label": "scsi.0",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/7bbcef72-3498-44ef-8c5e-0fff0310febc",
+              "vmdisk_uuid": "7bbcef72-3498-44ef-8c5e-0fff0310febc",
+              "device_uuid": "b1f07604-11b3-4ca9-8312-3b12cad662c4"
+            },
+            "is_cdrom": false,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": true,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "source_disk_address": {
+              "vmdisk_uuid": "2139910a-f848-42a6-8ade-82c6a54287bb"
+            },
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 42949672960
+          },
+          {
+            "disk_address": {
+              "device_bus": "scsi",
+              "device_index": 1,
+              "disk_label": "scsi.1",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/8de1d84e-4048-44cb-b94d-1f3cbab16653",
+              "vmdisk_uuid": "8de1d84e-4048-44cb-b94d-1f3cbab16653",
+              "device_uuid": "0d91a643-447c-465a-8889-812e822f2119"
+            },
+            "is_cdrom": false,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": true,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 536870912000
+          },
+          {
+            "disk_address": {
+              "device_bus": "ide",
+              "device_index": 0,
+              "disk_label": "ide.0",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/3284b872-beeb-4897-9be2-c26b99a69a73",
+              "vmdisk_uuid": "3284b872-beeb-4897-9be2-c26b99a69a73",
+              "device_uuid": "ce612d84-c466-427a-a145-a9093d4800d3"
+            },
+            "is_cdrom": true,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": false,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "source_disk_address": {
+              "ndfs_filepath": "/SelfServiceContainer/.vm_customization_isos/1eae493b-5101-437a-8e48-8e62a5eb09af.iso"
+            },
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 382976
+          }
+        ],
+        "vm_features": {
+          "AGENT_VM": false,
+          "VGA_CONSOLE": true
+        },
+        "vm_logical_timestamp": 4,
+        "machine_type": "pc"
+      },
+      {
+        "allow_live_migrate": true,
+        "gpus_assigned": false,
+        "description": "NutanixPrismCentral",
+        "ha_priority": 0,
+        "host_uuid": "d4992e15-8a67-4b8f-a4d5-e8e6b6abdb1f",
+        "memory_mb": 65536,
+        "name": "Prism Central pc.2022.1",
+        "num_cores_per_vcpu": 1,
+        "num_vcpus": 8,
+        "power_state": "on",
+        "timezone": "UTC",
+        "uuid": "0a47796c-4fc4-442e-89ca-25ff5ef8752d",
+        "vm_disk_info": [
+          {
+            "disk_address": {
+              "device_bus": "scsi",
+              "device_index": 0,
+              "disk_label": "scsi.0",
+              "ndfs_filepath": "/Default/.acropolis/vmdisk/2e4cc077-8c79-4a99-9440-72ff0f67efff",
+              "vmdisk_uuid": "2e4cc077-8c79-4a99-9440-72ff0f67efff",
+              "device_uuid": "68e6e2f1-bbec-48c7-96d2-8655cf2f9398"
+            },
+            "is_cdrom": false,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": true,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "source_disk_address": {
+              "ndfs_filepath": "/Default/pc.2022.1-pc-boot.img"
+            },
+            "storage_container_uuid": "c78fea63-deda-476d-a871-8ffd52cd0b1e",
+            "size": 15728640
+          },
+          {
+            "disk_address": {
+              "device_bus": "scsi",
+              "device_index": 1,
+              "disk_label": "scsi.1",
+              "ndfs_filepath": "/Default/.acropolis/vmdisk/27ff0d9a-52ad-4038-8a42-d54b7747c79d",
+              "vmdisk_uuid": "27ff0d9a-52ad-4038-8a42-d54b7747c79d",
+              "device_uuid": "10a7eb78-3c51-4859-b1ba-d792b61c5e08"
+            },
+            "is_cdrom": false,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": true,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "source_disk_address": {
+              "ndfs_filepath": "/Default/pc.2022.1-pc-home.img"
+            },
+            "storage_container_uuid": "c78fea63-deda-476d-a871-8ffd52cd0b1e",
+            "size": 75161927680
+          },
+          {
+            "disk_address": {
+              "device_bus": "scsi",
+              "device_index": 3,
+              "disk_label": "scsi.3",
+              "ndfs_filepath": "/Default/.acropolis/vmdisk/547e04f6-fa8b-404c-b7f1-1dae7f02e90f",
+              "vmdisk_uuid": "547e04f6-fa8b-404c-b7f1-1dae7f02e90f",
+              "device_uuid": "614cb80c-8925-4b6f-ae58-81af6b93c634"
+            },
+            "is_cdrom": false,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": true,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "storage_container_uuid": "c78fea63-deda-476d-a871-8ffd52cd0b1e",
+            "size": 2684354560000
+          },
+          {
+            "disk_address": {
+              "device_bus": "scsi",
+              "device_index": 4,
+              "disk_label": "scsi.4",
+              "ndfs_filepath": "/Default/.acropolis/vmdisk/9552b5c5-4192-4f54-946b-c449d01b5896",
+              "vmdisk_uuid": "9552b5c5-4192-4f54-946b-c449d01b5896",
+              "device_uuid": "63563575-2a6a-45d6-a40f-9ddaa1d2642b"
+            },
+            "is_cdrom": false,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": true,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "storage_container_uuid": "c78fea63-deda-476d-a871-8ffd52cd0b1e",
+            "size": 383478923264
+          },
+          {
+            "disk_address": {
+              "device_bus": "ide",
+              "device_index": 0,
+              "disk_label": "ide.0",
+              "ndfs_filepath": "/Default/.acropolis/vmdisk/96cf5f68-8aca-41af-b7a1-fbfed0239e26",
+              "vmdisk_uuid": "96cf5f68-8aca-41af-b7a1-fbfed0239e26",
+              "device_uuid": "9cd367a8-970e-4ea1-a2ef-377dc9aee44b"
+            },
+            "is_cdrom": true,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": false,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "source_disk_address": {
+              "ndfs_filepath": "/Default/Prism Central pc.2022.1.iso"
+            },
+            "storage_container_uuid": "c78fea63-deda-476d-a871-8ffd52cd0b1e",
+            "size": 374784
+          },
+          {
+            "disk_address": {
+              "device_bus": "scsi",
+              "device_index": 5,
+              "disk_label": "scsi.5",
+              "ndfs_filepath": "/Default/.acropolis/vmdisk/683eb80b-dc44-4bfc-9f18-490eb403a193",
+              "vmdisk_uuid": "683eb80b-dc44-4bfc-9f18-490eb403a193",
+              "device_uuid": "4d4bcdf7-c31e-4e15-a351-3c6aa113f11b"
+            },
+            "is_cdrom": false,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": true,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "storage_container_uuid": "c78fea63-deda-476d-a871-8ffd52cd0b1e",
+            "size": 2684354560000
+          },
+          {
+            "disk_address": {
+              "device_bus": "scsi",
+              "device_index": 6,
+              "disk_label": "scsi.6",
+              "ndfs_filepath": "/Default/.acropolis/vmdisk/adad3dab-ab91-4b98-8bd8-faa4ddf1ae59",
+              "vmdisk_uuid": "adad3dab-ab91-4b98-8bd8-faa4ddf1ae59",
+              "device_uuid": "3b20f64f-a0f0-4b32-9575-3f8b5b160ed8"
+            },
+            "is_cdrom": false,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": true,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "storage_container_uuid": "c78fea63-deda-476d-a871-8ffd52cd0b1e",
+            "size": 2684354560000
+          },
+          {
+            "disk_address": {
+              "device_bus": "scsi",
+              "device_index": 7,
+              "disk_label": "scsi.7",
+              "ndfs_filepath": "/Default/.acropolis/vmdisk/c2ad79fd-bdf3-4354-8531-7d347af0245d",
+              "vmdisk_uuid": "c2ad79fd-bdf3-4354-8531-7d347af0245d",
+              "device_uuid": "a633837c-1b9d-4efb-a547-53569b924bcd"
+            },
+            "is_cdrom": false,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": true,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "storage_container_uuid": "c78fea63-deda-476d-a871-8ffd52cd0b1e",
+            "size": 2684354560000
+          }
+        ],
+        "vm_features": {
+          "AGENT_VM": false,
+          "VGA_CONSOLE": true
+        },
+        "vm_logical_timestamp": 5,
+        "machine_type": "pc"
+      },
+      {
+        "allow_live_migrate": true,
+        "gpus_assigned": false,
+        "boot": {
+          "disk_address": {
+            "device_bus": "scsi",
+            "device_index": 0
+          },
+          "boot_device_type": "disk",
+          "uefi_boot": false,
+          "secure_boot": false
+        },
+        "ha_priority": 0,
+        "host_uuid": "254e54f7-a5a6-4543-a916-0c1699be1b75",
+        "memory_mb": 8192,
+        "name": "karbon-stackstate-5f525a-etcd-2",
+        "num_cores_per_vcpu": 1,
+        "num_vcpus": 4,
+        "power_state": "on",
+        "timezone": "UTC",
+        "uuid": "0d1145d9-e67e-425e-bcfb-a869d18b842c",
+        "vm_disk_info": [
+          {
+            "disk_address": {
+              "device_bus": "scsi",
+              "device_index": 0,
+              "disk_label": "scsi.0",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/b5880466-80ca-476e-90a4-57d70402e0c9",
+              "vmdisk_uuid": "b5880466-80ca-476e-90a4-57d70402e0c9",
+              "device_uuid": "a9a5ca9b-a480-4ce7-9959-524503de1b4d"
+            },
+            "is_cdrom": false,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": true,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "source_disk_address": {
+              "vmdisk_uuid": "2139910a-f848-42a6-8ade-82c6a54287bb"
+            },
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 42949672960
+          },
+          {
+            "disk_address": {
+              "device_bus": "scsi",
+              "device_index": 1,
+              "disk_label": "scsi.1",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/ca84d9fa-0cfb-4f56-85f6-fd19bb8b5170",
+              "vmdisk_uuid": "ca84d9fa-0cfb-4f56-85f6-fd19bb8b5170",
+              "device_uuid": "8fe4fd99-2c42-4717-8f02-a03cf1f5ab76"
+            },
+            "is_cdrom": false,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": true,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 42949672960
+          },
+          {
+            "disk_address": {
+              "device_bus": "ide",
+              "device_index": 0,
+              "disk_label": "ide.0",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/e7ec7971-265f-4532-9cc2-7e06d72d8218",
+              "vmdisk_uuid": "e7ec7971-265f-4532-9cc2-7e06d72d8218",
+              "device_uuid": "b95edb5a-d98a-4eaf-b018-6317baffb226"
+            },
+            "is_cdrom": true,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": false,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "source_disk_address": {
+              "ndfs_filepath": "/SelfServiceContainer/.vm_customization_isos/99a58791-4266-4922-8557-fce11e6d0a89.iso"
+            },
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 382976
+          }
+        ],
+        "vm_features": {
+          "AGENT_VM": false,
+          "VGA_CONSOLE": true
+        },
+        "vm_logical_timestamp": 4,
+        "machine_type": "pc"
+      },
+      {
+        "allow_live_migrate": true,
+        "gpus_assigned": false,
+        "boot": {
+          "disk_address": {
+            "device_bus": "scsi",
+            "device_index": 0
+          },
+          "boot_device_type": "disk",
+          "uefi_boot": false,
+          "secure_boot": false
+        },
+        "ha_priority": 0,
+        "host_uuid": "254e54f7-a5a6-4543-a916-0c1699be1b75",
+        "memory_mb": 8192,
+        "name": "karbon-stackstatev2-76d31b-k8s-worker-2",
+        "num_cores_per_vcpu": 1,
+        "num_vcpus": 8,
+        "power_state": "on",
+        "timezone": "UTC",
+        "uuid": "24c3c7ac-89af-4781-9e63-d75343de8c90",
+        "vm_disk_info": [
+          {
+            "disk_address": {
+              "device_bus": "scsi",
+              "device_index": 0,
+              "disk_label": "scsi.0",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/200eff00-a135-41b5-9fbc-aed641f3199b",
+              "vmdisk_uuid": "200eff00-a135-41b5-9fbc-aed641f3199b",
+              "device_uuid": "0bc0dbb3-9cd9-4398-9997-934c8e7fea41"
+            },
+            "is_cdrom": false,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": true,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "source_disk_address": {
+              "vmdisk_uuid": "2139910a-f848-42a6-8ade-82c6a54287bb"
+            },
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 42949672960
+          },
+          {
+            "disk_address": {
+              "device_bus": "scsi",
+              "device_index": 1,
+              "disk_label": "scsi.1",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/1615eafd-6e1f-4d28-8d66-8271fd2c3cf5",
+              "vmdisk_uuid": "1615eafd-6e1f-4d28-8d66-8271fd2c3cf5",
+              "device_uuid": "6464eb83-8e8a-41c6-8b6d-ff1297690ee9"
+            },
+            "is_cdrom": false,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": true,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 128849018880
+          },
+          {
+            "disk_address": {
+              "device_bus": "ide",
+              "device_index": 0,
+              "disk_label": "ide.0",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/694ac766-4351-493f-8f24-4d35d8504af1",
+              "vmdisk_uuid": "694ac766-4351-493f-8f24-4d35d8504af1",
+              "device_uuid": "72542d3c-22f4-4b04-b637-1fd5ca7c0307"
+            },
+            "is_cdrom": true,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": false,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "source_disk_address": {
+              "ndfs_filepath": "/SelfServiceContainer/.vm_customization_isos/1742b33d-569a-4061-b840-c78ffc3658c9.iso"
+            },
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 382976
+          }
+        ],
+        "vm_features": {
+          "AGENT_VM": false,
+          "VGA_CONSOLE": true
+        },
+        "vm_logical_timestamp": 3,
+        "machine_type": "pc"
+      },
+      {
+        "allow_live_migrate": true,
+        "gpus_assigned": false,
+        "boot": {
+          "disk_address": {
+            "device_bus": "scsi",
+            "device_index": 0
+          },
+          "boot_device_type": "disk",
+          "uefi_boot": false,
+          "secure_boot": false
+        },
+        "ha_priority": 0,
+        "host_uuid": "ed5edbbb-7428-4066-ae90-1270dcca2f37",
+        "memory_mb": 4096,
+        "name": "karbon-stackstate-c9a026-k8s-master-1",
+        "num_cores_per_vcpu": 1,
+        "num_vcpus": 4,
+        "power_state": "on",
+        "timezone": "UTC",
+        "uuid": "251ae818-431b-4c71-aa10-ec86e0291c11",
+        "vm_disk_info": [
+          {
+            "disk_address": {
+              "device_bus": "scsi",
+              "device_index": 0,
+              "disk_label": "scsi.0",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/59bc358f-cb5d-46ba-ad75-dfee9ec24e5b",
+              "vmdisk_uuid": "59bc358f-cb5d-46ba-ad75-dfee9ec24e5b",
+              "device_uuid": "c07eca05-0ccb-4bde-805b-41560a9a9b24"
+            },
+            "is_cdrom": false,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": true,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "source_disk_address": {
+              "vmdisk_uuid": "2139910a-f848-42a6-8ade-82c6a54287bb"
+            },
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 42949672960
+          },
+          {
+            "disk_address": {
+              "device_bus": "scsi",
+              "device_index": 1,
+              "disk_label": "scsi.1",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/85dc54ee-2e55-4e78-a386-6e04804aa16a",
+              "vmdisk_uuid": "85dc54ee-2e55-4e78-a386-6e04804aa16a",
+              "device_uuid": "dd79599c-ecef-402e-87f8-7620490072ab"
+            },
+            "is_cdrom": false,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": true,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 128849018880
+          },
+          {
+            "disk_address": {
+              "device_bus": "ide",
+              "device_index": 0,
+              "disk_label": "ide.0",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/e283d7bc-83db-42b1-8874-2fca0ed1ee42",
+              "vmdisk_uuid": "e283d7bc-83db-42b1-8874-2fca0ed1ee42",
+              "device_uuid": "7cc8086c-f8c3-4e40-bfb3-e5a16b06f125"
+            },
+            "is_cdrom": true,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": false,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "source_disk_address": {
+              "ndfs_filepath": "/SelfServiceContainer/.vm_customization_isos/507300c1-605d-41e5-abde-4921e4d8863a.iso"
+            },
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 382976
+          }
+        ],
+        "vm_features": {
+          "AGENT_VM": false,
+          "VGA_CONSOLE": true
+        },
+        "vm_logical_timestamp": 4,
+        "machine_type": "pc"
+      },
+      {
+        "allow_live_migrate": true,
+        "gpus_assigned": false,
+        "boot": {
+          "disk_address": {
+            "device_bus": "scsi",
+            "device_index": 0
+          },
+          "boot_device_type": "disk",
+          "uefi_boot": false,
+          "secure_boot": false
+        },
+        "ha_priority": 0,
+        "host_uuid": "ed5edbbb-7428-4066-ae90-1270dcca2f37",
+        "memory_mb": 8192,
+        "name": "karbon-stackstate-5f525a-etcd-0",
+        "num_cores_per_vcpu": 1,
+        "num_vcpus": 4,
+        "power_state": "on",
+        "timezone": "UTC",
+        "uuid": "2add6e8d-6f99-42ff-94db-05483926eed0",
+        "vm_disk_info": [
+          {
+            "disk_address": {
+              "device_bus": "scsi",
+              "device_index": 0,
+              "disk_label": "scsi.0",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/7e1d78ec-4483-46de-b15b-95d9d38b75c6",
+              "vmdisk_uuid": "7e1d78ec-4483-46de-b15b-95d9d38b75c6",
+              "device_uuid": "ebbf249b-690a-4127-b034-0843b7398e40"
+            },
+            "is_cdrom": false,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": true,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "source_disk_address": {
+              "vmdisk_uuid": "2139910a-f848-42a6-8ade-82c6a54287bb"
+            },
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 42949672960
+          },
+          {
+            "disk_address": {
+              "device_bus": "scsi",
+              "device_index": 1,
+              "disk_label": "scsi.1",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/79839270-36c9-492b-b18c-5fcc24594fc7",
+              "vmdisk_uuid": "79839270-36c9-492b-b18c-5fcc24594fc7",
+              "device_uuid": "48a3e99a-02ad-4e00-8f50-025899d86b85"
+            },
+            "is_cdrom": false,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": true,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 42949672960
+          },
+          {
+            "disk_address": {
+              "device_bus": "ide",
+              "device_index": 0,
+              "disk_label": "ide.0",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/eb1e53bf-f059-4b3d-88d9-60252ec01477",
+              "vmdisk_uuid": "eb1e53bf-f059-4b3d-88d9-60252ec01477",
+              "device_uuid": "6cfd2384-4547-47dd-9896-f7cce182f581"
+            },
+            "is_cdrom": true,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": false,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "source_disk_address": {
+              "ndfs_filepath": "/SelfServiceContainer/.vm_customization_isos/b4744801-4468-45ea-8757-4eb176b29aee.iso"
+            },
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 382976
+          }
+        ],
+        "vm_features": {
+          "AGENT_VM": false,
+          "VGA_CONSOLE": true
+        },
+        "vm_logical_timestamp": 3,
+        "machine_type": "pc"
+      },
+      {
+        "allow_live_migrate": true,
+        "gpus_assigned": false,
+        "boot": {
+          "disk_address": {
+            "device_bus": "scsi",
+            "device_index": 0
+          },
+          "boot_device_type": "disk",
+          "uefi_boot": false,
+          "secure_boot": false
+        },
+        "ha_priority": 0,
+        "host_uuid": "ed5edbbb-7428-4066-ae90-1270dcca2f37",
+        "memory_mb": 8192,
+        "name": "karbon-stackstatev2-76d31b-k8s-worker-3",
+        "num_cores_per_vcpu": 1,
+        "num_vcpus": 8,
+        "power_state": "on",
+        "timezone": "UTC",
+        "uuid": "2f67265a-0191-4150-85de-51524df096f4",
+        "vm_disk_info": [
+          {
+            "disk_address": {
+              "device_bus": "scsi",
+              "device_index": 0,
+              "disk_label": "scsi.0",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/40d20c8c-ff23-4430-a373-bca34acd94f7",
+              "vmdisk_uuid": "40d20c8c-ff23-4430-a373-bca34acd94f7",
+              "device_uuid": "a8061733-8d7e-46fd-add0-24bd04c4fe8f"
+            },
+            "is_cdrom": false,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": true,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "source_disk_address": {
+              "vmdisk_uuid": "2139910a-f848-42a6-8ade-82c6a54287bb"
+            },
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 42949672960
+          },
+          {
+            "disk_address": {
+              "device_bus": "scsi",
+              "device_index": 1,
+              "disk_label": "scsi.1",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/c3381cc8-de69-446a-83b2-e729673f7422",
+              "vmdisk_uuid": "c3381cc8-de69-446a-83b2-e729673f7422",
+              "device_uuid": "fa657791-f69a-4a8a-a92f-3bc22e5622af"
+            },
+            "is_cdrom": false,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": true,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 128849018880
+          },
+          {
+            "disk_address": {
+              "device_bus": "ide",
+              "device_index": 0,
+              "disk_label": "ide.0",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/f4a05d2a-c5db-46bd-9aae-1b1829bc9d70",
+              "vmdisk_uuid": "f4a05d2a-c5db-46bd-9aae-1b1829bc9d70",
+              "device_uuid": "2f7d8b75-41cd-448b-800c-754288bae49a"
+            },
+            "is_cdrom": true,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": false,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "source_disk_address": {
+              "ndfs_filepath": "/SelfServiceContainer/.vm_customization_isos/a42ddbd0-a80c-48f5-8851-a55a3eb1a855.iso"
+            },
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 382976
+          }
+        ],
+        "vm_features": {
+          "AGENT_VM": false,
+          "VGA_CONSOLE": true
+        },
+        "vm_logical_timestamp": 3,
+        "machine_type": "pc"
+      },
+      {
+        "allow_live_migrate": true,
+        "gpus_assigned": false,
+        "boot": {
+          "disk_address": {
+            "device_bus": "scsi",
+            "device_index": 0
+          },
+          "boot_device_type": "disk",
+          "uefi_boot": false,
+          "secure_boot": false
+        },
+        "ha_priority": 0,
+        "host_uuid": "ed5edbbb-7428-4066-ae90-1270dcca2f37",
+        "memory_mb": 8192,
+        "name": "karbon-stackstatev2-068094-etcd-2",
+        "num_cores_per_vcpu": 1,
+        "num_vcpus": 4,
+        "power_state": "on",
+        "timezone": "UTC",
+        "uuid": "463d26ab-40c4-4986-b0bc-63be4341eb8c",
+        "vm_disk_info": [
+          {
+            "disk_address": {
+              "device_bus": "scsi",
+              "device_index": 0,
+              "disk_label": "scsi.0",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/d71496ce-f34e-4a3b-a38b-5adfdaafdd94",
+              "vmdisk_uuid": "d71496ce-f34e-4a3b-a38b-5adfdaafdd94",
+              "device_uuid": "a582f12a-6ae4-49f4-a487-a5e21ad5f598"
+            },
+            "is_cdrom": false,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": true,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "source_disk_address": {
+              "vmdisk_uuid": "2139910a-f848-42a6-8ade-82c6a54287bb"
+            },
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 42949672960
+          },
+          {
+            "disk_address": {
+              "device_bus": "scsi",
+              "device_index": 1,
+              "disk_label": "scsi.1",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/9c4cf352-6967-4993-9ab0-07b29a249339",
+              "vmdisk_uuid": "9c4cf352-6967-4993-9ab0-07b29a249339",
+              "device_uuid": "2bb3117d-e3a3-48ff-b016-d8fd4401ecc6"
+            },
+            "is_cdrom": false,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": true,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 42949672960
+          },
+          {
+            "disk_address": {
+              "device_bus": "ide",
+              "device_index": 0,
+              "disk_label": "ide.0",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/c8955bd9-2284-46b3-806a-72e73e366168",
+              "vmdisk_uuid": "c8955bd9-2284-46b3-806a-72e73e366168",
+              "device_uuid": "b3295636-e3b7-4e30-9277-adb58d65b3b0"
+            },
+            "is_cdrom": true,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": false,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "source_disk_address": {
+              "ndfs_filepath": "/SelfServiceContainer/.vm_customization_isos/503f3d81-133f-4d58-a4e8-be481edbfe14.iso"
+            },
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 382976
+          }
+        ],
+        "vm_features": {
+          "AGENT_VM": false,
+          "VGA_CONSOLE": true
+        },
+        "vm_logical_timestamp": 3,
+        "machine_type": "pc"
+      },
+      {
+        "allow_live_migrate": true,
+        "gpus_assigned": false,
+        "boot": {
+          "disk_address": {
+            "device_bus": "scsi",
+            "device_index": 0
+          },
+          "boot_device_type": "disk",
+          "uefi_boot": false,
+          "secure_boot": false
+        },
+        "ha_priority": 0,
+        "host_uuid": "da249120-a63b-4050-990a-2d00b4cb1255",
+        "memory_mb": 4096,
+        "name": "karbon-stackstatev2-76d31b-k8s-master-1",
+        "num_cores_per_vcpu": 1,
+        "num_vcpus": 4,
+        "power_state": "on",
+        "timezone": "UTC",
+        "uuid": "4b08310b-1553-4c7c-8c58-d179444a858e",
+        "vm_disk_info": [
+          {
+            "disk_address": {
+              "device_bus": "scsi",
+              "device_index": 0,
+              "disk_label": "scsi.0",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/1635e26b-b5f3-49df-908f-b4d6eda396ec",
+              "vmdisk_uuid": "1635e26b-b5f3-49df-908f-b4d6eda396ec",
+              "device_uuid": "3e754b56-afa4-4cc1-b3f9-b8e9d80b227d"
+            },
+            "is_cdrom": false,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": true,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "source_disk_address": {
+              "vmdisk_uuid": "2139910a-f848-42a6-8ade-82c6a54287bb"
+            },
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 42949672960
+          },
+          {
+            "disk_address": {
+              "device_bus": "scsi",
+              "device_index": 1,
+              "disk_label": "scsi.1",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/f9f8d486-344e-463e-90d1-cd53c51ce811",
+              "vmdisk_uuid": "f9f8d486-344e-463e-90d1-cd53c51ce811",
+              "device_uuid": "15b8e3ee-2884-4e10-b38b-bd885b311c29"
+            },
+            "is_cdrom": false,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": true,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 128849018880
+          },
+          {
+            "disk_address": {
+              "device_bus": "ide",
+              "device_index": 0,
+              "disk_label": "ide.0",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/9c48fb68-be93-4d38-9532-99deb9616723",
+              "vmdisk_uuid": "9c48fb68-be93-4d38-9532-99deb9616723",
+              "device_uuid": "428aa948-e8c1-4006-ae40-20085cb1221a"
+            },
+            "is_cdrom": true,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": false,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "source_disk_address": {
+              "ndfs_filepath": "/SelfServiceContainer/.vm_customization_isos/55442834-cb76-41a4-b9f9-fb2f5d062288.iso"
+            },
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 382976
+          }
+        ],
+        "vm_features": {
+          "AGENT_VM": false,
+          "VGA_CONSOLE": true
+        },
+        "vm_logical_timestamp": 3,
+        "machine_type": "pc"
+      },
+      {
+        "allow_live_migrate": true,
+        "gpus_assigned": false,
+        "boot": {
+          "disk_address": {
+            "device_bus": "scsi",
+            "device_index": 0
+          },
+          "boot_device_type": "disk",
+          "uefi_boot": false,
+          "secure_boot": false
+        },
+        "ha_priority": 0,
+        "host_uuid": "254e54f7-a5a6-4543-a916-0c1699be1b75",
+        "memory_mb": 8192,
+        "name": "karbon-stackstatev2-76d31b-k8s-worker-1",
+        "num_cores_per_vcpu": 1,
+        "num_vcpus": 8,
+        "power_state": "on",
+        "timezone": "UTC",
+        "uuid": "59f70b35-b14c-4347-8613-d12c3906d0a1",
+        "vm_disk_info": [
+          {
+            "disk_address": {
+              "device_bus": "scsi",
+              "device_index": 0,
+              "disk_label": "scsi.0",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/bc47cece-eac5-4c0a-948a-5838bb3a33f5",
+              "vmdisk_uuid": "bc47cece-eac5-4c0a-948a-5838bb3a33f5",
+              "device_uuid": "c6509de4-508f-49ab-8928-59ef00d0058e"
+            },
+            "is_cdrom": false,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": true,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "source_disk_address": {
+              "vmdisk_uuid": "2139910a-f848-42a6-8ade-82c6a54287bb"
+            },
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 42949672960
+          },
+          {
+            "disk_address": {
+              "device_bus": "scsi",
+              "device_index": 1,
+              "disk_label": "scsi.1",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/59750fa5-1591-4499-b9e8-67604245cb2a",
+              "vmdisk_uuid": "59750fa5-1591-4499-b9e8-67604245cb2a",
+              "device_uuid": "65a1bf0a-a726-4680-a4d5-ca46c651dfe4"
+            },
+            "is_cdrom": false,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": true,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 128849018880
+          },
+          {
+            "disk_address": {
+              "device_bus": "ide",
+              "device_index": 0,
+              "disk_label": "ide.0",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/5281a835-8082-4dbf-b5b9-ad888d61c03d",
+              "vmdisk_uuid": "5281a835-8082-4dbf-b5b9-ad888d61c03d",
+              "device_uuid": "4dbd1512-f32d-4f00-93ef-0b4b13ba717e"
+            },
+            "is_cdrom": true,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": false,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "source_disk_address": {
+              "ndfs_filepath": "/SelfServiceContainer/.vm_customization_isos/c1cfa15d-14a3-4c31-a416-c2df5b9c27fe.iso"
+            },
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 382976
+          }
+        ],
+        "vm_features": {
+          "AGENT_VM": false,
+          "VGA_CONSOLE": true
+        },
+        "vm_logical_timestamp": 3,
+        "machine_type": "pc"
+      },
+      {
+        "allow_live_migrate": true,
+        "gpus_assigned": false,
+        "boot": {
+          "disk_address": {
+            "device_bus": "scsi",
+            "device_index": 0
+          },
+          "boot_device_type": "disk",
+          "uefi_boot": false,
+          "secure_boot": false
+        },
+        "ha_priority": 0,
+        "host_uuid": "254e54f7-a5a6-4543-a916-0c1699be1b75",
+        "memory_mb": 4096,
+        "name": "karbon-stackstate-c9a026-k8s-master-0",
+        "num_cores_per_vcpu": 1,
+        "num_vcpus": 4,
+        "power_state": "on",
+        "timezone": "UTC",
+        "uuid": "7ccd0ba5-c998-4ecb-ae8a-05d2b3c6388f",
+        "vm_disk_info": [
+          {
+            "disk_address": {
+              "device_bus": "scsi",
+              "device_index": 0,
+              "disk_label": "scsi.0",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/97a6e689-d763-4a84-a28c-1a06534299d5",
+              "vmdisk_uuid": "97a6e689-d763-4a84-a28c-1a06534299d5",
+              "device_uuid": "c7446070-e74b-4888-85ac-3dd0c07d1003"
+            },
+            "is_cdrom": false,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": true,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "source_disk_address": {
+              "vmdisk_uuid": "2139910a-f848-42a6-8ade-82c6a54287bb"
+            },
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 42949672960
+          },
+          {
+            "disk_address": {
+              "device_bus": "scsi",
+              "device_index": 1,
+              "disk_label": "scsi.1",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/66b7d5d6-c5c3-49bd-b92d-2e51c0e4d85b",
+              "vmdisk_uuid": "66b7d5d6-c5c3-49bd-b92d-2e51c0e4d85b",
+              "device_uuid": "747925f5-c58e-4ca0-b688-1c1894fd65a5"
+            },
+            "is_cdrom": false,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": true,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 128849018880
+          },
+          {
+            "disk_address": {
+              "device_bus": "ide",
+              "device_index": 0,
+              "disk_label": "ide.0",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/6bc42828-3227-44a8-ad62-2c2247cfb8c3",
+              "vmdisk_uuid": "6bc42828-3227-44a8-ad62-2c2247cfb8c3",
+              "device_uuid": "b6e0ab6d-1e62-4414-a4e3-d6a5560e9bde"
+            },
+            "is_cdrom": true,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": false,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "source_disk_address": {
+              "ndfs_filepath": "/SelfServiceContainer/.vm_customization_isos/80cca062-9d44-4a80-a3f3-0edd548aa73c.iso"
+            },
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 382976
+          }
+        ],
+        "vm_features": {
+          "AGENT_VM": false,
+          "VGA_CONSOLE": true
+        },
+        "vm_logical_timestamp": 3,
+        "machine_type": "pc"
+      },
+      {
+        "allow_live_migrate": true,
+        "gpus_assigned": false,
+        "description": "Windows AD Server",
+        "ha_priority": 0,
+        "host_uuid": "254e54f7-a5a6-4543-a916-0c1699be1b75",
+        "memory_mb": 4096,
+        "name": "AutoAD",
+        "num_cores_per_vcpu": 1,
+        "num_vcpus": 2,
+        "power_state": "on",
+        "timezone": "UTC",
+        "uuid": "83a87a10-0d85-42c5-a2f6-3467a0a602e2",
+        "vm_disk_info": [
+          {
+            "disk_address": {
+              "device_bus": "scsi",
+              "device_index": 0,
+              "disk_label": "scsi.0",
+              "ndfs_filepath": "/Default/.acropolis/vmdisk/d725c6b1-3da7-4465-be6c-2ed6802fa287",
+              "vmdisk_uuid": "d725c6b1-3da7-4465-be6c-2ed6802fa287",
+              "device_uuid": "ee3d4fc3-3972-4436-89f4-2de1f3124045"
+            },
+            "is_cdrom": false,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": true,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "source_disk_address": {
+              "vmdisk_uuid": "2307595c-263c-4342-8801-b9a771be8a3c"
+            },
+            "storage_container_uuid": "c78fea63-deda-476d-a871-8ffd52cd0b1e",
+            "size": 80004503552
+          }
+        ],
+        "vm_features": {
+          "AGENT_VM": false,
+          "VGA_CONSOLE": true
+        },
+        "vm_logical_timestamp": 2,
+        "machine_type": "pc"
+      },
+      {
+        "allow_live_migrate": true,
+        "gpus_assigned": false,
+        "boot": {
+          "disk_address": {
+            "device_bus": "scsi",
+            "device_index": 0
+          },
+          "boot_device_type": "disk",
+          "uefi_boot": false,
+          "secure_boot": false
+        },
+        "ha_priority": 0,
+        "host_uuid": "254e54f7-a5a6-4543-a916-0c1699be1b75",
+        "memory_mb": 8192,
+        "name": "karbon-stackstatev2-068094-etcd-0",
+        "num_cores_per_vcpu": 1,
+        "num_vcpus": 4,
+        "power_state": "on",
+        "timezone": "UTC",
+        "uuid": "855ce158-fd8a-4b58-83f2-ff46d9e9952d",
+        "vm_disk_info": [
+          {
+            "disk_address": {
+              "device_bus": "scsi",
+              "device_index": 0,
+              "disk_label": "scsi.0",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/e617a9eb-d0df-4244-9493-1c15ef73c50a",
+              "vmdisk_uuid": "e617a9eb-d0df-4244-9493-1c15ef73c50a",
+              "device_uuid": "4323e779-26d6-450e-a07c-8808eb752eeb"
+            },
+            "is_cdrom": false,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": true,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "source_disk_address": {
+              "vmdisk_uuid": "2139910a-f848-42a6-8ade-82c6a54287bb"
+            },
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 42949672960
+          },
+          {
+            "disk_address": {
+              "device_bus": "scsi",
+              "device_index": 1,
+              "disk_label": "scsi.1",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/13700e5d-3433-4fa5-bf3e-87fb6e147b08",
+              "vmdisk_uuid": "13700e5d-3433-4fa5-bf3e-87fb6e147b08",
+              "device_uuid": "e6ded70e-8117-4bcb-9d3f-209201c020ba"
+            },
+            "is_cdrom": false,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": true,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 42949672960
+          },
+          {
+            "disk_address": {
+              "device_bus": "ide",
+              "device_index": 0,
+              "disk_label": "ide.0",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/33c798d9-f1af-4d10-88ec-72d2314d6dab",
+              "vmdisk_uuid": "33c798d9-f1af-4d10-88ec-72d2314d6dab",
+              "device_uuid": "2ac4743e-e153-418f-87c7-d78d9792c279"
+            },
+            "is_cdrom": true,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": false,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "source_disk_address": {
+              "ndfs_filepath": "/SelfServiceContainer/.vm_customization_isos/d63ac0a6-038c-473e-910d-940af7de6777.iso"
+            },
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 382976
+          }
+        ],
+        "vm_features": {
+          "AGENT_VM": false,
+          "VGA_CONSOLE": true
+        },
+        "vm_logical_timestamp": 3,
+        "machine_type": "pc"
+      },
+      {
+        "allow_live_migrate": true,
+        "gpus_assigned": false,
+        "boot": {
+          "disk_address": {
+            "device_bus": "scsi",
+            "device_index": 0
+          },
+          "boot_device_type": "disk",
+          "uefi_boot": false,
+          "secure_boot": false
+        },
+        "ha_priority": 0,
+        "host_uuid": "da249120-a63b-4050-990a-2d00b4cb1255",
+        "memory_mb": 8192,
+        "name": "karbon-stackstate-5f525a-etcd-1",
+        "num_cores_per_vcpu": 1,
+        "num_vcpus": 4,
+        "power_state": "on",
+        "timezone": "UTC",
+        "uuid": "8f26279d-7d67-438a-9080-0a18aafd514b",
+        "vm_disk_info": [
+          {
+            "disk_address": {
+              "device_bus": "scsi",
+              "device_index": 0,
+              "disk_label": "scsi.0",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/b8d55896-39ed-4ce4-945d-1e73a433cf50",
+              "vmdisk_uuid": "b8d55896-39ed-4ce4-945d-1e73a433cf50",
+              "device_uuid": "80464937-0b4c-4296-a4da-496f2659cc70"
+            },
+            "is_cdrom": false,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": true,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "source_disk_address": {
+              "vmdisk_uuid": "2139910a-f848-42a6-8ade-82c6a54287bb"
+            },
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 42949672960
+          },
+          {
+            "disk_address": {
+              "device_bus": "scsi",
+              "device_index": 1,
+              "disk_label": "scsi.1",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/64ae0b3b-6984-49c3-a8ea-d10eaacca967",
+              "vmdisk_uuid": "64ae0b3b-6984-49c3-a8ea-d10eaacca967",
+              "device_uuid": "2ebf5487-8a42-418b-9bcf-b024b06f5985"
+            },
+            "is_cdrom": false,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": true,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 42949672960
+          },
+          {
+            "disk_address": {
+              "device_bus": "ide",
+              "device_index": 0,
+              "disk_label": "ide.0",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/104d0ab9-5ec2-4899-9035-a69c7f78e813",
+              "vmdisk_uuid": "104d0ab9-5ec2-4899-9035-a69c7f78e813",
+              "device_uuid": "71a8a0fd-ccd8-4be5-8523-fd900d32c303"
+            },
+            "is_cdrom": true,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": false,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "source_disk_address": {
+              "ndfs_filepath": "/SelfServiceContainer/.vm_customization_isos/5c6df422-1864-4d6d-90cd-2baa7ae1d684.iso"
+            },
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 382976
+          }
+        ],
+        "vm_features": {
+          "AGENT_VM": false,
+          "VGA_CONSOLE": true
+        },
+        "vm_logical_timestamp": 3,
+        "machine_type": "pc"
+      },
+      {
+        "allow_live_migrate": true,
+        "gpus_assigned": false,
+        "boot": {
+          "disk_address": {
+            "device_bus": "scsi",
+            "device_index": 0
+          },
+          "boot_device_type": "disk",
+          "uefi_boot": false,
+          "secure_boot": false
+        },
+        "ha_priority": 0,
+        "host_uuid": "da249120-a63b-4050-990a-2d00b4cb1255",
+        "memory_mb": 4096,
+        "name": "karbon-stackstatev2-76d31b-k8s-master-0",
+        "num_cores_per_vcpu": 1,
+        "num_vcpus": 4,
+        "power_state": "on",
+        "timezone": "UTC",
+        "uuid": "aa23a874-356d-4cd8-987d-9c28cc18e199",
+        "vm_disk_info": [
+          {
+            "disk_address": {
+              "device_bus": "scsi",
+              "device_index": 0,
+              "disk_label": "scsi.0",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/761dcb2b-be92-4b38-bc53-c421e7034ded",
+              "vmdisk_uuid": "761dcb2b-be92-4b38-bc53-c421e7034ded",
+              "device_uuid": "945ac725-f48d-4d1c-84d0-80b1151d51c1"
+            },
+            "is_cdrom": false,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": true,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "source_disk_address": {
+              "vmdisk_uuid": "2139910a-f848-42a6-8ade-82c6a54287bb"
+            },
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 42949672960
+          },
+          {
+            "disk_address": {
+              "device_bus": "scsi",
+              "device_index": 1,
+              "disk_label": "scsi.1",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/d0bcc2f3-e323-4497-b30a-d315c9452d69",
+              "vmdisk_uuid": "d0bcc2f3-e323-4497-b30a-d315c9452d69",
+              "device_uuid": "b549d6f7-b743-4014-993e-5a2f130b1e77"
+            },
+            "is_cdrom": false,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": true,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 128849018880
+          },
+          {
+            "disk_address": {
+              "device_bus": "ide",
+              "device_index": 0,
+              "disk_label": "ide.0",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/5802a7e5-c7eb-4e9e-aa21-d3cadbf034aa",
+              "vmdisk_uuid": "5802a7e5-c7eb-4e9e-aa21-d3cadbf034aa",
+              "device_uuid": "3d0e2b5b-b3c0-448b-a8e8-dc5d9fa7d824"
+            },
+            "is_cdrom": true,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": false,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "source_disk_address": {
+              "ndfs_filepath": "/SelfServiceContainer/.vm_customization_isos/bf84e4ab-19b7-42f2-aa76-02487d7fa017.iso"
+            },
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 382976
+          }
+        ],
+        "vm_features": {
+          "AGENT_VM": false,
+          "VGA_CONSOLE": true
+        },
+        "vm_logical_timestamp": 3,
+        "machine_type": "pc"
+      },
+      {
+        "allow_live_migrate": true,
+        "gpus_assigned": false,
+        "boot": {
+          "disk_address": {
+            "device_bus": "scsi",
+            "device_index": 0
+          },
+          "boot_device_type": "disk",
+          "uefi_boot": false,
+          "secure_boot": false
+        },
+        "ha_priority": 0,
+        "host_uuid": "ed5edbbb-7428-4066-ae90-1270dcca2f37",
+        "memory_mb": 8192,
+        "name": "karbon-stackstatev2-76d31b-k8s-worker-0",
+        "num_cores_per_vcpu": 1,
+        "num_vcpus": 8,
+        "power_state": "on",
+        "timezone": "UTC",
+        "uuid": "b2aa946f-df15-4ea6-ae19-7c590e3ad688",
+        "vm_disk_info": [
+          {
+            "disk_address": {
+              "device_bus": "scsi",
+              "device_index": 0,
+              "disk_label": "scsi.0",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/c2800d2a-e3c4-4796-b1c2-4e2a43ccbe04",
+              "vmdisk_uuid": "c2800d2a-e3c4-4796-b1c2-4e2a43ccbe04",
+              "device_uuid": "ed506888-1418-4650-9bc0-cda4e3c2ff8c"
+            },
+            "is_cdrom": false,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": true,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "source_disk_address": {
+              "vmdisk_uuid": "2139910a-f848-42a6-8ade-82c6a54287bb"
+            },
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 42949672960
+          },
+          {
+            "disk_address": {
+              "device_bus": "scsi",
+              "device_index": 1,
+              "disk_label": "scsi.1",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/e61c101d-fe88-45f4-abd3-b33b47972d73",
+              "vmdisk_uuid": "e61c101d-fe88-45f4-abd3-b33b47972d73",
+              "device_uuid": "f4bf4911-5e45-4c5a-bfca-b47243011d15"
+            },
+            "is_cdrom": false,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": true,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 128849018880
+          },
+          {
+            "disk_address": {
+              "device_bus": "ide",
+              "device_index": 0,
+              "disk_label": "ide.0",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/c63c1177-672e-4580-ba9c-3a5b528c68f8",
+              "vmdisk_uuid": "c63c1177-672e-4580-ba9c-3a5b528c68f8",
+              "device_uuid": "53bc46e5-9da0-44f6-a23e-fdfc92b13cd9"
+            },
+            "is_cdrom": true,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": false,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "source_disk_address": {
+              "ndfs_filepath": "/SelfServiceContainer/.vm_customization_isos/469843f6-f2e3-4b78-8c62-d6521beaabd0.iso"
+            },
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 382976
+          }
+        ],
+        "vm_features": {
+          "AGENT_VM": false,
+          "VGA_CONSOLE": true
+        },
+        "vm_logical_timestamp": 3,
+        "machine_type": "pc"
+      },
+      {
+        "allow_live_migrate": true,
+        "gpus_assigned": false,
+        "boot": {
+          "disk_address": {
+            "device_bus": "scsi",
+            "device_index": 0
+          },
+          "boot_device_type": "disk",
+          "uefi_boot": false,
+          "secure_boot": false
+        },
+        "ha_priority": 0,
+        "host_uuid": "254e54f7-a5a6-4543-a916-0c1699be1b75",
+        "memory_mb": 32768,
+        "name": "karbon-stackstate-c9a026-k8s-worker-3",
+        "num_cores_per_vcpu": 1,
+        "num_vcpus": 8,
+        "power_state": "on",
+        "timezone": "UTC",
+        "uuid": "c38f0dae-0a19-4f71-a6dc-76cd524c74f3",
+        "vm_disk_info": [
+          {
+            "disk_address": {
+              "device_bus": "scsi",
+              "device_index": 0,
+              "disk_label": "scsi.0",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/564bb0aa-707c-4a26-a063-ec270e1efb47",
+              "vmdisk_uuid": "564bb0aa-707c-4a26-a063-ec270e1efb47",
+              "device_uuid": "7a7b548f-de54-488a-a93c-028afd24194b"
+            },
+            "is_cdrom": false,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": true,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "source_disk_address": {
+              "vmdisk_uuid": "2139910a-f848-42a6-8ade-82c6a54287bb"
+            },
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 42949672960
+          },
+          {
+            "disk_address": {
+              "device_bus": "scsi",
+              "device_index": 1,
+              "disk_label": "scsi.1",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/f62deaf6-34d8-4f8d-9c9d-1e6d63f9d1fa",
+              "vmdisk_uuid": "f62deaf6-34d8-4f8d-9c9d-1e6d63f9d1fa",
+              "device_uuid": "6ee6f308-6b96-4cd1-a6fc-b47cabe69e5d"
+            },
+            "is_cdrom": false,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": true,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 536870912000
+          },
+          {
+            "disk_address": {
+              "device_bus": "ide",
+              "device_index": 0,
+              "disk_label": "ide.0",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/b7c142e7-4c61-43c1-911e-96b941642430",
+              "vmdisk_uuid": "b7c142e7-4c61-43c1-911e-96b941642430",
+              "device_uuid": "5c58d3c2-1cbe-4a29-8cb0-8c071f3fb0b0"
+            },
+            "is_cdrom": true,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": false,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "source_disk_address": {
+              "ndfs_filepath": "/SelfServiceContainer/.vm_customization_isos/a3fe76dd-7192-4d41-8d77-44dceb11b14d.iso"
+            },
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 382976
+          }
+        ],
+        "vm_features": {
+          "AGENT_VM": false,
+          "VGA_CONSOLE": true
+        },
+        "vm_logical_timestamp": 3,
+        "machine_type": "pc"
+      },
+      {
+        "allow_live_migrate": true,
+        "gpus_assigned": false,
+        "boot": {
+          "disk_address": {
+            "device_bus": "scsi",
+            "device_index": 0
+          },
+          "boot_device_type": "disk",
+          "uefi_boot": false,
+          "secure_boot": false
+        },
+        "ha_priority": 0,
+        "host_uuid": "da249120-a63b-4050-990a-2d00b4cb1255",
+        "memory_mb": 8192,
+        "name": "karbon-stackstatev2-068094-etcd-1",
+        "num_cores_per_vcpu": 1,
+        "num_vcpus": 4,
+        "power_state": "on",
+        "timezone": "UTC",
+        "uuid": "c5aa830e-cbd0-4f7e-9286-0a0f107c8d37",
+        "vm_disk_info": [
+          {
+            "disk_address": {
+              "device_bus": "scsi",
+              "device_index": 0,
+              "disk_label": "scsi.0",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/ffe1ee3b-53ed-42cd-8da5-6dfea04025d7",
+              "vmdisk_uuid": "ffe1ee3b-53ed-42cd-8da5-6dfea04025d7",
+              "device_uuid": "e13d68c1-49c8-4baa-a781-dc9236571d21"
+            },
+            "is_cdrom": false,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": true,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "source_disk_address": {
+              "vmdisk_uuid": "2139910a-f848-42a6-8ade-82c6a54287bb"
+            },
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 42949672960
+          },
+          {
+            "disk_address": {
+              "device_bus": "scsi",
+              "device_index": 1,
+              "disk_label": "scsi.1",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/0aa2bf02-9bcf-4141-b533-954926af306f",
+              "vmdisk_uuid": "0aa2bf02-9bcf-4141-b533-954926af306f",
+              "device_uuid": "0447c5e2-31e4-41f0-b870-60e0a2d98d8c"
+            },
+            "is_cdrom": false,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": true,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 42949672960
+          },
+          {
+            "disk_address": {
+              "device_bus": "ide",
+              "device_index": 0,
+              "disk_label": "ide.0",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/e7028836-c0be-476f-a7b0-7ba172a1eb31",
+              "vmdisk_uuid": "e7028836-c0be-476f-a7b0-7ba172a1eb31",
+              "device_uuid": "9ae1d9be-988b-41c2-9496-e4c2c0cce7e7"
+            },
+            "is_cdrom": true,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": false,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "source_disk_address": {
+              "ndfs_filepath": "/SelfServiceContainer/.vm_customization_isos/834c67bc-244e-4eab-a668-e54e5261e980.iso"
+            },
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 382976
+          }
+        ],
+        "vm_features": {
+          "AGENT_VM": false,
+          "VGA_CONSOLE": true
+        },
+        "vm_logical_timestamp": 3,
+        "machine_type": "pc"
+      },
+      {
+        "allow_live_migrate": true,
+        "gpus_assigned": false,
+        "boot": {
+          "disk_address": {
+            "device_bus": "scsi",
+            "device_index": 0
+          },
+          "boot_device_type": "disk",
+          "uefi_boot": false,
+          "secure_boot": false
+        },
+        "ha_priority": 0,
+        "host_uuid": "da249120-a63b-4050-990a-2d00b4cb1255",
+        "memory_mb": 32768,
+        "name": "karbon-stackstate-c9a026-k8s-worker-0",
+        "num_cores_per_vcpu": 1,
+        "num_vcpus": 8,
+        "power_state": "on",
+        "timezone": "UTC",
+        "uuid": "c81730a6-ad5f-4748-b909-d9352878545b",
+        "vm_disk_info": [
+          {
+            "disk_address": {
+              "device_bus": "scsi",
+              "device_index": 0,
+              "disk_label": "scsi.0",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/2d54dcdf-14fb-42ef-9c9a-f24b7af83e69",
+              "vmdisk_uuid": "2d54dcdf-14fb-42ef-9c9a-f24b7af83e69",
+              "device_uuid": "c78609fe-9aed-40da-b854-c39181f254d4"
+            },
+            "is_cdrom": false,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": true,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "source_disk_address": {
+              "vmdisk_uuid": "2139910a-f848-42a6-8ade-82c6a54287bb"
+            },
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 42949672960
+          },
+          {
+            "disk_address": {
+              "device_bus": "scsi",
+              "device_index": 1,
+              "disk_label": "scsi.1",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/2ea3d68b-614a-478f-921d-6de302e4157d",
+              "vmdisk_uuid": "2ea3d68b-614a-478f-921d-6de302e4157d",
+              "device_uuid": "1aa0b2a3-8801-4a87-a3d9-bec2377e72d0"
+            },
+            "is_cdrom": false,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": true,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 536870912000
+          },
+          {
+            "disk_address": {
+              "device_bus": "ide",
+              "device_index": 0,
+              "disk_label": "ide.0",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/39140c70-e877-4daa-8f66-b51bfe00c5b9",
+              "vmdisk_uuid": "39140c70-e877-4daa-8f66-b51bfe00c5b9",
+              "device_uuid": "08dba8d9-5b43-4838-b0cb-1adb4716f731"
+            },
+            "is_cdrom": true,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": false,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "source_disk_address": {
+              "ndfs_filepath": "/SelfServiceContainer/.vm_customization_isos/41d7748d-dd06-4b83-a9d4-be9581137438.iso"
+            },
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 382976
+          }
+        ],
+        "vm_features": {
+          "AGENT_VM": false,
+          "VGA_CONSOLE": true
+        },
+        "vm_logical_timestamp": 3,
+        "machine_type": "pc"
+      },
+      {
+        "allow_live_migrate": true,
+        "gpus_assigned": false,
+        "boot": {
+          "disk_address": {
+            "device_bus": "scsi",
+            "device_index": 0
+          },
+          "boot_device_type": "disk",
+          "uefi_boot": false,
+          "secure_boot": false
+        },
+        "ha_priority": 0,
+        "host_uuid": "ed5edbbb-7428-4066-ae90-1270dcca2f37",
+        "memory_mb": 32768,
+        "name": "karbon-stackstate-c9a026-k8s-worker-2",
+        "num_cores_per_vcpu": 1,
+        "num_vcpus": 8,
+        "power_state": "on",
+        "timezone": "UTC",
+        "uuid": "ce68d149-2064-4fb3-8543-42ad6005fa2b",
+        "vm_disk_info": [
+          {
+            "disk_address": {
+              "device_bus": "scsi",
+              "device_index": 0,
+              "disk_label": "scsi.0",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/0168264b-0002-4ced-afcb-b5e1621af4d0",
+              "vmdisk_uuid": "0168264b-0002-4ced-afcb-b5e1621af4d0",
+              "device_uuid": "5809b218-723f-4a63-b295-11a936f1d299"
+            },
+            "is_cdrom": false,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": true,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "source_disk_address": {
+              "vmdisk_uuid": "2139910a-f848-42a6-8ade-82c6a54287bb"
+            },
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 42949672960
+          },
+          {
+            "disk_address": {
+              "device_bus": "scsi",
+              "device_index": 1,
+              "disk_label": "scsi.1",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/25518495-f8d6-4442-b183-a32112c905f7",
+              "vmdisk_uuid": "25518495-f8d6-4442-b183-a32112c905f7",
+              "device_uuid": "deebedcb-f2d4-4a93-994d-a6ba108b93f8"
+            },
+            "is_cdrom": false,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": true,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 536870912000
+          },
+          {
+            "disk_address": {
+              "device_bus": "ide",
+              "device_index": 0,
+              "disk_label": "ide.0",
+              "ndfs_filepath": "/SelfServiceContainer/.acropolis/vmdisk/d2908844-e2dd-46ad-bea1-02c5006f722a",
+              "vmdisk_uuid": "d2908844-e2dd-46ad-bea1-02c5006f722a",
+              "device_uuid": "25cbc39e-74e3-4545-a72b-d2f733429c77"
+            },
+            "is_cdrom": true,
+            "is_empty": false,
+            "flash_mode_enabled": false,
+            "is_scsi_passthrough": true,
+            "is_hot_remove_enabled": false,
+            "is_thin_provisioned": false,
+            "shared": false,
+            "source_disk_address": {
+              "ndfs_filepath": "/SelfServiceContainer/.vm_customization_isos/fb02fe14-4f08-46df-b66f-6454aa00c9ee.iso"
+            },
+            "storage_container_uuid": "300598e1-81ea-4f1a-8a4b-a5e703d9f2c3",
+            "size": 382976
+          }
+        ],
+        "vm_features": {
+          "AGENT_VM": false,
+          "VGA_CONSOLE": true
+        },
+        "vm_logical_timestamp": 3,
+        "machine_type": "pc"
+      }
+    ]
+  }
