@@ -24,10 +24,10 @@ tox = "^3.22.0"
 # StackState Agent Integration dev deps
 prometheus-client = "^0.3.0"
 Deprecated = "^1.2.11"
-requests = "^2.24.0"
 pytest-sugar = "^0.9.4"
 colorama = "^0.4.1"
 tabulate = "^0.8.9"
+requests-mock = "^1.9.3"
 
 [tool.tox]
 legacy_tox_ini = """

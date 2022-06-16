@@ -34,26 +34,26 @@ class NutanixClient(object):
         self, api_version: str, uri: str, body: Dict[str, Any] = None
     ) -> Union[List[Dict[str, Any]], Dict[str, Any]]:
         body = body or {}
-        url = self._get_url(api_version, uri)
+        url = self.get_url(api_version, uri)
         return self._handle_failed_call(self._session.post(url, data=body)).json()
 
     def get(
         self, api_version: str, uri: str, params: Dict[str, Any] = None
     ) -> Union[List[Dict[str, Any]], Dict[str, Any]]:
-        url = self._get_url(api_version, uri)
+        url = self.get_url(api_version, uri)
         result = self._handle_failed_call(self._session.get(url, params=params)).json()
         return result
 
     def get_clusters(self) -> List[Dict[str, Any]]:
-        url = self._get_url(self.V2, "clusters")
+        url = self.get_url(self.V2, "clusters")
         return self._get(url).json()["entities"]
 
     def get_karbon_clusters(self) -> List[Dict[str, Any]]:
-        url = self._get_url(self.V1_BETA_KARBON, "k8s/clusters")
+        url = self.get_url(self.V1_BETA_KARBON, "k8s/clusters")
         clusters = self._get(url).json()
         for cluster in clusters:
             node_pools = self._get(
-                self._get_url(self.V1_ALPHA_KARBON, f"k8s/clusters/{cluster['name']}/node-pools")
+                self.get_url(self.V1_ALPHA_KARBON, f"k8s/clusters/{cluster['name']}/node-pools")
             ).json()
             node_pools_lookup = {}
             for node_pool in node_pools:
@@ -68,7 +68,7 @@ class NutanixClient(object):
     def _get(self, url: str, params: Dict[str, Any] = None) -> requests.Response:
         return self._handle_failed_call(self._session.get(url, params=params))
 
-    def _get_url(self, api_version: str, uri: str):
+    def get_url(self, api_version: str, uri: str):
         return f"{self.api_base[api_version]}/{uri}"
 
     @staticmethod
