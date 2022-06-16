@@ -18,18 +18,13 @@ etl:
         - k8s_cluster_template
     - name: k8s_cluster_nodes
       query: |
-          def fetch():
-            results = []
-            for cluster in factory.lookups.get("k8s_clusters", []):
-               pools = nutanix_client.get(nutanix_client.V1_ALPHA_KARBON, "k8s/clusters/%s/node-pools" % cluster)
-               nodes = []
-               for pool in pools:
-                  nodes.extend(pool["nodes"]) 
-               for node in nodes:
-                  node["cluster"] = cluster
-               results.extend(nodes)
-            return results
-          fetch()
+          results = []
+          for cluster in factory.lookups.get("k8s_clusters", []):
+             pools = nutanix_client.get(nutanix_client.V1_ALPHA_KARBON, "k8s/clusters/%s/node-pools" % cluster)
+             nodes = py_.flatten(factory.jpath("$.[*].nodes", pools))
+             [py_.set_(n, "cluster", cluster) for n in nodes]
+             results.extend(nodes)
+          results
       template_refs:
         - k8s_nodes_template
   template:
