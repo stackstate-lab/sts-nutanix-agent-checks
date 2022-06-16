@@ -3,6 +3,7 @@ from typing import Any, Dict, List, Optional, Union
 from jsonpath_ng import parse
 from sts_nutanix_impl.model.stackstate import (Component, Event,
                                                HealthCheckState, Relation)
+import logging
 
 
 class TopologyFactory:
@@ -12,6 +13,8 @@ class TopologyFactory:
         self.health: Dict[str, HealthCheckState] = {}
         self.events: List[Event] = []
         self.lookups: Dict[str, Any] = {}
+        self.log = logging.getLogger()
+
 
     @staticmethod
     def jpath(path: str, target: Any, default: Any = None) -> Union[Optional[Any], List[Any]]:

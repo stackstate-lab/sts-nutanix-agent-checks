@@ -68,6 +68,7 @@ class BaseInterpreter:
             symtable[name] = ds
         symtable["uid"] = ctx.factory.get_uid
         symtable["py_"] = pydash
+        symtable["log"] = ctx.factory.log
         return symtable
 
 
@@ -93,10 +94,10 @@ class DataSourceInterpreter(BaseInterpreter):
 
         symtable = self._update_asteval_symtable()
         symtable["conf"] = instance_info
-        conf = self._run_code(datasource.constructor_arg, "constructor_arg")
+        symtable[datasource.cls] = ds_class
 
         try:
-            ds_instance = ds_class(conf, log)
+            ds_instance = self._run_code(datasource.init, "init")
         except Exception as e:
             raise Exception(
                 f"Failed to create class instance '{datasource.cls}' for datasource '{datasource.name}'."

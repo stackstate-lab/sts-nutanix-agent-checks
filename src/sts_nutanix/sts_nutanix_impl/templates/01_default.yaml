@@ -3,7 +3,7 @@ etl:
     - name: nutanix_client
       module: sts_nutanix_impl.client.nutanix_client
       cls: NutanixClient
-      constructor_arg: "conf.nutanix"
+      init: "NutanixClient(conf.nutanix, log)"
   queries:
     - name: nutanix_clusters
       query: "nutanix_client.get_clusters()"

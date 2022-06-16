@@ -9,7 +9,7 @@ class DataSource(Model):
     name: str = StringType(required=True)
     module: str = StringType(required=True)
     cls: str = StringType(required=True)
-    constructor_arg: str = StringType(required=True)
+    init: str = StringType(required=True)
 
 
 class Query(Model):

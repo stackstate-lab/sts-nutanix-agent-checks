@@ -20,6 +20,7 @@ class ETLDriver:
     def __init__(self, conf: InstanceInfo, factory: TopologyFactory, log: Logger):
         self.log = log
         self.factory = factory
+        self.factory.log = log
         self.conf = conf
         self.models = self._init_model(conf.etl)
 
