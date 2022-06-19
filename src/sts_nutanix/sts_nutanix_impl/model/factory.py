@@ -94,6 +94,24 @@ class TopologyFactory:
             raise Exception(f"Health event '{health.check_id}' already exists.")
         self.health[health.check_id] = health
 
+    def resolve_relations(self):
+        components: List[Component] = self.components.values()
+        for source in components:
+            for relation in source.relations:
+                if self.component_exists(relation.target_id):
+                    self.add_relation(relation.source_id, relation.target_id, relation.get_type())
+                else:
+                    target_component = self.get_component_by_name(relation.target_id, raise_not_found=False)
+                    if target_component:
+                        self.add_relation(relation.source_id, target_component.uid, relation.get_type())
+                    else:
+                        raise Exception(
+                            f"Failed to find related component '{relation.target_id}'. "
+                            f"Reference from component {source.uid}."
+                        )
+            source.relations = []
+
+
     @staticmethod
     def get_uid(integration: str, uid_type: str, urn_post_fix: str) -> str:
         sanitize_str = TopologyFactory.sanitize(urn_post_fix)
