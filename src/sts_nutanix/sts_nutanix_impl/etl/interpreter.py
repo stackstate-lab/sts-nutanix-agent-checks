@@ -8,10 +8,12 @@ from asteval import Interpreter
 from jsonpath_ng.exceptions import JsonPathParserError
 from six import string_types
 from sts_nutanix_impl.model.etl import (ComponentTemplate, DataSource, Query,
-                                        Template)
+                                        Template, ProcessorSpec, EventTemplate, MetricTemplate, MetricTemplateSpec,
+                                        EventTemplateSpec, HealthTemplate, HealthTemplateSpec, ComponentTemplateSpec)
 from sts_nutanix_impl.model.factory import TopologyFactory
 from sts_nutanix_impl.model.instance import InstanceInfo
-from sts_nutanix_impl.model.stackstate import Component
+from sts_nutanix_impl.model.stackstate import (Component, Metric, Event, METRIC_TYPE_CHOICES, EVENT_CATEGORY_CHOICES,
+                                               SourceLink, HealthCheckState, HEALTH_STATE_CHOICES)
 
 
 @attr.s(kw_only=True)
@@ -20,6 +22,9 @@ class TopologyContext:
     item: Dict[str, Any] = attr.ib(default=None)
     datasources: Dict[str, Any] = attr.ib(default={})
     component: Component = attr.ib(default=None)
+    event: Event = attr.ib(default=None)
+    metric: Metric = attr.ib(default=None)
+    health: HealthCheckState = attr.ib(default=None)
 
     def jpath(self, path) -> Any:
         return self.factory.jpath(path, self.item)
@@ -63,6 +68,9 @@ class BaseInterpreter:
         symtable["factory"] = ctx.factory
         symtable["item"] = ctx.item
         symtable["component"] = ctx.component
+        symtable["metric"] = ctx.metric
+        symtable["event"] = ctx.event
+        symtable["health"] = ctx.health
         symtable["jpath"] = ctx.jpath
         for name, ds in ctx.datasources.items():
             symtable[name] = ds
@@ -133,8 +141,20 @@ class QueryProcessorInterpreter(BaseInterpreter):
         self._run_code(query.processor, "processor")
 
 
-class TemplateInterpreter(BaseInterpreter):
-    def __init__(self, ctx: TopologyContext, template: ComponentTemplate, domain: str, layer: str, environment: str):
+class ProcessorInterpreter(BaseInterpreter):
+    def __init__(self, ctx: TopologyContext):
+        BaseInterpreter.__init__(self, ctx)
+
+    def interpret(self, processor: ProcessorSpec):
+        self.source_name = f"processor '{processor.name}'"
+        self._update_asteval_symtable()
+        self._run_code(processor.code, "code")
+
+
+class BaseTemplateInterpreter(BaseInterpreter):
+    def __init__(self, ctx: TopologyContext, template: Union[ComponentTemplate, EventTemplate, MetricTemplate,
+                                                             HealthTemplate],
+                 domain: str, layer: str, environment: str):
         BaseInterpreter.__init__(self, ctx)
         self.environment = environment
         self.layer = layer
@@ -143,66 +163,12 @@ class TemplateInterpreter(BaseInterpreter):
         self.template = template
         self.source_name = self.template_name
 
-    def active(self, item) -> bool:
+    def active(self, item: Any) -> bool:
         template = self.template
         self.ctx.item = item
         if template.selector is None:
             return True
         return self._get_value(template.selector, "selector")
-
-    def interpret(self, item: Dict[str, Any]) -> Component:
-        template = self.template
-        self.ctx.item = item
-        self.ctx.component = Component()
-        self._update_asteval_symtable()
-        if template.spec and template.code:
-            raise Exception(f"Template {template.name} cannot have both spec and code properties.")
-        if template.spec:
-            return self._interpret_spec(template.spec)
-        elif template.code:
-            return self._interpret_code(template.code)
-        else:
-            raise Exception(f"Template {template.name} must have either spec and code properties defined.")
-
-    def _interpret_spec(self, spec: Template) -> Component:
-        component: Component = self.ctx.component
-        component.set_type(self._get_string_property(spec.component_type, "type"))
-        component.set_name(self._get_string_property(spec.name, "name"))
-        if component.get_name() is None:
-            raise Exception(
-                f"Component name is required for '{component.get_type()}' on template" f" `{self.template_name}."
-            )
-        self.source_name = component.get_name()
-        component.properties.layer = self._get_string_property(spec.layer, "layer", self.layer)
-        component.properties.domain = self._get_string_property(spec.domain, "domain", self.domain)
-        component.properties.environment = self._get_string_property(spec.environment, "environment", self.environment)
-        component.properties.labels.extend(self._merge_list_property(spec.labels, "labels"))
-        component.uid = self._get_string_property(spec.uid, "uid", None)
-        if component.uid is None:
-            raise Exception(f"Component uid is required on template" f" `{self.template_name}.")
-        self._run_code(spec.processor, "processor")
-        component.uid = self._get_string_property(spec.uid, "uid", None)
-
-        component.properties.identifiers.extend(self._merge_list_property(spec.labels, "identifiers"))
-        component.properties.identifiers.append(component.uid)
-        self.ctx.factory.add_component(component)
-        return component
-
-    def _interpret_code(self, code: str) -> Component:
-        component = self.ctx.component
-        self._run_code(code, "code")
-        if component.get_name() is None:
-            raise Exception(f"Component name is required for on template `{self.template_name}.")
-        if component.properties.layer == "Unknown":
-            component.properties.layer = self.layer
-        if component.properties.domain == "Unknown":
-            component.properties.domain = self.domain
-        if component.uid is None:
-            raise Exception(f"Component uid is required on template" f" `{self.template_name}.")
-
-        component.properties.identifiers.append(component.uid)
-        self.ctx.factory.add_component(component)
-        return component
 
     def _merge_list_property(self, value: Union[Optional[str], List[str]], name: str) -> List[str]:
         if value is None:
@@ -216,12 +182,31 @@ class TemplateInterpreter(BaseInterpreter):
         value = self._get_value(expression, name, default=default)
         return self._assert_string(value, name)
 
-    def _get_list_property(self, expression: str, name: str, default=None) -> List[Any]:
+    def _get_float_property(self, expression: str, name: str, default: float = 0.0) -> float:
+        value = self._get_value(expression, name, default=default)
+        return self._assert_float(value, name)
+
+    def _get_list_property(self, expression: Union[str, list], name: str, default=None) -> List[Any]:
         if default is None:
             default = []
-        values = self._get_value(expression, name, default=default)
+        if isinstance(expression, string_types):
+            values = self._get_value(expression, name, default=default)
+        else:
+            values = expression
         values = self._assert_list(values, name)
         return [self._get_string_property(v, name) for v in values]
+
+    def _get_dict_property(self, expression: Union[str, list], name: str, default=None) -> Dict[str, Any]:
+        if default is None:
+            default = {}
+        if isinstance(expression, string_types):
+            values = self._get_value(expression, name, default=default)
+        else:
+            values = expression
+        values = self._assert_dict(values, name)
+        for k, v in values.items():
+            values[k] = self._get_value(v, f"{name}:{k}")
+        return values
 
     def _get_value(self, expression: str, name: str, default: Any = None) -> Any:
         if expression is None:
@@ -248,10 +233,27 @@ class TemplateInterpreter(BaseInterpreter):
                 self._raise_assert_error(value, name, "str")
         return value
 
+    def _assert_float(self, value: Any, name: str) -> float:
+        if value is not None:
+            if isinstance(value, string_types) or isinstance(value, int):
+                try:
+                    return float(value)
+                except Exception:
+                    self._raise_assert_error(value, name, "float")
+            elif not isinstance(value, float):
+                self._raise_assert_error(value, name, "float")
+        return value
+
     def _assert_list(self, value: Any, name: str) -> List[Any]:
         if value is not None:
             if not isinstance(value, list):
                 self._raise_assert_error(value, name, "list")
+        return value
+
+    def _assert_dict(self, value: Any, name: str) -> Dict[str, Any]:
+        if value is not None:
+            if not isinstance(value, dict):
+                self._raise_assert_error(value, name, "dict")
         return value
 
     def _raise_assert_error(self, value: Any, name: str, expected: str):
@@ -262,3 +264,170 @@ class TemplateInterpreter(BaseInterpreter):
 
     def _get_eval_expression_failed_source(self) -> str:
         return f"template '{self.source_name}'"
+
+
+class ComponentTemplateInterpreter(BaseTemplateInterpreter):
+    def __init__(self, ctx: TopologyContext, template: ComponentTemplate, domain: str, layer: str, environment: str):
+        BaseTemplateInterpreter.__init__(self, ctx, template, domain, layer, environment)
+
+    def interpret(self, item: Dict[str, Any]) -> Component:
+        template = self.template
+        self.ctx.item = item
+        self.ctx.component = Component()
+        self._update_asteval_symtable()
+        if template.spec and template.code:
+            raise Exception(f"Template {template.name} cannot have both spec and code properties.")
+        if template.spec:
+            return self._interpret_spec(template.spec)
+        elif template.code:
+            return self._interpret_code(template.code)
+        else:
+            raise Exception(f"Template {template.name} must have either spec and code properties defined.")
+
+    def _interpret_spec(self, spec: ComponentTemplateSpec) -> Component:
+        component: Component = self.ctx.component
+        component.set_type(self._get_string_property(spec.component_type, "type"))
+        component.set_name(self._get_string_property(spec.name, "name"))
+        if component.get_name() is None:
+            raise Exception(
+                f"Component name is required for '{component.get_type()}' on template" f" `{self.template_name}."
+            )
+        self.source_name = component.get_name()
+        component.properties.layer = self._get_string_property(spec.layer, "layer", self.layer)
+        component.properties.domain = self._get_string_property(spec.domain, "domain", self.domain)
+        component.properties.environment = self._get_string_property(spec.environment, "environment", self.environment)
+        component.properties.labels.extend(self._merge_list_property(spec.labels, "labels"))
+        component.properties.custom_properties.update(self._get_dict_property(spec.custom_properties,
+                                                                              "custom_properties"))
+        component.uid = self._get_string_property(spec.uid, "uid", None)
+        if component.uid is None:
+            raise Exception(f"Component uid is required on template" f" `{self.template_name}.")
+        self._run_code(spec.processor, "processor")
+        component.uid = self._get_string_property(spec.uid, "uid", None)
+
+        component.properties.identifiers.extend(self._merge_list_property(spec.labels, "identifiers"))
+        component.properties.identifiers.append(component.uid)
+        self.ctx.factory.add_component(component)
+        self.ctx.factory.add_component_relations(component, self._get_list_property(spec.relations, "relations", []))
+        return component
+
+    def _interpret_code(self, code: str) -> Component:
+        component = self.ctx.component
+        self._run_code(code, "code")
+        if component.get_name() is None:
+            raise Exception(f"Component name is required for on template `{self.template_name}.")
+        if component.properties.layer == "Unknown":
+            component.properties.layer = self.layer
+        if component.properties.domain == "Unknown":
+            component.properties.domain = self.domain
+        if component.uid is None:
+            raise Exception(f"Component uid is required on template" f" `{self.template_name}.")
+
+        component.properties.identifiers.append(component.uid)
+        self.ctx.factory.add_component(component)
+
+        return component
+
+
+class MetricTemplateInterpreter(BaseTemplateInterpreter):
+    def __init__(self, ctx: TopologyContext, template: MetricTemplate, domain: str, layer: str, environment: str):
+        BaseTemplateInterpreter.__init__(self, ctx, template, domain, layer, environment)
+
+    def interpret(self, item: Dict[str, Any]) -> Metric:
+        template: MetricTemplate = self.template
+        self.ctx.item = item
+        self.ctx.metric = metric = Metric()
+        self._update_asteval_symtable()
+        spec: MetricTemplateSpec = template.spec
+
+        metric.name = self._get_string_property(spec.name, "name", None)
+        if metric.name is None:
+            raise Exception(f"Template {template.name} metric name is required.")
+
+        metric.target_uid = self._get_string_property(spec.target_uid, "target_uid", None)
+        metric_type = self._get_string_property(spec.metric_type, "metric_type", "gauge")
+        if metric_type not in METRIC_TYPE_CHOICES:
+            raise Exception(f"Template {template.name} metric type '{metric_type}' not allowed. "
+                            f"Valid values {METRIC_TYPE_CHOICES}.")
+
+        metric.metric_type = metric_type
+        metric.value = self._get_float_property(spec.value, "value")
+        metric.tags = self._get_list_property(spec.tags, "tags", [])
+        self.ctx.factory.add_metric(metric)
+        return metric
+
+
+class EventTemplateInterpreter(BaseTemplateInterpreter):
+    def __init__(self, ctx: TopologyContext, template: EventTemplate, domain: str, layer: str, environment: str):
+        BaseTemplateInterpreter.__init__(self, ctx, template, domain, layer, environment)
+
+    def interpret(self, item: Dict[str, Any]) -> Event:
+        template: EventTemplate = self.template
+        self.ctx.item = item
+        self.ctx.event = event = Event()
+        self._update_asteval_symtable()
+        spec: EventTemplateSpec = template.spec
+
+        event.event_type = self._get_string_property(spec.event_type, "event_type", None)
+        if event.event_type is None:
+            raise Exception(f"Template {template.name} event type is required.")
+
+        category = self._get_string_property(spec.category, "category", "")
+        if category not in EVENT_CATEGORY_CHOICES:
+            raise Exception(f"Template {template.name} event category '{category}' not allowed. "
+                            f"Valid values {EVENT_CATEGORY_CHOICES}.")
+
+        event.context.category = category
+        event.context.element_identifiers = self._get_list_property(spec.element_identifiers, "element_identifiers", [])
+        event.context.data = self._get_dict_property(spec.data, "data")
+
+        for source_link in spec.source_links:
+            sl = SourceLink()
+            sl.title = self._get_string_property(source_link.title, "sourcelink.title", None)
+            sl.url = self._get_string_property(source_link.url, "sourcelink.url", None)
+            event.context.source_links.append(sl)
+        event.tags = self._get_list_property(spec.tags, "tags", [])
+        source = self._get_string_property(spec.source, "source", "ETL")
+        event.context.source = source
+        event.source = source
+        event.msg_title = self._get_string_property(spec.msg_title, "msg_title", None)
+        if event.msg_title is None:
+            raise Exception(f"Template {template.name} event msg title is required.")
+        event.msg_text = self._get_string_property(spec.msg_text, "msg_text")
+        self.ctx.factory.add_event(event)
+        return event
+
+
+class HeathTemplateInterpreter(BaseTemplateInterpreter):
+    def __init__(self, ctx: TopologyContext, template: HealthTemplate, domain: str, layer: str, environment: str):
+        BaseTemplateInterpreter.__init__(self, ctx, template, domain, layer, environment)
+
+    def interpret(self, item: Dict[str, Any]) -> HealthCheckState:
+        template: HealthTemplate = self.template
+        self.ctx.item = item
+        self.ctx.health = health = HealthCheckState()
+        self._update_asteval_symtable()
+        spec: HealthTemplateSpec = template.spec
+
+        health.check_id = self._get_string_property(spec.check_id, "check_id", None)
+        if health.check_id is None:
+            raise Exception(f"Template {template.name} health check id required.")
+
+        health.check_name = self._get_string_property(spec.check_name, "check_name", None)
+        if health.check_name is None:
+            raise Exception(f"Template {template.name} health check name required.")
+
+        health.topo_identifier = self._get_string_property(spec.topo_identifier, "topo_identifier", None)
+        if health.topo_identifier is None:
+            raise Exception(f"Template {template.name} health topo_identifier required.")
+
+        health.message = self._get_string_property(spec.message, "message", "")
+
+        health_status = self._get_string_property(spec.health, "health", "")
+        if health_status not in HEALTH_STATE_CHOICES:
+            raise Exception(f"Template {template.name} health '{health_status}' not allowed. "
+                            f"Valid values {HEALTH_STATE_CHOICES}.")
+
+        health.health = health_status
+        self.ctx.factory.add_health(health)
+        return health

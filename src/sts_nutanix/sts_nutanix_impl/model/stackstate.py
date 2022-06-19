@@ -5,7 +5,7 @@ from typing import Any, Dict, List, Union
 import pytz
 from schematics import Model
 from schematics.transforms import blacklist, wholelist
-from schematics.types import (BaseType, DictType, ListType, ModelType,
+from schematics.types import (BaseType, DictType, ListType, ModelType, FloatType,
                               StringType)
 from schematics.types import TimestampType as DefaultTimestampType
 from schematics.types import URLType
@@ -124,12 +124,15 @@ class Component(Model):
         self.properties.name = name
 
 
+HEALTH_STATE_CHOICES = ["CLEAR", "DEVIATING", "CRITICAL"]
+
+
 class HealthCheckState(Model):
     check_id: str = StringType(required=True, serialized_name="checkStateId")
     check_name: str = StringType(required=True, serialized_name="name")
     topo_identifier: str = StringType(required=True, serialized_name="topologyElementIdentifier")
     message: str = StringType(required=False)
-    health: str = StringType(required=True, choices=["CLEAR", "DEVIATING", "CRITICAL"])
+    health: str = StringType(required=True, choices=HEALTH_STATE_CHOICES)
 
     class Options:
         roles = {"public": wholelist()}
@@ -143,11 +146,14 @@ class SourceLink(Model):
         roles = {"public": wholelist()}
 
 
+EVENT_CATEGORY_CHOICES = ["Activities", "Alerts", "Anomalies", "Changes", "Others"]
+
+
 class EventContext(Model):
-    category: str = StringType(required=True, choices=["Activities", "Alerts", "Anomalies", "Changes", "Others"])
+    category: str = StringType(required=True, choices=EVENT_CATEGORY_CHOICES)
     data: Dict[str, Any] = DictType(AnyType, default={})
     element_identifiers: List[str] = ListType(StringType, required=False, default=[])
-    source: str = StringType(required=True, default="StaticTopology")
+    source: str = StringType(required=True, default="ETL")
     source_links: List[SourceLink] = ListType(ModelType(SourceLink), required=False, default=[])
 
     class Options:
@@ -160,9 +166,25 @@ class Event(Model):
     event_type: str = StringType(required=True)
     msg_title: str = StringType(required=True)
     msg_text: str = StringType(required=True)
-    source_type_name: str = StringType(required=True, default="StaticTopology")
+    source_type_name: str = StringType(required=True, default="ETL")
     tags: List[str] = ListType(StringType, required=False, default=[])
     timestamp: datetime = TimestampType(required=True)
 
     class Options:
         roles = {"public": wholelist()}
+
+
+METRIC_TYPE_CHOICES = ["gauge", "count", "monotonic_count", "rate", "histogram", "historate", "increment", "decrement"]
+
+
+class Metric(Model):
+    name: str = StringType(required=True)
+    timestamp: datetime = TimestampType(default=datetime.now())
+    metric_type: str = StringType(default="gauge", choices=METRIC_TYPE_CHOICES)
+    value: float = FloatType(required=True)
+    target_uid: str = StringType(required=True)
+    tags: List[str] = ListType(StringType, required=False, default=[])
+
+    class Options:
+        roles = {"public": wholelist()}
+

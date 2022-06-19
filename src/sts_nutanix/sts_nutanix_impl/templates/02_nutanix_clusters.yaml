@@ -1,0 +1,20 @@
+etl:
+  queries:
+    - name: nutanix_clusters
+      query: "nutanix_client.get_clusters()"
+      template_refs:
+        - nutanix_cluster_template
+  template:
+    components:
+      - name: nutanix_cluster_template
+        spec:
+          name: "$.name"
+          type: "nutanix-cluster"
+          uid: "|uid('nutanix', 'cluster', item['uuid'])"
+          layer: "Nutanix Clusters"
+          custom_properties:
+            cluster_external_ipaddress: "$.cluster_external_ipaddress"
+            cluster_external_data_services_ipaddress: "$.cluster_external_data_services_ipaddress"
+            number_of_nodes: "$.num_nodes"
+            external_subnet: "$.external_subnet"
+            internal_subnet: "$.internal_subnet"

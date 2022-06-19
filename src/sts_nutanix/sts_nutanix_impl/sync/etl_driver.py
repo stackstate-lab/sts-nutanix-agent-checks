@@ -7,13 +7,39 @@ from typing import Any, Dict, List
 import yaml
 from importlib_resources import files
 from sts_nutanix_impl.etl.interpreter import (DataSourceInterpreter,
-                                              QueryInterpreter,
-                                              QueryProcessorInterpreter,
-                                              TemplateInterpreter,
-                                              TopologyContext)
-from sts_nutanix_impl.model.etl import ETL, ComponentTemplate, Query
+                                              QueryInterpreter, QueryProcessorInterpreter, ComponentTemplateInterpreter,
+                                              TopologyContext, ProcessorInterpreter, EventTemplateInterpreter,
+                                              MetricTemplateInterpreter, HeathTemplateInterpreter)
+from sts_nutanix_impl.model.etl import ETL, ComponentTemplate, Query, MetricTemplate, EventTemplate, HealthTemplate
 from sts_nutanix_impl.model.factory import TopologyFactory
 from sts_nutanix_impl.model.instance import InstanceInfo
+import attr
+
+
+@attr.s(kw_only=True)
+class TemplateLookup:
+    component: Dict[str, ComponentTemplate] = attr.ib(default={})
+    event: Dict[str, EventTemplate] = attr.ib(default={})
+    metric: Dict[str, MetricTemplate] = attr.ib(default={})
+    health: Dict[str, HealthTemplate] = attr.ib(default={})
+
+    def index(self, etl: ETL):
+        def add(attr_name: str, key: str, value: Any):
+            item: Dict[str, Any] = getattr(self, attr_name)
+            if key in item:
+                raise Exception(f"{attr_name} template '{key}' already defined. Template names must be unique.")
+            else:
+                item[key] = value
+
+        def add_all(attr_name: str, items: List[Any]):
+            for item in items:
+                add(attr_name, item.name, item)
+
+        if etl.template is not None:
+            add_all("component", etl.template.components)
+            add_all("event", etl.template.events)
+            add_all("metric", etl.template.metrics)
+            add_all("health", etl.template.health)
 
 
 class ETLDriver:
@@ -23,13 +49,20 @@ class ETLDriver:
         self.factory.log = log
         self.conf = conf
         self.models = self._init_model(conf.etl)
+        self.template_lookup = self._init_template_lookup()
 
     def process(self):
         global_datasources: Dict[str, Any] = {}
         for model in self.models:
-            processor = ETLProcessor(model, self.conf, self.factory, self.log)
+            processor = ETLProcessor(model, self.template_lookup, self.conf, self.factory, self.log)
             ctx = TopologyContext(factory=self.factory, datasources=global_datasources)
             processor.process(ctx)
+
+    def _init_template_lookup(self) -> TemplateLookup:
+        lookup = TemplateLookup()
+        for model in self.models:
+            lookup.index(model)
+        return lookup
 
     def _init_model(self, model: ETL) -> List[ETL]:
         model_list: List[ETL] = []
@@ -64,16 +97,20 @@ class ETLDriver:
 
 
 class ETLProcessor:
-    def __init__(self, etl: ETL, conf: InstanceInfo, factory: TopologyFactory, log: Logger):
+    def __init__(self, etl: ETL, template_lookup: TemplateLookup, conf: InstanceInfo, factory: TopologyFactory,
+                 log: Logger):
+        self.template_lookup = template_lookup
         self.factory = factory
         self.log = log
         self.conf = conf
         self.etl = etl
         self.query_specs: Dict[str, Query] = {}
-        self.component_templates: Dict[str, ComponentTemplate] = {}
-        self._init_lookup_tables()
 
     def process(self, ctx: TopologyContext):
+        self._process_queries(ctx)
+        self._process_post_processors(ctx)
+
+    def _process_queries(self, ctx: TopologyContext):
         counters: Dict[str, int] = {}
         self._init_datasources(ctx)
         for query_spec in self.etl.queries:
@@ -83,10 +120,7 @@ class ETLProcessor:
             counters[f"Query_`{query_spec.name}`_Items"] = len(query_results)
             unprocessed_items = query_results
             for template_ref in query_spec.template_refs:
-                template = self.component_templates[template_ref]
-                interpreter = TemplateInterpreter(
-                    ctx, template, self.conf.domain, self.conf.layer, self.conf.environment
-                )
+                interpreter = self._get_interpreter(ctx, template_ref)
                 still_to_process_devices = []
                 for item in unprocessed_items:
                     if interpreter.active(item):
@@ -105,12 +139,32 @@ class ETLProcessor:
 
         self.log.info(f"Query Template Processing Counters:\n{counters}")
 
-    def _init_lookup_tables(self):
-        for qs in self.etl.queries:
-            self.query_specs[qs.name] = qs
-        if self.etl.template is not None:
-            for t in self.etl.template.components:
-                self.component_templates[t.name] = t
+    def _get_interpreter(self, ctx, template_ref):
+        template = self.template_lookup.component.get(template_ref, None)
+        if template:
+            return ComponentTemplateInterpreter(
+                ctx, template, self.conf.domain, self.conf.layer, self.conf.environment
+            )
+        template = self.template_lookup.event.get(template_ref, None)
+        if template:
+            return EventTemplateInterpreter(
+                ctx, template, self.conf.domain, self.conf.layer, self.conf.environment
+            )
+        template = self.template_lookup.metric.get(template_ref, None)
+        if template:
+            return MetricTemplateInterpreter(
+                ctx, template, self.conf.domain, self.conf.layer, self.conf.environment
+            )
+        template = self.template_lookup.health.get(template_ref, None)
+        if template:
+            return HeathTemplateInterpreter(
+                ctx, template, self.conf.domain, self.conf.layer, self.conf.environment
+            )
+        raise Exception(f"Template '{template_ref}' not found.")
+
+    def _process_post_processors(self, ctx: TopologyContext):
+        for processor_spec in self.etl.processors:
+            ProcessorInterpreter(ctx).interpret(processor_spec)
 
     def _init_datasources(self, ctx: TopologyContext):
         interpreter = DataSourceInterpreter(ctx)

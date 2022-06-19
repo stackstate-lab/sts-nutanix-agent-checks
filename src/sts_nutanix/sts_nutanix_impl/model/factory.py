@@ -1,8 +1,7 @@
 from typing import Any, Dict, List, Optional, Union
 
 from jsonpath_ng import parse
-from sts_nutanix_impl.model.stackstate import (Component, Event,
-                                               HealthCheckState, Relation)
+from sts_nutanix_impl.model.stackstate import Component, Event, Metric, HealthCheckState, Relation
 import logging
 
 
@@ -12,9 +11,9 @@ class TopologyFactory:
         self.relations: Dict[str, Relation] = {}
         self.health: Dict[str, HealthCheckState] = {}
         self.events: List[Event] = []
+        self.metrics: List[Metric] = []
         self.lookups: Dict[str, Any] = {}
         self.log = logging.getLogger()
-
 
     @staticmethod
     def jpath(path: str, target: Any, default: Any = None) -> Union[Optional[Any], List[Any]]:
@@ -28,6 +27,20 @@ class TopologyFactory:
 
     def add_event(self, event: Event):
         self.events.append(event)
+
+    def add_metric(self, metric: Metric):
+        self.metrics.append(metric)
+
+    def add_metric_value(self, name: str, value: float, metric_type: str = "gauge", tags: List[str] = None,
+                         target_uid=None):
+        metric = Metric()
+        metric.name = name
+        metric.value = value
+        metric.metric_type = metric_type
+        metric.target_uid = target_uid
+        if tags:
+            metric.tags = tags
+        self.metrics.append(metric)
 
     def add_component(self, component: Component):
         if component is None:
@@ -93,6 +106,27 @@ class TopologyFactory:
         if health.check_id in self.health:
             raise Exception(f"Health event '{health.check_id}' already exists.")
         self.health[health.check_id] = health
+
+    @staticmethod
+    def add_component_relations(component: Component, relations: List[str]):
+        for relation in relations:
+            rel_parts = relation.split("|")
+            rel_type = "uses"
+            if len(rel_parts) == 2:
+                rel_type = rel_parts[1]
+            reverse = False
+            if rel_parts[0].startswith("<"):
+                reverse = True
+                rel_parts[0] = rel_parts[0][1:]
+
+            if reverse:
+                rel_id = f"{rel_parts[0]} --> {component.uid}"
+                relation = Relation({"source_id": rel_parts[0], "target_id": component.uid, "external_id": rel_id})
+            else:
+                rel_id = f"{component.uid} --> {rel_parts[0]}"
+                relation = Relation({"source_id": component.uid, "target_id": rel_parts[0], "external_id": rel_id})
+            relation.set_type(rel_type)
+            component.relations.append(relation)
 
     def resolve_relations(self):
         components: List[Component] = self.components.values()

@@ -1,0 +1,21 @@
+etl:
+  queries:
+    - name: karbon_clusters
+      query: "nutanix_client.get(nutanix_client.V1_BETA_KARBON, 'k8s/clusters')"
+      processor: |
+        k8s_clusters = factory.lookups.setdefault("k8s_clusters", [])
+        k8s_clusters.append(item["name"])
+      template_refs:
+        - karbon_cluster_template
+  template:
+    components:
+      - name: karbon_cluster_template
+        spec:
+          name: "$.name"
+          type: "cluster"
+          uid: "|'urn:cluster:/kubernetes:%s' % item['name']"
+          layer: "K8s Clusters"
+
+
+
+

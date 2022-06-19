@@ -45,13 +45,7 @@ class AgentProcessor:
         self.agent_check.stop_snapshot()
         self._publish_health()
         self._publish_events()
-
-    @staticmethod
-    def _encode_utf8(string: str) -> str:
-        if PY3:
-            return string
-        else:
-            return string.encode("utf-8")
+        self._publish_metrics()
 
     def _publish_health(self):
         self.log.info(f"Synchronizing  '{len(self.factory.health)}' health states")
@@ -85,3 +79,17 @@ class AgentProcessor:
         for event in self.factory.events:
             event_dict = event.to_primitive(role="public")
             self.agent_check.event(event_dict)
+
+    def _publish_metrics(self):
+        self.log.info(f"Sending  '{len(self.factory.metrics)}' metrics")
+        for metric in self.factory.metrics:
+            metric_func = getattr(self.agent_check, metric.metric_type)
+            metric_func(metric.name, metric.value, tags=metric.tags, hostname=metric.target_uid)
+
+    @staticmethod
+    def _encode_utf8(string: str) -> str:
+        if PY3:
+            return string
+        else:
+            return string.encode("utf-8")
+
