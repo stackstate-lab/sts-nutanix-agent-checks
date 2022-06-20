@@ -5,7 +5,7 @@ from typing import Any, Dict, List, Optional, Union
 import attr
 import pydash
 from asteval import Interpreter
-from jsonpath_ng.exceptions import JsonPathParserError
+from jsonpath_ng.exceptions import JsonPathParserError, JsonPathLexerError
 from six import string_types
 from sts_nutanix_impl.model.etl import (ComponentTemplate,
                                         ComponentTemplateSpec, DataSource,
@@ -235,7 +235,7 @@ class BaseTemplateInterpreter(BaseInterpreter):
         if expression.startswith("$."):
             try:
                 return self.ctx.factory.jpath(expression, self.ctx.item, default)
-            except JsonPathParserError as e:
+            except (JsonPathParserError, JsonPathLexerError) as e:
                 raise Exception(
                     f"Failed to evaluate property '{name}' for '{self.source_name}' on template `{self.template_name}`."
                     f" Expression |\n {expression} \n |.\n Errors:\n {str(e)}"

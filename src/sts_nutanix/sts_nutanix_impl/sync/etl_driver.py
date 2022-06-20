@@ -131,23 +131,19 @@ class ETLProcessor:
             if query_results is None or len(query_results) == 0:
                 self.log.warning(f"Query {query_spec.name} returned no results! Check query logic in template.")
             counters[f"Query_`{query_spec.name}`_Items"] = len(query_results)
-            unprocessed_items = query_results
+            processed_by_counter = 0
             for template_ref in query_spec.template_refs:
                 interpreter = self._get_interpreter(ctx, template_ref)
-                still_to_process_devices = []
-                for item in unprocessed_items:
+                for item in query_results:
                     if interpreter.active(item):
                         try:
                             interpreter.interpret(item)
+                            processed_by_counter += 1
                         except Exception as e:
                             self.log.error(json.dumps(item, indent=4))
                             raise e
-                    else:
-                        still_to_process_devices.append(item)
-                unprocessed_items = still_to_process_devices
-            if len(unprocessed_items) > 0:
-                self.log.warning(f"Unprocessed Count for Query {query_spec.name} is {len(unprocessed_items)}")
-                self.log.debug([d for d in unprocessed_items])
+            if processed_by_counter == 0:
+                self.log.warning(f"Unprocessed Count for Query {query_spec.name} is 0")
             QueryProcessorInterpreter(ctx).interpret(query_spec)
 
         self.log.info(f"Query Template Processing Counters:\n{counters}")
