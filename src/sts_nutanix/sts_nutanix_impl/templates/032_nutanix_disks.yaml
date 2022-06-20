@@ -1,0 +1,32 @@
+etl:
+  queries:
+    - name: nutanix_disks
+      query: "nutanix_client.get(nutanix_client.V2, 'disks')['entities']"
+      template_refs:
+        - nutanix_disk_template
+        - nutanix_disk_online_template
+  template:
+    components:
+      - name: nutanix_disk_template
+        spec:
+          name: "$.disk_hardware_config.serial_number"
+          type: "nutanix-disk"
+          uid: "|uid('nutanix', 'disk', item['disk_uuid'])"
+          layer: "Nutanix Disks"
+          custom_properties:
+            online: "$.online"
+            storage_tier_name: "$.storage_tier_name"
+            model: "$.disk_hardware_config.model"
+            bad: "$.disk_hardware_config.bad"
+            mounted: "$.disk_hardware_config.mounted"
+            current_firmware_version: "$.disk_hardware_config.current_firmware_version"
+          relations: ["|'<urn:nutanix:host:/%s' % item['node_uuid']"]
+    health:
+      - name: nutanix_disk_online_template
+        spec:
+          check_id: "|'%s_online' % item['disk_uuid']"
+          check_name: "DiskOnline"
+          topo_identifier: "|uid('nutanix', 'disk', item['disk_uuid'])"
+          health: "|'CLEAR' if item['online'] else 'WARNING'"
+          message: "|'Disk Status is %s' % item['disk_status']"
+
