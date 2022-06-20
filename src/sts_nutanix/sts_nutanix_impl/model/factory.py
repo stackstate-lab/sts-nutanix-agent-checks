@@ -151,7 +151,7 @@ class TopologyFactory:
     @staticmethod
     def get_uid(integration: str, uid_type: str, urn_post_fix: str) -> str:
         sanitize_str = TopologyFactory.sanitize(urn_post_fix)
-        return f"urn:{integration}:{uid_type}/{sanitize_str}"
+        return f"urn:{integration}:{uid_type}:/{sanitize_str}"
 
     @staticmethod
     def sanitize(value: str) -> str:
