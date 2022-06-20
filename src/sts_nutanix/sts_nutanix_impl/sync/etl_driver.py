@@ -4,16 +4,22 @@ import pathlib
 from logging import Logger
 from typing import Any, Dict, List
 
+import attr
 import yaml
 from importlib_resources import files
-from sts_nutanix_impl.etl.interpreter import (DataSourceInterpreter,
-                                              QueryInterpreter, QueryProcessorInterpreter, ComponentTemplateInterpreter,
-                                              TopologyContext, ProcessorInterpreter, EventTemplateInterpreter,
-                                              MetricTemplateInterpreter, HeathTemplateInterpreter)
-from sts_nutanix_impl.model.etl import ETL, ComponentTemplate, Query, MetricTemplate, EventTemplate, HealthTemplate
+from sts_nutanix_impl.etl.interpreter import (ComponentTemplateInterpreter,
+                                              DataSourceInterpreter,
+                                              EventTemplateInterpreter,
+                                              HeathTemplateInterpreter,
+                                              MetricTemplateInterpreter,
+                                              ProcessorInterpreter,
+                                              QueryInterpreter,
+                                              QueryProcessorInterpreter,
+                                              TopologyContext)
+from sts_nutanix_impl.model.etl import (ETL, ComponentTemplate, EventTemplate,
+                                        HealthTemplate, MetricTemplate, Query)
 from sts_nutanix_impl.model.factory import TopologyFactory
 from sts_nutanix_impl.model.instance import InstanceInfo
-import attr
 
 
 @attr.s(kw_only=True)
@@ -97,8 +103,9 @@ class ETLDriver:
 
 
 class ETLProcessor:
-    def __init__(self, etl: ETL, template_lookup: TemplateLookup, conf: InstanceInfo, factory: TopologyFactory,
-                 log: Logger):
+    def __init__(
+        self, etl: ETL, template_lookup: TemplateLookup, conf: InstanceInfo, factory: TopologyFactory, log: Logger
+    ):
         self.template_lookup = template_lookup
         self.factory = factory
         self.log = log
@@ -142,24 +149,16 @@ class ETLProcessor:
     def _get_interpreter(self, ctx, template_ref):
         template = self.template_lookup.component.get(template_ref, None)
         if template:
-            return ComponentTemplateInterpreter(
-                ctx, template, self.conf.domain, self.conf.layer, self.conf.environment
-            )
+            return ComponentTemplateInterpreter(ctx, template, self.conf.domain, self.conf.layer, self.conf.environment)
         template = self.template_lookup.event.get(template_ref, None)
         if template:
-            return EventTemplateInterpreter(
-                ctx, template, self.conf.domain, self.conf.layer, self.conf.environment
-            )
+            return EventTemplateInterpreter(ctx, template, self.conf.domain, self.conf.layer, self.conf.environment)
         template = self.template_lookup.metric.get(template_ref, None)
         if template:
-            return MetricTemplateInterpreter(
-                ctx, template, self.conf.domain, self.conf.layer, self.conf.environment
-            )
+            return MetricTemplateInterpreter(ctx, template, self.conf.domain, self.conf.layer, self.conf.environment)
         template = self.template_lookup.health.get(template_ref, None)
         if template:
-            return HeathTemplateInterpreter(
-                ctx, template, self.conf.domain, self.conf.layer, self.conf.environment
-            )
+            return HeathTemplateInterpreter(ctx, template, self.conf.domain, self.conf.layer, self.conf.environment)
         raise Exception(f"Template '{template_ref}' not found.")
 
     def _process_post_processors(self, ctx: TopologyContext):

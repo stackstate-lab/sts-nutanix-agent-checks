@@ -1,10 +1,9 @@
-from typing import Any, Dict, List, Set, Union
-import itertools
+from typing import Any, Dict, List, Union
 
 from schematics import Model
-from schematics.exceptions import DataError
-from schematics.types import ListType, ModelType, StringType, UnionType, DictType
-from sts_nutanix_impl.model.stackstate import METRIC_TYPE_CHOICES, EVENT_CATEGORY_CHOICES, AnyType
+from schematics.types import (DictType, ListType, ModelType, StringType,
+                              UnionType)
+from sts_nutanix_impl.model.stackstate import EVENT_CATEGORY_CHOICES, AnyType
 
 
 class DataSource(Model):

@@ -5,8 +5,8 @@ from typing import Any, Dict, List, Union
 import pytz
 from schematics import Model
 from schematics.transforms import blacklist, wholelist
-from schematics.types import (BaseType, DictType, ListType, ModelType, FloatType,
-                              StringType)
+from schematics.types import (BaseType, DictType, FloatType, ListType,
+                              ModelType, StringType)
 from schematics.types import TimestampType as DefaultTimestampType
 from schematics.types import URLType
 
@@ -187,4 +187,3 @@ class Metric(Model):
 
     class Options:
         roles = {"public": wholelist()}
-

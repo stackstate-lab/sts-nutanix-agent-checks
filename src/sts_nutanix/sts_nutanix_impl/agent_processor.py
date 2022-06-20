@@ -92,4 +92,3 @@ class AgentProcessor:
             return string
         else:
             return string.encode("utf-8")
-

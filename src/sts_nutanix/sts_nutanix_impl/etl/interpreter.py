@@ -7,13 +7,19 @@ import pydash
 from asteval import Interpreter
 from jsonpath_ng.exceptions import JsonPathParserError
 from six import string_types
-from sts_nutanix_impl.model.etl import (ComponentTemplate, DataSource, Query,
-                                        Template, ProcessorSpec, EventTemplate, MetricTemplate, MetricTemplateSpec,
-                                        EventTemplateSpec, HealthTemplate, HealthTemplateSpec, ComponentTemplateSpec)
+from sts_nutanix_impl.model.etl import (ComponentTemplate,
+                                        ComponentTemplateSpec, DataSource,
+                                        EventTemplate, EventTemplateSpec,
+                                        HealthTemplate, HealthTemplateSpec,
+                                        MetricTemplate, MetricTemplateSpec,
+                                        ProcessorSpec, Query)
 from sts_nutanix_impl.model.factory import TopologyFactory
 from sts_nutanix_impl.model.instance import InstanceInfo
-from sts_nutanix_impl.model.stackstate import (Component, Metric, Event, METRIC_TYPE_CHOICES, EVENT_CATEGORY_CHOICES,
-                                               SourceLink, HealthCheckState, HEALTH_STATE_CHOICES)
+from sts_nutanix_impl.model.stackstate import (EVENT_CATEGORY_CHOICES,
+                                               HEALTH_STATE_CHOICES,
+                                               METRIC_TYPE_CHOICES, Component,
+                                               Event, HealthCheckState, Metric,
+                                               SourceLink)
 
 
 @attr.s(kw_only=True)
@@ -152,9 +158,14 @@ class ProcessorInterpreter(BaseInterpreter):
 
 
 class BaseTemplateInterpreter(BaseInterpreter):
-    def __init__(self, ctx: TopologyContext, template: Union[ComponentTemplate, EventTemplate, MetricTemplate,
-                                                             HealthTemplate],
-                 domain: str, layer: str, environment: str):
+    def __init__(
+        self,
+        ctx: TopologyContext,
+        template: Union[ComponentTemplate, EventTemplate, MetricTemplate, HealthTemplate],
+        domain: str,
+        layer: str,
+        environment: str,
+    ):
         BaseInterpreter.__init__(self, ctx)
         self.environment = environment
         self.layer = layer
@@ -196,7 +207,7 @@ class BaseTemplateInterpreter(BaseInterpreter):
         values = self._assert_list(values, name)
         return [self._get_string_property(v, name) for v in values]
 
-    def _get_dict_property(self, expression: Union[str, list], name: str, default=None) -> Dict[str, Any]:
+    def _get_dict_property(self, expression: Union[str, Dict[str, Any]], name: str, default=None) -> Dict[str, Any]:
         if default is None:
             default = {}
         if isinstance(expression, string_types):
@@ -204,9 +215,10 @@ class BaseTemplateInterpreter(BaseInterpreter):
         else:
             values = expression
         values = self._assert_dict(values, name)
+        result: Dict[str, Any] = {}
         for k, v in values.items():
-            values[k] = self._get_value(v, f"{name}:{k}")
-        return values
+            result[k] = self._get_value(v, f"{name}:{k}")
+        return result
 
     def _get_value(self, expression: str, name: str, default: Any = None) -> Any:
         if expression is None:
@@ -297,8 +309,9 @@ class ComponentTemplateInterpreter(BaseTemplateInterpreter):
         component.properties.domain = self._get_string_property(spec.domain, "domain", self.domain)
         component.properties.environment = self._get_string_property(spec.environment, "environment", self.environment)
         component.properties.labels.extend(self._merge_list_property(spec.labels, "labels"))
-        component.properties.custom_properties.update(self._get_dict_property(spec.custom_properties,
-                                                                              "custom_properties"))
+        component.properties.custom_properties.update(
+            self._get_dict_property(spec.custom_properties, "custom_properties")
+        )
         component.uid = self._get_string_property(spec.uid, "uid", None)
         if component.uid is None:
             raise Exception(f"Component uid is required on template" f" `{self.template_name}.")
@@ -347,8 +360,10 @@ class MetricTemplateInterpreter(BaseTemplateInterpreter):
         metric.target_uid = self._get_string_property(spec.target_uid, "target_uid", None)
         metric_type = self._get_string_property(spec.metric_type, "metric_type", "gauge")
         if metric_type not in METRIC_TYPE_CHOICES:
-            raise Exception(f"Template {template.name} metric type '{metric_type}' not allowed. "
-                            f"Valid values {METRIC_TYPE_CHOICES}.")
+            raise Exception(
+                f"Template {template.name} metric type '{metric_type}' not allowed. "
+                f"Valid values {METRIC_TYPE_CHOICES}."
+            )
 
         metric.metric_type = metric_type
         metric.value = self._get_float_property(spec.value, "value")
@@ -374,8 +389,10 @@ class EventTemplateInterpreter(BaseTemplateInterpreter):
 
         category = self._get_string_property(spec.category, "category", "")
         if category not in EVENT_CATEGORY_CHOICES:
-            raise Exception(f"Template {template.name} event category '{category}' not allowed. "
-                            f"Valid values {EVENT_CATEGORY_CHOICES}.")
+            raise Exception(
+                f"Template {template.name} event category '{category}' not allowed. "
+                f"Valid values {EVENT_CATEGORY_CHOICES}."
+            )
 
         event.context.category = category
         event.context.element_identifiers = self._get_list_property(spec.element_identifiers, "element_identifiers", [])
@@ -425,8 +442,10 @@ class HeathTemplateInterpreter(BaseTemplateInterpreter):
 
         health_status = self._get_string_property(spec.health, "health", "")
         if health_status not in HEALTH_STATE_CHOICES:
-            raise Exception(f"Template {template.name} health '{health_status}' not allowed. "
-                            f"Valid values {HEALTH_STATE_CHOICES}.")
+            raise Exception(
+                f"Template {template.name} health '{health_status}' not allowed. "
+                f"Valid values {HEALTH_STATE_CHOICES}."
+            )
 
         health.health = health_status
         self.ctx.factory.add_health(health)

@@ -15,7 +15,8 @@ logging.basicConfig()
 logger = logging.getLogger("stackstate_checks.base.checks.base.sl1check")
 logger.setLevel(logging.INFO)
 
-@requests_mock.Mocker(kw='m')
+
+@requests_mock.Mocker(kw="m")
 def test_check(m: requests_mock.Mocker = None):
     topology.reset()
     instance_dict = setup_test_instance()
@@ -25,11 +26,18 @@ def test_check(m: requests_mock.Mocker = None):
     check._init_health_api()
 
     nutanix = NutanixClient(instance.nutanix, logger)
+    print(nutanix.get_url(nutanix.V2, "clusters"))
     m.register_uri("GET", nutanix.get_url(nutanix.V2, "clusters"), json=response("get_clusters_v2"))
-    m.register_uri("GET", nutanix.get_url(nutanix.V1_BETA_KARBON, "k8s/clusters"),
-                   json=response("karbon_list_k8s_clusters"))
-    m.register_uri("GET", nutanix.get_url(nutanix.V1_ALPHA_KARBON, "k8s/clusters/stackstate/node-pools"),
-                   json=response("karbon_list_cluster_node_pools"))
+    print(nutanix.get_url(nutanix.V1_BETA_KARBON, "k8s/clusters"))
+    m.register_uri(
+        "GET", nutanix.get_url(nutanix.V1_BETA_KARBON, "k8s/clusters"), json=response("karbon_list_k8s_clusters")
+    )
+    print(nutanix.get_url(nutanix.V1_ALPHA_KARBON, "k8s/clusters/stackstate/node-pools"))
+    m.register_uri(
+        "GET",
+        nutanix.get_url(nutanix.V1_ALPHA_KARBON, "k8s/clusters/stackstate/node-pools"),
+        json=response("karbon_list_cluster_node_pools"),
+    )
 
     check.check(instance)
 
@@ -43,6 +51,7 @@ def test_check(m: requests_mock.Mocker = None):
 def response(file_name):
     with open(f"tests/resources/responses/{file_name}.json") as f:
         return json.load(f)
+
 
 def setup_test_instance() -> Dict[str, Any]:
     with open("tests/resources/conf.d/nutanix.d/conf.yaml.example") as f:

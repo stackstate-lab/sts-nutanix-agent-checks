@@ -1,8 +1,10 @@
+import logging
 from typing import Any, Dict, List, Optional, Union
 
 from jsonpath_ng import parse
-from sts_nutanix_impl.model.stackstate import Component, Event, Metric, HealthCheckState, Relation
-import logging
+from sts_nutanix_impl.model.stackstate import (Component, Event,
+                                               HealthCheckState, Metric,
+                                               Relation)
 
 
 class TopologyFactory:
@@ -31,8 +33,9 @@ class TopologyFactory:
     def add_metric(self, metric: Metric):
         self.metrics.append(metric)
 
-    def add_metric_value(self, name: str, value: float, metric_type: str = "gauge", tags: List[str] = None,
-                         target_uid=None):
+    def add_metric_value(
+        self, name: str, value: float, metric_type: str = "gauge", tags: List[str] = None, target_uid=None
+    ):
         metric = Metric()
         metric.name = name
         metric.value = value
@@ -144,7 +147,6 @@ class TopologyFactory:
                             f"Reference from component {source.uid}."
                         )
             source.relations = []
-
 
     @staticmethod
     def get_uid(integration: str, uid_type: str, urn_post_fix: str) -> str:
