@@ -57,12 +57,21 @@ class BaseInterpreter:
         if len(self.aeval.error) > existing_errs and fail_on_error:
             error_messages = []
             for err in self.aeval.error:
-                error_messages.append(err.exc_info)
-                error_messages.append(err.get_error())
-            raise Exception(
-                f"Failed to evaluate property '{eval_property}' on `{self._get_eval_expression_failed_source()}`. "
-                f"Expression |\n {expression} \n |.\n Errors:\n {error_messages}"
-            )
+                lineno = 0 if not err.node else err.node.lineno
+                error_messages.append((err.msg, lineno, err.get_error()))
+            error_lines = [(f"Failed to evaluate property '{eval_property}' on "
+                           f"`{self._get_eval_expression_failed_source()}`. "),
+                           "-"*40,
+                           expression,
+                           "-"*40]
+            for msg, line_num, error_message in error_messages:
+                error_lines.append(f"Error: {error_message[0]} - {msg}")
+                error_lines.append(f"Line Number: {line_num}")
+                error_lines.append("-"*40)
+                inner_lines = error_message[1].split("\n")
+                error_lines.extend(inner_lines)
+                error_lines.append("-"*40)
+            raise Exception("\n".join(error_lines))
         return result
 
     def _get_eval_expression_failed_source(self) -> str:
@@ -201,7 +210,7 @@ class BaseTemplateInterpreter(BaseInterpreter):
         if default is None:
             default = []
         if isinstance(expression, string_types):
-            values = self._get_value(expression, name, default=default)
+            values = self._get_value(expression, name, default=default, force_eval=True)
         else:
             values = expression
         values = self._assert_list(values, name)
@@ -211,7 +220,7 @@ class BaseTemplateInterpreter(BaseInterpreter):
         if default is None:
             default = {}
         if isinstance(expression, string_types):
-            values = self._get_value(expression, name, default=default)
+            values = self._get_value(expression, name, default=default, force_eval=True)
         else:
             values = expression
         values = self._assert_dict(values, name)
@@ -220,7 +229,7 @@ class BaseTemplateInterpreter(BaseInterpreter):
             result[k] = self._get_value(v, f"{name}:{k}")
         return result
 
-    def _get_value(self, expression: str, name: str, default: Any = None) -> Any:
+    def _get_value(self, expression: str, name: str, default: Any = None, force_eval=False) -> Any:
         if expression is None:
             return default
         if expression.startswith("$."):
@@ -231,7 +240,7 @@ class BaseTemplateInterpreter(BaseInterpreter):
                     f"Failed to evaluate property '{name}' for '{self.source_name}' on template `{self.template_name}`."
                     f" Expression |\n {expression} \n |.\n Errors:\n {str(e)}"
                 )
-        elif expression.startswith("|"):
+        elif expression.startswith("|") or force_eval:
             result = self._run_code(expression, name)
             if result is None:
                 return default
