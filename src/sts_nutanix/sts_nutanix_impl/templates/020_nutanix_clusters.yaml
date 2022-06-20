@@ -1,0 +1,56 @@
+etl:
+  queries:
+    - name: nutanix_clusters
+      query: "nutanix_client.get_clusters()"
+      processor: |
+        rackable_units = factory.lookups.setdefault("rackable_units", {})
+        rackable_units[item["uuid"]] = item["rackable_units"]
+      template_refs:
+        - nutanix_cluster_template
+    - name: nutanix_rackable_units
+      query: |
+        results = []
+        for cluster, units in factory.lookups.get("rackable_units", {}).items():
+          [py_.set_(n, "cluster_uuid", cluster) for n in units]
+          results.extend(units)
+        results
+      template_refs:
+        - nutanix_rackable_unit_template
+  template:
+    components:
+      - name: nutanix_cluster_template
+        spec:
+          name: "$.name"
+          type: "nutanix-cluster"
+          uid: "|uid('nutanix', 'cluster', item['uuid'])"
+          layer: "Nutanix Clusters"
+          custom_properties:
+            cluster_external_ipaddress: "$.cluster_external_ipaddress"
+            cluster_external_data_services_ipaddress: "$.cluster_external_data_services_ipaddress"
+            number_of_nodes: "$.num_nodes"
+            external_subnet: "$.external_subnet"
+            internal_subnet: "$.internal_subnet"
+          relations: |
+            |results = []
+            for rack_unit in item["rackable_units"]:
+              for node_uuid in rack_unit["node_uuids"]:
+                results.append("urn:nutanix:host:/%s" % (node_uuid))
+            results
+      - name: nutanix_rackable_unit_template
+        spec:
+          name: '|"%s-%s" % (item["model_name"], item["serial"])'
+          type: "nutanix-rack"
+          uid: "|uid('nutanix', 'rack', item['rackable_unit_uuid'])"
+          layer: "Nutanix Racks"
+          custom_properties:
+            model: "$.model"
+            model_name: "$.model_name"
+            serial: "$.serial"
+          relations: |
+            |results = []
+            for node_uuid in item["node_uuids"]:
+              results.append("urn:nutanix:host:/%s" % node_uuid)
+            results
+            
+              
+

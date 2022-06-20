@@ -1,0 +1,24 @@
+etl:
+  queries:
+    - name: nutanix_hosts
+      query: |
+        nutanix_client.post(nutanix_client.V3,
+                            'hosts/list',
+                            {"kind": "host"})["entities"]
+      template_refs:
+        - nutanix_host_template
+  template:
+    components:
+      - name: nutanix_host_template
+        spec:
+          name: "|jpath('$.spec.name') or jpath('$.metadata.uuid')"
+          type: "nutanix-host"
+          uid: "|uid('nutanix', 'host', item['metadata']['uuid'])"
+          layer: "Nutanix Hosts"
+          custom_properties:
+            state: "$.status.state"
+            host_type: "$.status.host_type"
+            number_of_nodes: "$.num_nodes"
+            controller_vm_ip: "$.status.controller_vm.ip"
+            hypervisor_ip: "$.status.hypervisor.ip"
+            hypervisor_vm_count: "$.status.hypervisor.num_vms"
