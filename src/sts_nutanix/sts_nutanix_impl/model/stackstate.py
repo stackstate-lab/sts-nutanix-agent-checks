@@ -179,7 +179,7 @@ METRIC_TYPE_CHOICES = ["gauge", "count", "monotonic_count", "rate", "histogram",
 
 class Metric(Model):
     name: str = StringType(required=True)
-    timestamp: datetime = TimestampType(default=datetime.now())
+    timestamp: datetime = TimestampType(default=datetime.now(pytz.utc))
     metric_type: str = StringType(default="gauge", choices=METRIC_TYPE_CHOICES)
     value: float = FloatType(required=True)
     target_uid: str = StringType(required=True)

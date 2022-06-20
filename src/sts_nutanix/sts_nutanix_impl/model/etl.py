@@ -90,6 +90,7 @@ class MetricTemplate(Model):
     name: str = StringType(required=True)
     selector: str = StringType(default=None)
     spec = ModelType(MetricTemplateSpec)
+    code = StringType()
 
 
 class ProcessorSpec(Model):
@@ -107,7 +108,8 @@ class Template(Model):
 class ETL(Model):
     source: str = StringType(default="Unknown")
     refs: List[str] = ListType(StringType(), default=[])
-    processors: List[ProcessorSpec] = ListType(ModelType(ProcessorSpec), default=[])
+    pre_processors: List[ProcessorSpec] = ListType(ModelType(ProcessorSpec), default=[])
+    post_processors: List[ProcessorSpec] = ListType(ModelType(ProcessorSpec), default=[])
     datasources: List[DataSource] = ListType(ModelType(DataSource), default=[])
     queries: List[Query] = ListType(ModelType(Query), default=[])
     template: Template = ModelType(Template)

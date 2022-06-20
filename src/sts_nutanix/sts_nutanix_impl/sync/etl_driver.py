@@ -120,6 +120,7 @@ class ETLProcessor:
         self.query_specs: Dict[str, Query] = {}
 
     def process(self, ctx: TopologyContext):
+        self._process_pre_processors(ctx)
         self._process_queries(ctx)
         self._process_post_processors(ctx)
 
@@ -164,7 +165,11 @@ class ETLProcessor:
         raise Exception(f"Template '{template_ref}' not found.")
 
     def _process_post_processors(self, ctx: TopologyContext):
-        for processor_spec in self.etl.processors:
+        for processor_spec in self.etl.post_processors:
+            ProcessorInterpreter(ctx).interpret(processor_spec)
+
+    def _process_pre_processors(self, ctx: TopologyContext):
+        for processor_spec in self.etl.pre_processors:
             ProcessorInterpreter(ctx).interpret(processor_spec)
 
     def _init_datasources(self, ctx: TopologyContext):

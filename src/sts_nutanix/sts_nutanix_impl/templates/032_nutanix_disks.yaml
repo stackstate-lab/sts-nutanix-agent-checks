@@ -1,10 +1,22 @@
 etl:
+  pre_processors:
+    - name: convert_bytes_function
+      code: |
+        def bytesto(bytes, to, bsize=1024):
+            a = {'k' : 1, 'm': 2, 'g' : 3, 't' : 4, 'p' : 5, 'e' : 6 }
+            r = float(bytes)
+            for i in range(a[to]):
+                r = r / bsize
+            return(r)
+        session["bytesto"] = bytesto
   queries:
     - name: nutanix_disks
       query: "nutanix_client.get(nutanix_client.V2, 'disks')['entities']"
       template_refs:
         - nutanix_disk_template
         - nutanix_disk_online_template
+        - nutanix_disk_metric_spec_template
+        - nutanix_disk_metric_code_template
   template:
     components:
       - name: nutanix_disk_template
@@ -29,4 +41,29 @@ etl:
           topo_identifier: "|uid('nutanix', 'disk', item['disk_uuid'])"
           health: "|'CLEAR' if item['online'] else 'WARNING'"
           message: "|'Disk Status is %s' % item['disk_status']"
+    metrics:
+      - name: nutanix_disk_metric_spec_template
+        spec:
+          name: "storage.logical_usage_gb"
+          metric_type: "gauge"
+          value: "|session['bytesto'](item['usage_stats']['storage.logical_usage_bytes'], 'g')"
+          target_uid: "|uid('nutanix', 'disk', item['disk_uuid'])"
+      - name: nutanix_disk_metric_code_template
+        code: |
+          component_uid = uid('nutanix','disk', item['disk_uuid'])
+          bytesto = session['bytesto']
+          usage_stats = item["usage_stats"]
+          factory.add_metric_value("storage.capacity_gb", 
+                                    bytesto(usage_stats["storage.capacity_bytes"], 'g'),
+                                    target_uid=component_uid)
+          factory.add_metric_value("storage.free_gb",
+                                    bytesto(usage_stats["storage.free_bytes"], 'g'),
+                                    target_uid=component_uid)
+          factory.add_metric_value("storage.usage_gb",
+                                    bytesto(usage_stats["storage.usage_bytes"], 'g'),
+                                    target_uid=component_uid)
+        
+          
+          
+
 

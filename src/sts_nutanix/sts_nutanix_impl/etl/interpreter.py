@@ -31,6 +31,7 @@ class TopologyContext:
     event: Event = attr.ib(default=None)
     metric: Metric = attr.ib(default=None)
     health: HealthCheckState = attr.ib(default=None)
+    session: Dict[str, Any] = attr.ib(default={})
 
     def jpath(self, path) -> Any:
         return self.factory.jpath(path, self.item)
@@ -87,6 +88,7 @@ class BaseInterpreter:
         symtable["event"] = ctx.event
         symtable["health"] = ctx.health
         symtable["jpath"] = ctx.jpath
+        symtable["session"] = ctx.session
         for name, ds in ctx.datasources.items():
             symtable[name] = ds
         symtable["uid"] = ctx.factory.get_uid
@@ -355,17 +357,25 @@ class MetricTemplateInterpreter(BaseTemplateInterpreter):
     def __init__(self, ctx: TopologyContext, template: MetricTemplate, domain: str, layer: str, environment: str):
         BaseTemplateInterpreter.__init__(self, ctx, template, domain, layer, environment)
 
-    def interpret(self, item: Dict[str, Any]) -> Metric:
+    def interpret(self, item: Dict[str, Any]) -> Optional[Metric]:
         template: MetricTemplate = self.template
         self.ctx.item = item
+
+        if template.spec and template.code:
+            raise Exception(f"Template {template.name} cannot have both spec and code properties.")
+        if template.spec:
+            return self._interpret_spec(template.spec, template)
+        elif template.code:
+            return self._interpret_code(template.code)
+        else:
+            raise Exception(f"Template {template.name} must have either spec and code properties defined.")
+
+    def _interpret_spec(self, spec: MetricTemplateSpec, template: MetricTemplate):
         self.ctx.metric = metric = Metric()
         self._update_asteval_symtable()
-        spec: MetricTemplateSpec = template.spec
-
         metric.name = self._get_string_property(spec.name, "name", None)
         if metric.name is None:
             raise Exception(f"Template {template.name} metric name is required.")
-
         metric.target_uid = self._get_string_property(spec.target_uid, "target_uid", None)
         metric_type = self._get_string_property(spec.metric_type, "metric_type", "gauge")
         if metric_type not in METRIC_TYPE_CHOICES:
@@ -373,12 +383,14 @@ class MetricTemplateInterpreter(BaseTemplateInterpreter):
                 f"Template {template.name} metric type '{metric_type}' not allowed. "
                 f"Valid values {METRIC_TYPE_CHOICES}."
             )
-
         metric.metric_type = metric_type
         metric.value = self._get_float_property(spec.value, "value")
         metric.tags = self._get_list_property(spec.tags, "tags", [])
         self.ctx.factory.add_metric(metric)
-        return metric
+
+    def _interpret_code(self, code: str):
+        self._update_asteval_symtable()
+        self._run_code(code, "code")
 
 
 class EventTemplateInterpreter(BaseTemplateInterpreter):

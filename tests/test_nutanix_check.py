@@ -6,7 +6,7 @@ from sts_nutanix_impl.model.instance import InstanceInfo
 from sts_nutanix_impl.client.nutanix_client import NutanixClient
 from nutanix import NutanixCheck
 
-from stackstate_checks.stubs import topology, health
+from stackstate_checks.stubs import topology, health, aggregator
 import yaml
 import logging
 import requests_mock
@@ -57,13 +57,14 @@ def test_check(m: requests_mock.Mocker = None):
     stream = {"urn": "urn:health:nutanix:nutanix_health", "sub_stream": ""}
     health_snapshot = health._snapshots[json.dumps(stream)]
     health_check_states = health_snapshot["check_states"]
-
+    metric_names = aggregator.metric_names
     snapshot = topology.get_snapshot("")
     components = snapshot["components"]
     relations = snapshot["relations"]
     assert len(components) == 25
     assert len(relations) == 16
     assert len(health_check_states) == 8
+    assert len(metric_names) == 4
 
 
 def response(file_name):
