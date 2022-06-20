@@ -39,6 +39,13 @@ def test_check(m: requests_mock.Mocker = None):
         json=response("karbon_list_cluster_node_pools"),
     )
 
+    print(nutanix.get_url(nutanix.V3, "hosts/list"))
+    m.register_uri(
+        "POST",
+        nutanix.get_url(nutanix.V3, "hosts/list"),
+        json=response("list_hosts"),
+    )
+
     check.check(instance)
 
     snapshot = topology.get_snapshot("")
