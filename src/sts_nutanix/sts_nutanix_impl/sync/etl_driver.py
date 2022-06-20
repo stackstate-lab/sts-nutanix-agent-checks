@@ -1,4 +1,5 @@
 import json
+import logging
 import os
 import pathlib
 from logging import Logger
@@ -22,18 +23,20 @@ from sts_nutanix_impl.model.factory import TopologyFactory
 from sts_nutanix_impl.model.instance import InstanceInfo
 
 
-@attr.s(kw_only=True)
 class TemplateLookup:
-    component: Dict[str, ComponentTemplate] = attr.ib(default={})
-    event: Dict[str, EventTemplate] = attr.ib(default={})
-    metric: Dict[str, MetricTemplate] = attr.ib(default={})
-    health: Dict[str, HealthTemplate] = attr.ib(default={})
+    def __init__(self):
+        self.log: Logger = logging.getLogger()
+        self.component: Dict[str, ComponentTemplate] = {}
+        self.event: Dict[str, EventTemplate] = {}
+        self.metric: Dict[str, MetricTemplate] = {}
+        self.health: Dict[str, HealthTemplate] = {}
 
     def index(self, etl: ETL):
         def add(attr_name: str, key: str, value: Any):
             item: Dict[str, Any] = getattr(self, attr_name)
             if key in item:
-                raise Exception(f"{attr_name} template '{key}' already defined. Template names must be unique.")
+                logging.error(f"{attr_name} template '{key}' already defined [{etl.source}]."
+                              f" Template names must be unique. Ignoring...")
             else:
                 item[key] = value
 
@@ -54,6 +57,7 @@ class ETLDriver:
         self.factory = factory
         self.factory.log = log
         self.conf = conf
+        conf.etl.source = "conf.yaml"
         self.models = self._init_model(conf.etl)
         self.template_lookup = self._init_template_lookup()
 
@@ -67,6 +71,7 @@ class ETLDriver:
     def _init_template_lookup(self) -> TemplateLookup:
         lookup = TemplateLookup()
         for model in self.models:
+            self.log.info(f"Loading templates from {model.source}.")
             lookup.index(model)
         return lookup
 
@@ -97,6 +102,7 @@ class ETLDriver:
             with open(str(yaml_file)) as f:
                 etl_data = yaml.load(f)
             etl_model = ETL(etl_data["etl"])
+            etl_model.source = str(yaml_file)
             etl_model.validate()
             results.extend(self._init_model(etl_model))
         return results
