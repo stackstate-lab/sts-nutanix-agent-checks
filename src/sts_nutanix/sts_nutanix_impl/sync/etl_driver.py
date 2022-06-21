@@ -128,6 +128,7 @@ class ETLProcessor:
     def _process_queries(self, ctx: TopologyContext):
         counters: Dict[str, int] = {}
         self._init_datasources(ctx)
+        query_post_processor = QueryProcessorInterpreter(ctx)
         for query_spec in self.etl.queries:
             query_results = self._get_query_result(ctx, query_spec)
             if query_results is None or len(query_results) == 0:
@@ -140,13 +141,13 @@ class ETLProcessor:
                     if interpreter.active(item):
                         try:
                             interpreter.interpret(item)
+                            query_post_processor.interpret(query_spec)
                             processed_by_counter += 1
                         except Exception as e:
                             self.log.error(json.dumps(item, indent=4))
                             raise e
             if processed_by_counter == 0:
                 self.log.warning(f"Unprocessed Count for Query {query_spec.name} is 0")
-            QueryProcessorInterpreter(ctx).interpret(query_spec)
 
         self.log.info(f"Query Template Processing Counters:\n{counters}")
 

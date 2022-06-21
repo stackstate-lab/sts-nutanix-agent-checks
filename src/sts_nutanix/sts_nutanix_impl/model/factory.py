@@ -142,9 +142,13 @@ class TopologyFactory:
                     if target_component:
                         self.add_relation(relation.source_id, target_component.uid, relation.get_type())
                     else:
+                        msg = (f"Failed to find related component '{relation.target_id}'. "
+                               f"Reference from component {source.uid}.")
+                        self.log.error(msg)
+                        self.log.error("Current components known in factory:")
+                        for uid in self.components.keys():
+                            self.log.error(uid)
                         raise Exception(
-                            f"Failed to find related component '{relation.target_id}'. "
-                            f"Reference from component {source.uid}."
                         )
             source.relations = []
 
