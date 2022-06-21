@@ -63,9 +63,10 @@ class ETLDriver:
 
     def process(self):
         global_datasources: Dict[str, Any] = {}
+        global_session: Dict[str, Any] = {}
         for model in self.models:
             processor = ETLProcessor(model, self.template_lookup, self.conf, self.factory, self.log)
-            ctx = TopologyContext(factory=self.factory, datasources=global_datasources)
+            ctx = TopologyContext(factory=self.factory, datasources=global_datasources, global_session=global_session)
             processor.process(ctx)
 
     def _init_template_lookup(self) -> TemplateLookup:

@@ -26,6 +26,7 @@ etl:
           uid: "|uid('nutanix', 'disk', item['disk_uuid'])"
           layer: "Nutanix Disks"
           custom_properties:
+            disk_size: "$.disk_size"
             online: "$.online"
             storage_tier_name: "$.storage_tier_name"
             model: "$.disk_hardware_config.model"

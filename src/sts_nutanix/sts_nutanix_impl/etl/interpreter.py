@@ -32,6 +32,7 @@ class TopologyContext:
     metric: Metric = attr.ib(default=None)
     health: HealthCheckState = attr.ib(default=None)
     session: Dict[str, Any] = attr.ib(default={})
+    global_session: Dict[str, Any] = attr.ib(default={})
 
     def jpath(self, path) -> Any:
         return self.factory.jpath(path, self.item)
@@ -89,6 +90,7 @@ class BaseInterpreter:
         symtable["health"] = ctx.health
         symtable["jpath"] = ctx.jpath
         symtable["session"] = ctx.session
+        symtable["global_session"] = ctx.global_session
         for name, ds in ctx.datasources.items():
             symtable[name] = ds
         symtable["uid"] = ctx.factory.get_uid
