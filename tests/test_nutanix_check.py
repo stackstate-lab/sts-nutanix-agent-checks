@@ -53,6 +53,13 @@ def test_check(m: requests_mock.Mocker = None):
         json=response("get_disks_v2"),
     )
 
+    print(nutanix.get_url(nutanix.V2, "vms?include_vm_disk_config=true"))
+    m.register_uri(
+        "GET",
+        nutanix.get_url(nutanix.V2, "vms?include_vm_disk_config=true"),
+        json=response("get_vms_include_disk_v2"),
+    )
+
     check.check(instance)
     stream = {"urn": "urn:health:nutanix:nutanix_health", "sub_stream": ""}
     health_snapshot = health._snapshots[json.dumps(stream)]
@@ -61,8 +68,8 @@ def test_check(m: requests_mock.Mocker = None):
     snapshot = topology.get_snapshot("")
     components = snapshot["components"]
     relations = snapshot["relations"]
-    assert len(components) == 25
-    assert len(relations) == 16
+    assert len(components) == 108
+    assert len(relations) == 99
     assert len(health_check_states) == 8
     assert len(metric_names) == 4
 
