@@ -141,11 +141,13 @@ class ETLProcessor:
                     if interpreter.active(item):
                         try:
                             interpreter.interpret(item)
-                            query_post_processor.interpret(query_spec)
                             processed_by_counter += 1
                         except Exception as e:
                             self.log.error(json.dumps(item, indent=4))
                             raise e
+            for item in query_results:
+                ctx.item = item
+                query_post_processor.interpret(query_spec)
             if processed_by_counter == 0:
                 self.log.warning(f"Unprocessed Count for Query {query_spec.name} is 0")
 
