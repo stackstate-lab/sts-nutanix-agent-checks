@@ -5,18 +5,8 @@ description = "StackState integration with Nutanix via Agent Checks"
 authors = ["Ravan Naidoo <rnaidoo@stackstate.com>"]
 
 [tool.poetry.dependencies]
-python = ">=2.7,<3.0.0 || >=3.7.0,<4"
-pyyaml = "^3.13"
-schematics = "^2.1.0"
-typing = "^3.7.4.1"
-pytz = "^2022.1"
-requests = "^2.24.0"
-six = "^1.12.0"
-asteval = "=0.9.17"
-attrs = "^21.4.0"
-jsonpath-ng = "^1.5.3"
-importlib-resources = "=3.3.1"
-pydash = "=4.9.3"
+python = ">=2.7,<3.0.0 || >=3.7.0"
+stackstate-etl-agent-check = { path = "/Users/rnaidoo/sts/repos/github/stackstate-lab/stackstate-etl-agent-check/dist/stackstate-etl-agent-check-py3-0.1.0.tar.gz" }
 
 [tool.poetry.dev-dependencies]
 pytest = "*"
@@ -40,7 +30,7 @@ envlist = py27
 whitelist_externals = poetry
 poetry_add_dev_dependencies = True
 deps =
-    -e git+https://github.com/StackVista/stackstate-agent-integrations.git@1.10.1#egg=stackstate_checks_base&subdirectory=stackstate_checks_base
+    -e git+https://github.com/StackVista/stackstate-agent-integrations.git@1.20.0#egg=stackstate_checks_base&subdirectory=stackstate_checks_base
     pytest
     pytest-sugar
     prometheus-client

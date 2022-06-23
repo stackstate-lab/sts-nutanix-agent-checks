@@ -2,7 +2,7 @@ from typing import List
 
 from schematics import Model
 from schematics.types import IntType, ListType, ModelType, StringType, URLType
-from sts_nutanix_impl.model.etl import ETL
+from stackstate_etl.model.instance import InstanceInfo as EtlInstanceInfo
 
 
 class NutanixSpec(Model):
@@ -15,12 +15,8 @@ class NutanixSpec(Model):
     retry_on_status: List[int] = ListType(IntType, default=[408, 429, 500, 502, 503, 504])
 
 
-class InstanceInfo(Model):
+class InstanceInfo(EtlInstanceInfo):
     instance_url: str = StringType(required=True)
-    instance_type: str = StringType(default="sl1check")
+    instance_type: str = StringType(default="nutanixcheck")
     collection_interval: int = IntType(default=120)
     nutanix: NutanixSpec = ModelType(NutanixSpec, required=True)
-    domain: str = StringType(default="Nutanix")
-    layer: str = StringType(default="Machines")
-    environment: str = StringType(default="production")
-    etl: ETL = ModelType(ETL, required=True)
