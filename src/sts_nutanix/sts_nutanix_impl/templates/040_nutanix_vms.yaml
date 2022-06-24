@@ -1,11 +1,12 @@
 etl:
   queries:
     - name: nutanix_vms
-      query: 'nutanix_client.get(nutanix_client.V2, "vms", {"include_vm_disk_config": "true"})["entities"]'
+      query: '|nutanix_client.post(nutanix_client.V3, "vms/list", {"kind": "vm"})["entities"]'
       processor: |
         vm_disks = factory.lookups.setdefault("vm_disks", [])
-        [py_.set_(n, "vm_name", item['name']) for n in item["vm_disk_info"]]
-        vm_disks.extend(item["vm_disk_info"])
+        disk_list = item["status"]["resources"]["disk_list"]
+        [py_.set_(n, "vm_name", item["status"]['name']) for n in disk_list]
+        vm_disks.extend(disk_list)
       template_refs:
         - nutanix_vm_template
     - name: nutanix_vm_disks
@@ -16,30 +17,28 @@ etl:
     components:
       - name: nutanix_vm_template
         spec:
-          name: "$.name"
+          name: "$.status.name"
           type: "nutanix-vm"
-          uid: "|'urn:host:/%s' % item['name']"
+          uid: "|'urn:host:/%s' % item['status']['name']"
           layer: "Nutanix VMs"
-          identifiers: ["|uid('nutanix', 'vm', item['uuid'])"]
           custom_properties:
-            uuid: "$.uuid"
-            memory_mb: "$.memory_mb"
-            num_cores_per_vcpu: "$.num_cores_per_vcpu"
-            num_vcpus: "$.num_vcpus"
-            power_state: "$.power_state"
-            machine_type: "$.machine_type"
+            memory_mb: "$.status.resources.memory_size_mib"
+            num_vcpus_per_socket: "$.status.resources.num_vcpus_per_socket"
+            power_state: "$.status.resources.power_state"
+            machine_type: "$.status.resources.machine_type"
           relations: |
-              |results = [uid('nutanix', 'host', item['host_uuid'])]
-              for disk_info in item["vm_disk_info"]:
-                  results.append("urn:nutanix:vmdisk:/%s" % (disk_info["disk_address"]["vmdisk_uuid"]))
+              |results = [uid('nutanix', 'host', item['status']['resources']['host_reference']['uuid'])]
+              for disk_info in item["status"]["resources"]["disk_list"]:
+                  results.append("urn:nutanix:vmdisk:/%s" % (disk_info["uuid"]))
               results
       - name: nutanix_vm_disk
         spec:
-          name: "|'%s-%s' % (item['vm_name'], jpath('$.disk_address.disk_label'))"
+          name: |
+              |disk_address = item['device_properties']['disk_address']
+              '%s-%s-%s' % (item['vm_name'], disk_address['adapter_type'], disk_address['device_index'])
           type: "nutanix-vm-disk"
-          uid: "|uid('nutanix', 'vmdisk', item['disk_address']['vmdisk_uuid'])"
+          uid: "|uid('nutanix', 'vmdisk', item['uuid'])"
           layer: "Nutanix VM Disks"
           custom_properties:
-            device_bus: "$.disk_address.device_bus"
-            disk_label: "$.disk_address.disk_label"
-            disk_size_gb: "|global_session['bytesto'](item['size'], 'g')"
+            uuid: "$.uuid"
+            disk_size_gb: "|global_session['bytesto'](item['disk_size_bytes'], 'g')"
