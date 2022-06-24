@@ -22,6 +22,7 @@ etl:
           uid: "|'urn:host:/%s' % item['status']['name']"
           layer: "Nutanix VMs"
           custom_properties:
+            nic_list: "$.status.resources.nic_list"
             memory_mb: "$.status.resources.memory_size_mib"
             num_vcpus_per_socket: "$.status.resources.num_vcpus_per_socket"
             power_state: "$.status.resources.power_state"
@@ -30,6 +31,8 @@ etl:
               |results = [uid('nutanix', 'host', item['status']['resources']['host_reference']['uuid'])]
               for disk_info in item["status"]["resources"]["disk_list"]:
                   results.append("urn:nutanix:vmdisk:/%s" % (disk_info["uuid"]))
+              for nic_info in item["status"]["resources"]["nic_list"]:
+                results.append("urn:nutanix:vlan:/%s" % (nic_info["subnet_reference"]["uuid"]))
               results
       - name: nutanix_vm_disk
         spec:

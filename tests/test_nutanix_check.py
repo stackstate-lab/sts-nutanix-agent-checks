@@ -35,8 +35,8 @@ def test_check(m: requests_mock.Mocker = None):
     snapshot = topology.get_snapshot("")
     components = snapshot["components"]
     relations = snapshot["relations"]
-    assert len(components) == 102, "Number of Components does not match"
-    assert len(relations) == 110, "Number of Relations does not match"
+    assert len(components) == 66, "Number of Components does not match"
+    assert len(relations) == 85, "Number of Relations does not match"
     assert len(health_check_states) == 8, "Number of Health does not match"
     assert len(metric_names) == 4, "Number of Metrics does not match"
 
