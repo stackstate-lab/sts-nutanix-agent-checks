@@ -1,0 +1,25 @@
+etl:
+  queries:
+    - name: nutanix_networks
+      query: "nutanix_client.get(nutanix_client.V2,'networks')['entities']"
+      template_refs:
+        - nutanix_switch_template
+        - nutanix_vlan_template
+  template:
+    components:
+      - name: nutanix_switch_template
+        selector: "|not factory.component_exists('urn:nutanix:vswitch:/%s' % item['virtual_switch_uuid'])"
+        spec:
+          name: "$.vswitch_name"
+          type: "nutanix-vswitch"
+          uid: "|uid('nutanix', 'vswitch', item['virtual_switch_uuid'])"
+          layer: "Nutanix Switches"
+      - name: nutanix_vlan_template
+        spec:
+          name: "$.name"
+          type: "nutanix-vlan"
+          uid: "|uid('nutanix', 'vlan', item['uuid'])"
+          layer: "Nutanix Vlans"
+          relations: ["|uid('nutanix', 'vswitch', item['virtual_switch_uuid'])"]
+          custom_properties:
+            ip_config: "$.ip_config"
