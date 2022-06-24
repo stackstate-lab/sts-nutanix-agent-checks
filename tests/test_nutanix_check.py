@@ -68,10 +68,19 @@ def test_check(m: requests_mock.Mocker = None):
     snapshot = topology.get_snapshot("")
     components = snapshot["components"]
     relations = snapshot["relations"]
-    assert len(components) == 108
-    assert len(relations) == 99
-    assert len(health_check_states) == 8
-    assert len(metric_names) == 4
+    assert len(components) == 99, "Number of Components does not match"
+    assert len(relations) == 108, "Number of Relations does not match"
+    assert len(health_check_states) == 8, "Number of Health does not match"
+    assert len(metric_names) == 4, "Number of Metrics does not match"
+
+    host_uid = 'urn:host:/karbon-stackstate-c9a026-k8s-master-0'
+    k8s_cluster_uid = 'urn:cluster:/kubernetes:stackstate'
+    host_component = assert_component(components, host_uid)
+    assert_component(components, k8s_cluster_uid)
+    assert_relation(relations, k8s_cluster_uid, host_uid)
+
+    assert host_component["data"]["custom_properties"]["ipv4_address"] == "10.55.90.119"
+
 
 
 def response(file_name):
@@ -88,7 +97,7 @@ def setup_test_instance() -> Dict[str, Any]:
 
 def assert_component(components: List[dict], cid: str) -> Dict[str, Any]:
     component = next(iter(filter(lambda item: (item["id"] == cid), components)), None)
-    assert component is not None
+    assert component is not None, f"Expected to find component {cid}"
     return component
 
 
@@ -104,5 +113,5 @@ def assert_relation(relations: List[dict], sid: str, tid: str) -> Dict[str, Any]
         ),
         None,
     )
-    assert relation is not None
+    assert relation is not None, f"Expected to find relation {sid}->{tid}"
     return relation

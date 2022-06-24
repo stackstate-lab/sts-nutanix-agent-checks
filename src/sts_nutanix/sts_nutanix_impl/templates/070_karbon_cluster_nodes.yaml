@@ -15,10 +15,14 @@ etl:
     components:
       - name: karbon_cluster_node_template
         spec:
+          mergeable: true
           name: "$.hostname"
           type: "node"
           uid: "|'urn:host:/%s' % item['hostname']"
-          identifiers: ["|'urn:ip:/stackstate:%s:%s' % (item['hostname'], item['ipv4_address'])"]
+          custom_properties:
+            ipv4_address: "$.ipv4_address"
+          relations:
+            - "|'<urn:cluster:/kubernetes:%s' % item['cluster']"
 
 
 

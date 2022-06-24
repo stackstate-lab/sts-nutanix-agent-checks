@@ -18,9 +18,11 @@ etl:
         spec:
           name: "$.name"
           type: "nutanix-vm"
-          uid: "|uid('nutanix', 'vm', item['uuid'])"
+          uid: "|'urn:host:/%s' % item['name']"
           layer: "Nutanix VMs"
+          identifiers: ["|uid('nutanix', 'vm', item['uuid'])"]
           custom_properties:
+            uuid: "$.uuid"
             memory_mb: "$.memory_mb"
             num_cores_per_vcpu: "$.num_cores_per_vcpu"
             num_vcpus: "$.num_vcpus"
