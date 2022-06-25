@@ -71,24 +71,24 @@ sudo -u stackstate-agent stackstate-agent check nutanix -l info
 
 ### Template Mappings
 
-| Name                               | Type                | 4T        | Nutanix Api                                         | Description |
-|------------------------------------|---------------------|-----------|-----------------------------------------------------|-------------|
-| nutanix_cluster_template           | nutanix-cluster     | Component | PrismGateway/services/rest/v2.0/clusters            |             |
-| nutanix_rackable_unit_template     | nutanix-rack        | Component | PrismGateway/services/rest/v2.0/clusters            |             |
-| nutanix_host_template              | nutanix-host        | Component | api/nutanix/v3/hosts/list                           |             |
-| nutanix_disk_template              | nutanix-disk        | Component | PrismGateway/services/rest/v2.0/disks               |             |
-| nutanix_disk_online_template       | nutanix-disk        | Health    | PrismGateway/services/rest/v2.0/disks               |             |
-| nutanix_disk_metric_spec_template  | nutanix-disk        | Metric    | PrismGateway/services/rest/v2.0/disks               |             |
-| nutanix_switch_template            | nutanix-vswitch     | Component | PrismGateway/services/rest/v2.0/networks            |             |
-| nutanix_vlan_template              | nutanix-vlan        | Component | PrismGateway/services/rest/v2.0/networks            |             |
-| nutanix_storage_container_template | nutanix-storage     | Component | PrismGateway/services/rest/v2.0/storage_containers  |             |
-| nutanix_vdisk_template             | nutanix-vdisk       | Component | PrismGateway/services/rest/v2.0/vdisks              |             |
-| nutanix_vm_template                | nutanix-vm          | Component | api/nutanix/v3/vms/list                             |             |
-| nutanix_vm_disk                    | nutanix-vm-disk     | Component | api/nutanix/v3/vms/list                             |             |
-| nutanix_volume_group_template      | nutanix-volumegroup | Component | PrismGateway/services/rest/v2.0/volume_groups       |             |
-| karbon_cluster_template            | cluster             | Component | karbon/v1-beta.1/k8s/clusters                       |             |
-| karbon_cluster_node_template       | nutanix-vm          | Component | karbon/v1-alpha.1/k8s/clusters/{cluster}/node-pools |             |
-| karbon_cluster_ahv_config_template | cluster             | Component | karbon/v1-alpha.1/k8s/clusters/{cluster}/node-pools |             |
+| Name                                                                                                                     | Type                | 4T        | Nutanix Api                                         | Description |
+|--------------------------------------------------------------------------------------------------------------------------|---------------------|-----------|-----------------------------------------------------|-------------|
+| [nutanix_cluster_template](./src/sts_nutanix/sts_nutanix_impl/templates/020_nutanix_clusters.yaml)                       | nutanix-cluster     | Component | PrismGateway/services/rest/v2.0/clusters            |             |
+| [nutanix_rackable_unit_template](./src/sts_nutanix/sts_nutanix_impl/templates/020_nutanix_clusters.yaml)                 | nutanix-rack        | Component | PrismGateway/services/rest/v2.0/clusters            |             |
+| [nutanix_host_template](./src/sts_nutanix/sts_nutanix_impl/templates/030_nutanix_hosts.yaml)                             | nutanix-host        | Component | api/nutanix/v3/hosts/list                           |             |
+| [nutanix_disk_template](./src/sts_nutanix/sts_nutanix_impl/templates/032_nutanix_disks.yaml)                             | nutanix-disk        | Component | PrismGateway/services/rest/v2.0/disks               |             |
+| [nutanix_disk_online_template](./src/sts_nutanix/sts_nutanix_impl/templates/032_nutanix_disks.yaml)                      | nutanix-disk        | Health    | PrismGateway/services/rest/v2.0/disks               |             |
+| [nutanix_disk_metric_spec_template](./src/sts_nutanix/sts_nutanix_impl/templates/032_nutanix_disks.yaml)                 | nutanix-disk        | Metric    | PrismGateway/services/rest/v2.0/disks               |             |
+| [nutanix_switch_template](./src/sts_nutanix/sts_nutanix_impl/templates/034_nutanix_networks.yaml)                        | nutanix-vswitch     | Component | PrismGateway/services/rest/v2.0/networks            |             |
+| [nutanix_vlan_template](./src/sts_nutanix/sts_nutanix_impl/templates/0034_nutanix_networks.yaml)                         | nutanix-vlan        | Component | PrismGateway/services/rest/v2.0/networks            |             |
+| [nutanix_storage_container_template](./src/sts_nutanix/sts_nutanix_impl/templates/036_nutanix_storage_containers.yaml)   | nutanix-storage     | Component | PrismGateway/services/rest/v2.0/storage_containers  |             |
+| [nutanix_vdisk_template](./src/sts_nutanix/sts_nutanix_impl/templates/038_nutanix_vdisks.yaml)                         | nutanix-vdisk       | Component | PrismGateway/services/rest/v2.0/vdisks              |             |
+| [nutanix_vm_template](./src/sts_nutanix/sts_nutanix_impl/templates/040_nutanix_vms.yaml)                            | nutanix-vm          | Component | api/nutanix/v3/vms/list                             |             |
+| [nutanix_vm_disk](./src/sts_nutanix/sts_nutanix_impl/templates/020_nutanix_clusters.yaml)                                | nutanix-vm-disk     | Component | api/nutanix/v3/vms/list                             |             |
+| [nutanix_volume_group_template](./src/sts_nutanix/sts_nutanix_impl/templates/050_nutanix_volume_groups.yaml)                  | nutanix-volumegroup | Component | PrismGateway/services/rest/v2.0/volume_groups       |             |
+| [karbon_cluster_template](./src/sts_nutanix/sts_nutanix_impl/templates/060_karbon_clusters.yaml)                        | cluster             | Component | karbon/v1-beta.1/k8s/clusters                       |             |
+| [karbon_cluster_node_template](./src/sts_nutanix/sts_nutanix_impl/templates/070_karbon_cluster_nodes.yaml)                   | nutanix-vm          | Component | karbon/v1-alpha.1/k8s/clusters/{cluster}/node-pools |             |
+| [karbon_cluster_ahv_config_template](./src/sts_nutanix/sts_nutanix_impl/templates/070_karbon_cluster_nodes.yaml)             | cluster             | Component | karbon/v1-alpha.1/k8s/clusters/{cluster}/node-pools |             |
 
 
 ## Development
