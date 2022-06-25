@@ -72,9 +72,9 @@ Nutanix APIs to syn data from,
 ### DataSources
 
 
-| Name           | Module                                 | Cls           | Description                       |
-|----------------|----------------------------------------|---------------|-----------------------------------|
-| nutanix_client | sts_nutanix_impl.client.nutanix_client | NutanixClient | enables rest calls to Nutanix api |
+| Name                                                                            | Module                                 | Cls           | Description                       |
+|---------------------------------------------------------------------------------|----------------------------------------|---------------|-----------------------------------|
+| [nutanix_client](./src/sts_nutanix/sts_nutanix_impl/templates/010_default.yaml) | sts_nutanix_impl.client.nutanix_client | NutanixClient | enables rest calls to Nutanix api |
 
 
 ### Template Mappings
