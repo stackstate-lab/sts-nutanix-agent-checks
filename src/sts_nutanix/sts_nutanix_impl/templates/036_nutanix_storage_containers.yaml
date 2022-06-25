@@ -1,0 +1,18 @@
+etl:
+  queries:
+    - name: nutanix_storage_containers
+      query: "nutanix_client.get(nutanix_client.V2,'storage_containers')['entities']"
+      template_refs:
+        - nutanix_storage_container_template
+  template:
+    components:
+      - name: nutanix_storage_container_template
+        spec:
+          name: "$.name"
+          type: "nutanix-storage"
+          uid: "|uid('nutanix', 'storage', item['storage_container_uuid'])"
+          layer: "Nutanix Storage"
+          relations:
+            - "|'<%s' % uid('nutanix', 'cluster', item['cluster_uuid'])"
+          custom_properties:
+            max_capacity_tb: "|global_session['bytesto'](item['max_capacity'], 't')"

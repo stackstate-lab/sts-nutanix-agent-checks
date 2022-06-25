@@ -35,12 +35,13 @@ def test_check(m: requests_mock.Mocker = None):
     snapshot = topology.get_snapshot("")
     components = snapshot["components"]
     relations = snapshot["relations"]
-    assert len(components) == 66, "Number of Components does not match"
-    assert len(relations) == 85, "Number of Relations does not match"
+    assert len(components) == 170, "Number of Components does not match"
+    assert len(relations) == 288, "Number of Relations does not match"
     assert len(health_check_states) == 8, "Number of Health does not match"
     assert len(metric_names) == 4, "Number of Metrics does not match"
 
     host_uid = 'urn:host:/karbon-stackstate-c9a026-k8s-master-0'
+    k8s_cluster_uid = 'urn:cluster:/kubernetes:stackstate'
     k8s_cluster_uid = 'urn:cluster:/kubernetes:stackstate'
     host_component = assert_component(components, host_uid)
     assert_component(components, k8s_cluster_uid)
@@ -68,6 +69,9 @@ def _setup_request_mocks(instance, m):
                  ("POST", nutanix.V3, "vms/list", "listvms"),
                  ("GET", nutanix.V2, "disks", "get_disks_v2"),
                  ("GET", nutanix.V2, "networks", "get_networks_v2"),
+                 ("GET", nutanix.V2, "storage_containers", "get_storage_containers_v2"),
+                 ("GET", nutanix.V2, "volume_groups", "get_volumes_groups_v2"),
+                 ("GET", nutanix.V2, "vdisks", "get_vdisks_v2"),
                  ]
 
     for endpoint in endpoints:

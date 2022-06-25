@@ -1,0 +1,24 @@
+etl:
+  queries:
+    - name: nutanix_vdisks
+      query: "nutanix_client.get(nutanix_client.V2,'vdisks')['entities']"
+      template_refs:
+        - nutanix_vdisk_template
+  template:
+    components:
+      - name: nutanix_vdisk_template
+        spec:
+          name: "|'%s-%s' % (item['disk_address'], item['uuid'])"
+          type: "nutanix-vdisk"
+          uid: "|uid('nutanix', 'vdisk', item['uuid'])"
+          layer: "Nutanix vDisks"
+          relations: |
+            |results=[]
+            results.append(uid('nutanix', 'storage', item['storage_container_uuid']))
+            if item['device_uuid']:
+              results.append('<%s' % uid('nutanix', 'vmdisk', item['device_uuid']))
+            results
+          custom_properties:
+            attached_vmname: "$.attached_vmname"
+            attached_volume_group_id: "$.attached_volume_group_id"
+            disk_address: "$.disk_address"

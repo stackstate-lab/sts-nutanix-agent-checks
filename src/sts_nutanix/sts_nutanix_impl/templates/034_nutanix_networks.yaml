@@ -20,6 +20,7 @@ etl:
           type: "nutanix-vlan"
           uid: "|uid('nutanix', 'vlan', item['uuid'])"
           layer: "Nutanix Vlans"
-          relations: ["|uid('nutanix', 'vswitch', item['virtual_switch_uuid'])"]
+          relations:
+            - "|uid('nutanix', 'vswitch', item['virtual_switch_uuid'])"
           custom_properties:
             ip_config: "$.ip_config"

@@ -1,0 +1,18 @@
+etl:
+  queries:
+    - name: nutanix_volume_groups
+      query: "nutanix_client.get(nutanix_client.V2,'volume_groups')['entities']"
+      template_refs:
+        - nutanix_volume_group_template
+  template:
+    components:
+      - name: nutanix_volume_group_template
+        spec:
+          name: "$.name"
+          type: "nutanix-volumegroup"
+          uid: "|uid('nutanix', 'volumegroup', item['uuid'])"
+          layer: "Nutanix VolumeGroups"
+          relations:
+            - "|'%s' % uid('nutanix', 'vdisk', item['disk_list'][0]['vmdisk_uuid'])"
+          custom_properties:
+            description: "$.description"

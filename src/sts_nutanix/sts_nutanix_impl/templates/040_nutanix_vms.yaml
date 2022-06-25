@@ -42,6 +42,8 @@ etl:
           type: "nutanix-vm-disk"
           uid: "|uid('nutanix', 'vmdisk', item['uuid'])"
           layer: "Nutanix VM Disks"
+          relations:
+            - "|uid('nutanix', 'storage', item['storage_config']['storage_container_reference']['uuid'])"
           custom_properties:
             uuid: "$.uuid"
             disk_size_gb: "|global_session['bytesto'](item['disk_size_bytes'], 'g')"
