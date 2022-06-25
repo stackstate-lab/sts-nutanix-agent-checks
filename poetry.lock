@@ -478,26 +478,29 @@ version = "0.1.0"
 description = "StackState Extract-Transform-Load Framework for 4T data ingestion"
 category = "main"
 optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*, !=3.6.*"
+python-versions = ">=2.7,<3.0.0 || >=3.7.0"
+develop = false
 
 [package.dependencies]
-asteval = "0.9.17"
-attrs = ">=21.4.0,<22.0.0"
-cachetools = "3.1.1"
+asteval = "=0.9.17"
+attrs = "^21.4.0"
+cachetools = "=3.1.1"
 click = "<8.0"
-importlib-resources = "3.3.1"
-jsonpath-ng = ">=1.5.3,<2.0.0"
-pandas = "0.24.2"
-pydash = "4.9.3"
-pytz = ">=2022.1,<2023.0"
-PyYAML = "5.4.1"
-requests = "2.25.0"
-schematics = ">=2.1.1,<3.0.0"
-six = ">=1.16.0,<2.0.0"
+importlib-resources = "=3.3.1"
+jsonpath-ng = "^1.5.3"
+pandas = "=0.24.2"
+pydash = "=4.9.3"
+pytz = "^2022.1"
+PyYAML = "=5.4.1"
+requests = "=2.25.0"
+schematics = "^2.1.1"
+six = "^1.16.0"
 
 [package.source]
-type = "file"
-url = "../stackstate-etl/dist/stackstate-etl-py3-0.1.0.tar.gz"
+type = "git"
+url = "git@github.com:stackstate-lab/stackstate-etl.git"
+reference = "master"
+resolved_reference = "708dd8a03fe351ab0b519a506ab8ec778cd12d34"
 
 [[package]]
 name = "stackstate-etl-agent-check"
@@ -505,11 +508,17 @@ version = "0.1.0"
 description = "StackState Extract-Transform-Load Agent Check for 4T data ingestion"
 category = "main"
 optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*, !=3.6.*"
+python-versions = ">=2.7,<3.0.0 || >=3.7.0"
+develop = false
+
+[package.dependencies]
+stackstate-etl = {git = "git@github.com:stackstate-lab/stackstate-etl.git", rev = "master"}
 
 [package.source]
-type = "file"
-url = "../stackstate-etl-agent-check/dist/stackstate-etl-agent-check-py3-0.1.0.tar.gz"
+type = "git"
+url = "git@github.com:stackstate-lab/stackstate-etl-agent-check.git"
+reference = "master"
+resolved_reference = "75d90d5b9d8fe8f670bb2c8da352ec388749a723"
 
 [[package]]
 name = "tabulate"
@@ -639,7 +648,7 @@ testing = ["pathlib2", "unittest2", "jaraco.itertools", "func-timeout"]
 [metadata]
 lock-version = "1.1"
 python-versions = ">=2.7,<3.0.0 || >=3.7.0"
-content-hash = "564a7b006a65873bbba6285ab1ae3ccbdb43c278ad09bdaa492a922505c70e99"
+content-hash = "184bccee5e67f7bf56a467ddc862dc240c3470b92b33aa592751004cf5ff5c1e"
 
 [metadata.files]
 asteval = [
@@ -880,12 +889,8 @@ six = [
     {file = "six-1.16.0-py2.py3-none-any.whl", hash = "sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254"},
     {file = "six-1.16.0.tar.gz", hash = "sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"},
 ]
-stackstate-etl = [
-    {file = "stackstate-etl-py3-0.1.0.tar.gz", hash = "sha256:75fb730ca8331f52c2edbad9cd97f853a56d97b271f575172337317d3f7df732"},
-]
-stackstate-etl-agent-check = [
-    {file = "stackstate-etl-agent-check-py3-0.1.0.tar.gz", hash = "sha256:729b5b6975bbafba195c9cd3005801bfbbe4986021758b720a839f578f0f9df9"},
-]
+stackstate-etl = []
+stackstate-etl-agent-check = []
 tabulate = [
     {file = "tabulate-0.8.10-py3-none-any.whl", hash = "sha256:0ba055423dbaa164b9e456abe7920c5e8ed33fcc16f6d1b2f2d152c8e1e8b4fc"},
     {file = "tabulate-0.8.10-py3.8.egg", hash = "sha256:436f1c768b424654fce8597290d2764def1eea6a77cfa5c33be00b1bc0f4f63d"},
