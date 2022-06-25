@@ -55,8 +55,3 @@ etl:
           factory.add_metric_value("storage.usage_gb",
                                     bytesto(usage_stats["storage.usage_bytes"], 'g'),
                                     target_uid=component_uid)
-        
-          
-          
-
-

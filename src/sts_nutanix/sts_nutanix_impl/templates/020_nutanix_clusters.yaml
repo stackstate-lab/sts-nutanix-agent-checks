@@ -55,6 +55,3 @@ etl:
             for node_uuid in item["node_uuids"]:
               results.append("urn:nutanix:host:/%s" % node_uuid)
             results
-            
-              
-

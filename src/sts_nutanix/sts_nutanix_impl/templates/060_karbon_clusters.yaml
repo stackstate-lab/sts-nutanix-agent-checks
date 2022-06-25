@@ -15,7 +15,3 @@ etl:
           type: "cluster"
           uid: "|'urn:cluster:/kubernetes:%s' % item['name']"
           layer: "K8s Clusters"
-
-
-
-

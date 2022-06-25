@@ -32,7 +32,3 @@ etl:
           uid: "|'urn:cluster:/kubernetes:%s' % item['cluster']"
           labels:
             - "|'prism_cluster:%s' % item['cluster']"
-
-
-
-
