@@ -6,6 +6,7 @@ etl:
         vm_disks = factory.lookups.setdefault("vm_disks", [])
         disk_list = item["status"]["resources"]["disk_list"]
         [py_.set_(n, "vm_name", item["status"]['name']) for n in disk_list]
+        [py_.set_(n, "cluster_uuid", item["status"]['cluster_reference']['uuid']) for n in disk_list]
         vm_disks.extend(disk_list)
       template_refs:
         - nutanix_vm_template
@@ -21,6 +22,8 @@ etl:
           type: "nutanix-vm"
           uid: "|'urn:host:/%s' % item['status']['name']"
           layer: "Nutanix VMs"
+          labels:
+            - "|'prism_cluster:%s' % global_session['cluster_lookup'][jpath('$.status.cluster_reference.uuid')]"
           custom_properties:
             nic_list: "$.status.resources.nic_list"
             memory_mb: "$.status.resources.memory_size_mib"
@@ -42,6 +45,8 @@ etl:
           type: "nutanix-vm-disk"
           uid: "|uid('nutanix', 'vmdisk', item['uuid'])"
           layer: "Nutanix VM Disks"
+          labels:
+            - "|'prism_cluster:%s' % global_session['cluster_lookup'][jpath('$.cluster_uuid')]"
           relations:
             - "|uid('nutanix', 'storage', item['storage_config']['storage_container_reference']['uuid'])"
           custom_properties:

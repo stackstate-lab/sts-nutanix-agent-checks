@@ -12,6 +12,8 @@ etl:
           type: "nutanix-storage"
           uid: "|uid('nutanix', 'storage', item['storage_container_uuid'])"
           layer: "Nutanix Storage"
+          labels:
+            - "|'prism_cluster:%s' % global_session['cluster_lookup'][jpath('$.cluster_uuid')]"
           relations:
             - "|'<%s' % uid('nutanix', 'cluster', item['cluster_uuid'])"
           custom_properties:

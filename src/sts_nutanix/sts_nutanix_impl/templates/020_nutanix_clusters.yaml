@@ -3,6 +3,8 @@ etl:
     - name: nutanix_clusters
       query: "nutanix_client.get_clusters()"
       processor: |
+        cluster_lookup = global_session.setdefault("cluster_lookup", {})
+        cluster_lookup[item['uuid']] = item['name']
         rackable_units = factory.lookups.setdefault("rackable_units", {})
         rackable_units[item["uuid"]] = item["rackable_units"]
       template_refs:
@@ -24,6 +26,8 @@ etl:
           type: "nutanix-cluster"
           uid: "|uid('nutanix', 'cluster', item['uuid'])"
           layer: "Nutanix Clusters"
+          labels:
+            - "|'prism_cluster:%s' % item['name']"
           custom_properties:
             cluster_external_ipaddress: "$.cluster_external_ipaddress"
             cluster_external_data_services_ipaddress: "$.cluster_external_data_services_ipaddress"

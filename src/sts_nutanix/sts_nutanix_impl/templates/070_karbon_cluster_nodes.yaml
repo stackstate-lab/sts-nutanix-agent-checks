@@ -11,6 +11,7 @@ etl:
           results
       template_refs:
         - karbon_cluster_node_template
+        - karbon_cluster_ahv_config_template
   template:
     components:
       - name: karbon_cluster_node_template
@@ -23,6 +24,14 @@ etl:
             ipv4_address: "$.ipv4_address"
           relations:
             - "|'<urn:cluster:/kubernetes:%s' % item['cluster']"
+      - name: karbon_cluster_ahv_config_template
+        spec:
+          mergeable: true
+          name: "$.cluster"
+          type: "cluster"
+          uid: "|'urn:cluster:/kubernetes:%s' % item['cluster']"
+          labels:
+            - "|'prism_cluster:%s' % item['cluster']"
 
 
 

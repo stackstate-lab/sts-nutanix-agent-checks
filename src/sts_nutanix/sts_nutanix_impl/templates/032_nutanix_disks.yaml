@@ -15,6 +15,8 @@ etl:
           type: "nutanix-disk"
           uid: "|uid('nutanix', 'disk', item['disk_uuid'])"
           layer: "Nutanix Disks"
+          labels:
+            - "|'prism_cluster:%s' % global_session['cluster_lookup'][jpath('$.cluster_uuid')]"
           custom_properties:
             disk_size: "$.disk_size"
             online: "$.online"

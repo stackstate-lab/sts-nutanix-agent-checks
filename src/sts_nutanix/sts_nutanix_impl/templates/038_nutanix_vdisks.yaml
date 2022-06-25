@@ -12,6 +12,8 @@ etl:
           type: "nutanix-vdisk"
           uid: "|uid('nutanix', 'vdisk', item['uuid'])"
           layer: "Nutanix vDisks"
+          labels:
+            - "|'prism_cluster:%s' % global_session['cluster_lookup'][jpath('$.cluster_uuid')]"
           relations: |
             |results=[]
             results.append(uid('nutanix', 'storage', item['storage_container_uuid']))
