@@ -40,9 +40,9 @@ def test_check(m: requests_mock.Mocker = None):
     assert len(health_check_states) == 8, "Number of Health does not match"
     assert len(metric_names) == 4, "Number of Metrics does not match"
 
-    host_uid = 'urn:host:/karbon-stackstate-c9a026-k8s-master-0'
-    k8s_cluster_uid = 'urn:cluster:/kubernetes:stackstate'
-    k8s_cluster_uid = 'urn:cluster:/kubernetes:stackstate'
+    host_uid = "urn:host:/karbon-stackstate-c9a026-k8s-master-0"
+    k8s_cluster_uid = "urn:cluster:/kubernetes:stackstate"
+    k8s_cluster_uid = "urn:cluster:/kubernetes:stackstate"
     host_component = assert_component(components, host_uid)
     assert_component(components, k8s_cluster_uid)
     assert_relation(relations, k8s_cluster_uid, host_uid)
@@ -62,17 +62,18 @@ def _setup_request_mocks(instance, m):
         print(url)
         m.register_uri(method, url, json=response(json_file))
 
-    endpoints = [("GET", nutanix.V2, "clusters", "get_clusters_v2"),
-                 ("GET", nutanix.V1_BETA_KARBON, "k8s/clusters", "karbon_list_k8s_clusters"),
-                 ("GET", nutanix.V1_ALPHA_KARBON, "k8s/clusters/stackstate/node-pools", "karbon_list_cluster_node_pools"),
-                 ("POST", nutanix.V3, "hosts/list", "list_hosts"),
-                 ("POST", nutanix.V3, "vms/list", "listvms"),
-                 ("GET", nutanix.V2, "disks", "get_disks_v2"),
-                 ("GET", nutanix.V2, "networks", "get_networks_v2"),
-                 ("GET", nutanix.V2, "storage_containers", "get_storage_containers_v2"),
-                 ("GET", nutanix.V2, "volume_groups", "get_volumes_groups_v2"),
-                 ("GET", nutanix.V2, "vdisks", "get_vdisks_v2"),
-                 ]
+    endpoints = [
+        ("GET", nutanix.V2, "clusters", "get_clusters_v2"),
+        ("GET", nutanix.V1_BETA_KARBON, "k8s/clusters", "karbon_list_k8s_clusters"),
+        ("GET", nutanix.V1_ALPHA_KARBON, "k8s/clusters/stackstate/node-pools", "karbon_list_cluster_node_pools"),
+        ("POST", nutanix.V3, "hosts/list", "list_hosts"),
+        ("POST", nutanix.V3, "vms/list", "listvms"),
+        ("GET", nutanix.V2, "disks", "get_disks_v2"),
+        ("GET", nutanix.V2, "networks", "get_networks_v2"),
+        ("GET", nutanix.V2, "storage_containers", "get_storage_containers_v2"),
+        ("GET", nutanix.V2, "volume_groups", "get_volumes_groups_v2"),
+        ("GET", nutanix.V2, "vdisks", "get_vdisks_v2"),
+    ]
 
     for endpoint in endpoints:
         register(*endpoint)

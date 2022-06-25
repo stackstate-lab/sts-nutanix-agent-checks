@@ -1,286 +1,118 @@
 # StackState Nutanix Agent Check
 
-# Overview
+## Overview
 
 A custom [StackState Agent Check](https://docs.stackstate.com/develop/developer-guides/agent_check/agent_checks) that
-makes it possible to integrate Nutanix.
+makes it possible to integrate [Nutanix Prism](https://www.nutanix.com/uk/products/prism) and 
+[Nutanix Karbon](https://www.nutanix.com/uk/products/karbon).
 
-The integration allows a user to setup SL1 queries to fetch devices for an organization(s).
-For each device, the user has the ability to define mapping templates that map the device to it's 
-StackState component equivalent.  The template mechanism if flexible enough to let users do the mapping declaratively
-or fully in code.  Templates and Queries are defined in the `conf.yaml` configuration used by the agent check.
+The integration uses the [StackState ETL framework](https://github.com/stackstate-lab/stackstate-etl) 
+to define templates to map Nutanix Rest Api entities to StackState Components, Relations, Events,
+Metrics and Health Syncs
 
+See [StackState ETL documentation](https://stackstate-lab.github.io/stackstate-etl/) for more information.
 
-# Sample conf.yaml
+## Installation
 
-Additional sections in this document will address the important parts of the configuration.
+From the StackState Agent 2 linux machine, run
+
+```bash 
+curl -L https://github.com/stackstate-lab/sts-nutanix-agent-checks/releases/download/v0.1.0/sts_nutanix-0.1.0.zip -o sts_nutanix.zip
+tar -xvf sts_nutanix.zip
+./install.sh
+```
+
+Setup `conf.yaml` on agent machine.
+
+```bash 
+cp /etc/stackstate-agent/conf.d/nutanix.d/conf.yaml.example /etc/stackstate-agent/conf.d/nutanix.d/conf.yaml
+chown stackstate-agent:stackstate-agent /etc/stackstate-agent/conf.d/nutanix.d/conf.yaml
+vi conf.yaml
+```
+
+Change the properties to match your environment.
 
 ```yaml
+
 init_config:
 
 instances:
   - instance_url: "localvm"
-    instance_type: sl1check
+    instance_type: nutanix
     collection_interval: 300
-    sl1:
-      url: "https://10.0.0.12"
-      username: "em7admin"
-      password: "em7admin"
-    domain: "SL1"
-    layer: "Device"
-    organization_search:
-        op: "eq"                 
-        value: "StackState"
-    queries:
-      - name: all
-        template_refs:
-          - generic_device_template
-    template:
-      components:
-        - name: generic_device_template
-          selector: "|True"
-          spec:
-            name: "$.name"
+    nutanix:
+      url: "https://10.55.90.37:9440"
+      prism_central_url: "https://10.55.90.39:9440"
+      username: "admin"
+      password: "nx2Tech081!"
+    domain: "Nutanix"
+    layer: "Machines"
+    etl:
+      refs:
+        - "module_dir://sts_nutanix_impl.templates"
+
+
 ```
 
-# Organization Search
-
-Used to filter out Organization from the synchronization.
-
-```yaml
-...
-instances:
-  - ...
-    ...
-    organization_search:
-        op: "eq"                 
-        value: "StackState"
-    ...
-```
-
-The `op` property can have one of the following values:
-
-- contains
-- beginsWith
-- endsWith
-- doesNotContain
-- doesNotBeginWith
-- doesNotEndWith
-- in
-- notIn
-- eq
-- neq
-
-When using `in` or `notIn` the `value` property must be a list. 
-
-```yaml
-...
-    value: ["StackState", "SL1"]
-...
-```
-
-# Queries
-
-The list of queries are used to fetch sub-sets of devices from SL1
-
-```yaml
-...
-instances:
-  - ...
-    ...
-    queries:
-        - name: cloud_services
-          query:
-            field: logicalName
-            op: "eq"
-            value: "AWS Cloud Service"
-          template_refs:
-            - generic_device_template 
-        - name: all
-          template_refs:
-            - generic_device_template
-    ...
-```
-## Query Properties
-
-
-| Name          | Type   | Description                                                               | 
-|---------------|--------|---------------------------------------------------------------------------|
-| name          | string | Name of the query                                                         |
-| query         | object | Optional. When left out, all devices are retrieved                        |
-| query.field   | string | Device field to match. Options are `logicalName`, `virtualType`, `class`  |
-| query.op      | string | Same as `op` describ in Organization Search section                       |
-| query.value   | string | Desired device value                                                      |
-| template_refs | list   | The templates to be used to process the mapping of each device from query |
-
-## Query Results
-
-A list of devices with the device having the following representation,
-
-```json
-[
-  {
-    "id": "1",
-    "ip": "192.158.23.10",
-    "componentDescendants": {
-      "edges": []
-    },
-    "alignedAttributes": [],
-    "name": "MyLinuxHost",
-    "state": "3",
-    "events": {
-      "edges": [
-        {
-          "node": {
-            "id": "6",
-            "severity": "3",
-            "message": "Device Failed Availability Check: UDP/SNMP check requested but invalid or no credential was specified."
-          }
-        }
-      ]
-    },
-    "deviceClass": {
-      "logicalName": "Ping ICMP",
-      "class": "Ping",
-      "virtualType": "physical"
-    }
-  }
-]
-```
-
-# Templates
-
-A template can have a declarative nature by declaring the component properties under the `spec` property.
-Or the component can be created via code under the `code` property.
-
-```yaml
-...
-instances:
-  - ...
-    ...
-    template:
-      components:
-        - name: generic_device_template
-          selector: "|True"
-          spec:
-            name: "$.name"
-            type: "|type()"
-            layer: "Devices"
-            labels: ["staticlabel", "|'label %s' % 'as code'", "$.name"]
-        - name: code_template
-          selector: "$.deviceClass.logicalName.startswith('AWS')"
-          code: |
-            component.uid = uid()
-            component.set_name(jpath("$.name", device))
-            component.set_type(ctype())
-            component.properties.add_label_kv("virtualType", device["deviceClass"]["virtualType"])
-            
-```
-
-## Template Activation
-
-The `selector` property contains an [expression](#Expressions) that resolves to true or false.
-When true the template is considered active for the current device and will be applied.
-
-
-## Component Properties
-
-| Name          | Type   | Description                                                              | 
-|---------------|--------|--------------------------------------------------------------------------|
-| uid           | string | Optional. Defaults to `urn:sl1:id:/<id>` when not defined                |
-| name          | string | Optional. Defaults to device id.                                         |
-| layer         | string | Optional. Defaults to default value in conf.yaml                         |
-| domain        | string | Optional. Defaults to default value in conf.yaml                         |
-| environment   | string | Optional. Defaults to default value in conf.yaml                         |
-| labels        | list   | Optional.                                                                |
-| identifiers   | list   | Optional. Automatically adds uid                                         |
-| processor     | code   | Optional. Process `component` object using code to set other properties  |
-
-## Expressions
-
-The templating mechanism all the used of expressions for property values. 
-
-### JsonPath Expression
-
-Any field value starting with `$.` is assumed to be a Json path.  Using Json path one can extract values from the target
-device.  See [Json Path Syntax](https://github.com/h2non/jsonpath-ng#jsonpath-syntax) for more details.
-
-### Code Expression
-
-Any field value starting with `|` is assumed to be a code expression. Any valid python code can be used.
-The following can be reference,
-
-
-| Name      | Type     | Description                                                                                               | 
-|-----------|----------|-----------------------------------------------------------------------------------------------------------|
-| factory   | object   | See [TopologyFactory](src/sts_nutanix/sts_nutanix_impl/model/factory.py)                                        |
-| component | object   | The current component under construction. See [Component](src/sts_nutanix/sts_nutanix_impl/model/stackstate.py) |
-| device    | object   | The current device being mapped.                                                                          |
-| uid       | function | Generates the default identifier `urn:sl1:id:/<device id>`                                                |
-| ctype     | function | Creates the StackState type by using the DeviceClass logical name                                         |
-| jpath     | function | Allows for the resolution of a Json path expression. `jpath("$.name", device)`                            |
-
-# Agent Check Installation
-
-These instructions are for the [StackState Agent Linux Installation](https://docs.stackstate.com/setup/agent/linux).
-
-Download SL1 agent check [release](https://github.com/stackstate-lab/sts-sl1-agent-checks/releases/download/v0.1.0/sts_sl1-0.1.0.zip)
-to the machine running the StackState Agent.
+Run the agent check to verify configured correctly.
 
 ```bash
-$ curl -o sts_sl1-0.1.0.zip -L https://github.com/stackstate-lab/sts-sl1-agent-checks/releases/download/0.1.0/sts_sl1-0.1.0.zip
-$ unzip ./sts_sl1-0.1.0.zip
-$ ./install.sh
-$ cd /etc/stackstate-agent/conf.d/sl1.d
-$ cp ./conf.yaml.example ./conf.yaml
-$ chown stackstate-agent:stackstate-agent ./conf.yaml
-$ vi ./conf.yaml
+sudo -u stackstate-agent stackstate-agent check nutanix -l info
 ```
 
-Change the configuration to match your environment. Example,
+## ETL
 
-```yaml
-init_config:
+### DataSources
 
-instances:
-  - instance_url: "localvm"
-    instance_type: sl1check
-    collection_interval: 300
-    sl1:
-      url: "https://10.0.0.12"
-      username: "em7admin"
-      password: "em7admin"
+| Name           | Module                                 | Cls           | Description                       |
+|----------------|----------------------------------------|---------------|-----------------------------------|
+| nutanix_client | sts_nutanix_impl.client.nutanix_client | NutanixClient | enables rest calls to Nutanix api |
 
-```
 
-On the StackState server create an instance of the Custom Synchronization StackPack for the `instance_url` and 
-`instance_type=sl1check`.
+### Template Mappings
 
-# Development
+| Name                               | Type                | 4T        | Nutanix Api                                         | Description |
+|------------------------------------|---------------------|-----------|-----------------------------------------------------|-------------|
+| nutanix_cluster_template           | nutanix-cluster     | Component | PrismGateway/services/rest/v2.0/clusters            |             |
+| nutanix_rackable_unit_template     | nutanix-rack        | Component | PrismGateway/services/rest/v2.0/clusters            |             |
+| nutanix_host_template              | nutanix-host        | Component | api/nutanix/v3/hosts/list                           |             |
+| nutanix_disk_template              | nutanix-disk        | Component | PrismGateway/services/rest/v2.0/disks               |             |
+| nutanix_disk_online_template       | nutanix-disk        | Health    | PrismGateway/services/rest/v2.0/disks               |             |
+| nutanix_disk_metric_spec_template  | nutanix-disk        | Metric    | PrismGateway/services/rest/v2.0/disks               |             |
+| nutanix_switch_template            | nutanix-vswitch     | Component | PrismGateway/services/rest/v2.0/networks            |             |
+| nutanix_vlan_template              | nutanix-vlan        | Component | PrismGateway/services/rest/v2.0/networks            |             |
+| nutanix_storage_container_template | nutanix-storage     | Component | PrismGateway/services/rest/v2.0/storage_containers  |             |
+| nutanix_vdisk_template             | nutanix-vdisk       | Component | PrismGateway/services/rest/v2.0/vdisks              |             |
+| nutanix_vm_template                | nutanix-vm          | Component | api/nutanix/v3/vms/list                             |             |
+| nutanix_vm_disk                    | nutanix-vm-disk     | Component | api/nutanix/v3/vms/list                             |             |
+| nutanix_volume_group_template      | nutanix-volumegroup | Component | PrismGateway/services/rest/v2.0/volume_groups       |             |
+| karbon_cluster_template            | cluster             | Component | karbon/v1-beta.1/k8s/clusters                       |             |
+| karbon_cluster_node_template       | nutanix-vm          | Component | karbon/v1-alpha.1/k8s/clusters/{cluster}/node-pools |             |
+| karbon_cluster_ahv_config_template | cluster             | Component | karbon/v1-alpha.1/k8s/clusters/{cluster}/node-pools |             |
+
+
+## Development
+
+StackState Nutanix Agent Check is developed in Python 3, and is transpiled to Python 2.7 during build.
 
 ---
-## Prerequisites:
+### Prerequisites:
 
 - Python v.3.7+. See [Python installation guide](https://docs.python-guide.org/starting/installation/)
 - [Poetry](https://python-poetry.org/docs/#installation)
 - [Docker](https://www.docker.com/get-started)
 - [Custom Synchronization StackPack](https://docs.stackstate.com/stackpacks/integrations/customsync)
 ---
-## Setup
+
 ### Setup local code repository
 
-```bash 
-git clone git@github.com:stackstate-lab/sts-sl1-agent-checks.git
-cd ./sts-sl1-agent-checks
-poetry install 
-```
 
 The poetry install command creates a virtual environment and downloads the required dependencies.
 
 Install the [stsdev](https://github.com/stackstate-lab/stslab-dev) tool into the virtual environment.
 
 ```bash 
-python -m pip install https://github.com/stackstate-lab/stslab-dev/releases/download/v0.0.4/stslab_dev-0.0.4-py3-none-any.whl
+python -m pip install https://github.com/stackstate-lab/stslab-dev/releases/download/v0.0.7/stslab_dev-0.0.7-py3-none-any.whl
 ```
 
 Finalize the downloading of the StackState Agent dependencies using `stsdev`
@@ -296,50 +128,39 @@ StackState url and api key for your environment.
 ```bash
 
 cat <<EOF > ./.env
-STS_URL=https://k8sdemo.demo.stackstate.io/receiver/stsAgent
-STS_API_KEY=xxxx
+#STSDEV_IMAGE_EXT=tests/resources/docker/agent_dockerfile
+STS_URL=https://xxx.stackstate.io/receiver/stsAgent
+STS_API_KEY=xxx
+STSDEV_ADDITIONAL_COMMANDS=/etc/stackstate-agent/share/install.sh
+STSDEV_ADDITIONAL_COMMANDS_FG=true
+EXCLUDE_LIBS=charset-normalizer,stackstate-etl,stackstate-etl-agent-check
 EOF
 ```
-
 ### Preparing Agent check conf.yaml
 
 ```
-cp ./tests/resources/conf.d/sl1.d/conf.yaml.example ./tests/resources/conf.d/sl1.d/conf.yaml
-```
-Edit the conf.yaml to resemble the following.
-
-```yaml
-init_config:
-
-instances:
-  - instance_url: "localvm"
-    instance_type: sl1check
-    collection_interval: 300
-    sl1:
-      url: "https://10.0.0.12"
-      username: "em7admin"
-      password: "em7admin"
+cp ./tests/resources/conf.d/nutanix.d/conf.yaml.example ./tests/resources/conf.d/nutanix.d/conf.yaml
 ```
 ---
-## Running in Intellij
+
+### Running in Intellij
 
 Setup the module sdk to point to the virtual python environment created by Poetry.
 Default on macos is `~/Library/Caches/pypoetry/virtualenvs`
 
-Create a python test run config for `sl1-agent-checks/tests/test_sl1_check.py`
-
-Edit `sl1-agent-checks/tests/test_sl1_check.py` to point to your conf.yaml and not the `conf.yaml.example`
+Create a python test run config for `tests/test_nutanix_check.py`
 
 You can now run the integration from the test.
 
-## Running using `stsdev`
+---
+### Running using `stsdev`
 
 ```bash
 
-stsdev agent check sl1 
+stsdev agent check nutanix 
 ```
 
-## Running StackState Agent to send data to StackState
+### Running StackState Agent to send data to StackState
 
 ```bash
 
@@ -386,10 +207,10 @@ This will automatically run code formatting, linting, and tests.
 A check can be dry-run inside the StackState Agent by running
 
 ```console
-$ stsdev agent check rongen
+$ stsdev agent check nutanix
 ```
-Before running the command, remember to copy the example conf `tests/resources/conf.d/rontgen.d/conf.yaml.example` to
-`tests/resources/conf.d/rontgen.d/conf.yaml`.
+Before running the command, remember to copy the example conf `tests/resources/conf.d/nutanix.d/conf.yaml.example` to
+`tests/resources/conf.d/nutanix.d/conf.yaml`.
 
 
 ### Running checks in the Agent
