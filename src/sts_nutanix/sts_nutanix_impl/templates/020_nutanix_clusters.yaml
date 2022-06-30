@@ -5,14 +5,14 @@ etl:
       processor: |
         cluster_lookup = global_session.setdefault("cluster_lookup", {})
         cluster_lookup[item['uuid']] = item['name']
-        rackable_units = factory.lookups.setdefault("rackable_units", {})
+        rackable_units = session.setdefault("rackable_units", {})
         rackable_units[item["uuid"]] = item["rackable_units"]
       template_refs:
         - nutanix_cluster_template
     - name: nutanix_rackable_units
       query: |
         results = []
-        for cluster, units in factory.lookups.get("rackable_units", {}).items():
+        for cluster, units in session.get("rackable_units", {}).items():
           [py_.set_(n, "cluster_uuid", cluster) for n in units]
           results.extend(units)
         results
@@ -26,6 +26,8 @@ etl:
           type: "nutanix-cluster"
           uid: "|uid('nutanix', 'cluster', item['uuid'])"
           layer: "Nutanix Clusters"
+          identifiers:
+            - "|uid('nutanix', 'cluster', item['name'])"
           labels:
             - "|'prism_cluster:%s' % item['name']"
           custom_properties:

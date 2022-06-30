@@ -20,7 +20,7 @@ etl:
         spec:
           name: "$.status.name"
           type: "nutanix-vm"
-          uid: "|'urn:host:/%s' % item['status']['name']"
+          uid: "|'urn:host:/%s' % item['status']['name'].lower()"
           layer: "Nutanix VMs"
           labels:
             - "|'prism_cluster:%s' % global_session['cluster_lookup'][jpath('$.status.cluster_reference.uuid')]"
