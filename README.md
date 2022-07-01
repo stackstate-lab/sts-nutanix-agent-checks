@@ -6,7 +6,7 @@ A custom [StackState Agent Check](https://docs.stackstate.com/develop/developer-
 makes it possible to integrate [Nutanix Prism](https://www.nutanix.com/uk/products/prism) and 
 [Nutanix Karbon](https://www.nutanix.com/uk/products/karbon).
 
-The integration uses the [StackState ETL framework](https://github.com/stackstate-lab/stackstate-etl) 
+The integration uses the [StackState ETL framework](https://stackstate-lab.github.io/stackstate-etl/) 
 to define templates to map Nutanix Rest Api entities to StackState Components, Relations, Events,
 Metrics and Health Syncs
 
