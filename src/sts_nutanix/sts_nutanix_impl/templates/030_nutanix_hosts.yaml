@@ -16,7 +16,7 @@ etl:
           uid: "|uid('nutanix', 'host', item['metadata']['uuid'])"
           layer: "Nutanix Hosts"
           identifiers:
-            - "|uid('nutanix', 'host', item['name'])"
+            - "|uid('nutanix', 'host', component.get_name())"
           labels:
             - "|'prism_cluster:%s' % global_session['cluster_lookup'].get(jpath('$.status.cluster_reference.uuid'), 'unknown')"
           custom_properties:

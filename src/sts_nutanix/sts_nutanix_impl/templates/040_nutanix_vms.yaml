@@ -31,7 +31,7 @@ etl:
             power_state: "$.status.resources.power_state"
             machine_type: "$.status.resources.machine_type"
           relations: |
-              |results = [uid('nutanix', 'host', item['status']['resources']['host_reference']['uuid'])]
+              results = [uid('nutanix', 'host', item['status']['resources']['host_reference']['uuid'])]
               for disk_info in item["status"]["resources"]["disk_list"]:
                   results.append("urn:nutanix:vmdisk:/%s" % (disk_info["uuid"]))
               for nic_info in item["status"]["resources"]["nic_list"]:
@@ -40,7 +40,7 @@ etl:
       - name: nutanix_vm_disk
         spec:
           name: |
-              |disk_address = item['device_properties']['disk_address']
+              disk_address = item['device_properties']['disk_address']
               '%s-%s-%s' % (item['vm_name'], disk_address['adapter_type'], disk_address['device_index'])
           type: "nutanix-vm-disk"
           uid: "|uid('nutanix', 'vmdisk', item['uuid'])"

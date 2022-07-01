@@ -37,7 +37,7 @@ etl:
             external_subnet: "$.external_subnet"
             internal_subnet: "$.internal_subnet"
           relations: |
-            |results = []
+            results = []
             for rack_unit in item["rackable_units"]:
               for node_uuid in rack_unit["node_uuids"]:
                 results.append("urn:nutanix:host:/%s" % (node_uuid))
@@ -53,7 +53,7 @@ etl:
             model_name: "$.model_name"
             serial: "$.serial"
           relations: |
-            |results = []
+            results = []
             for node_uuid in item["node_uuids"]:
               results.append("urn:nutanix:host:/%s" % node_uuid)
             results
