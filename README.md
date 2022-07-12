@@ -41,8 +41,8 @@ instances:
     instance_type: nutanix
     collection_interval: 300
     nutanix:
-      url: "https://10.55.90.37:9440"
-      prism_central_url: "https://10.55.90.39:9440"
+      url: "http://host.docker.internal:3005"
+      prism_central_url: "http://host.docker.internal:3005"
       username: "admin"
       password: "nx2Tech081!"
     domain: "Nutanix"
@@ -109,6 +109,7 @@ StackState Nutanix Agent Check is developed in Python 3, and is transpiled to Py
 - Python v.3.7+. See [Python installation guide](https://docs.python-guide.org/starting/installation/)
 - [Poetry](https://python-poetry.org/docs/#installation)
 - [Docker](https://www.docker.com/get-started)
+- [Mockoon](https://mockoon.com/)
 - [Custom Synchronization StackPack](https://docs.stackstate.com/stackpacks/integrations/customsync)
 ---
 
@@ -144,11 +145,19 @@ STSDEV_ADDITIONAL_COMMANDS_FG=true
 EXCLUDE_LIBS=charset-normalizer,stackstate-etl,stackstate-etl-agent-check
 EOF
 ```
+
+### Preparing Mock Server
+
+In Mockoon, open environment `tests/resources/mockoon/nutanix.json` and press start.
+
 ### Preparing Agent check conf.yaml
 
 ```
 cp ./tests/resources/conf.d/nutanix.d/conf.yaml.example ./tests/resources/conf.d/nutanix.d/conf.yaml
 ```
+Change the `url` property to point to Mockoon port for when the agent check runs in docker.
+e.g `http://host.docker.internal:3005`
+
 ---
 
 ### Running in Intellij
