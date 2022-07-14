@@ -35,7 +35,7 @@ class NutanixClient(object):
     ) -> Union[List[Dict[str, Any]], Dict[str, Any]]:
         body = body or {}
         url = self.get_url(api_version, uri)
-        return self._handle_failed_call(self._session.post(url, data=body)).json()
+        return self._handle_failed_call(self._session.post(url, json=body)).json()
 
     def get(
         self, api_version: str, uri: str, params: Dict[str, Any] = None
