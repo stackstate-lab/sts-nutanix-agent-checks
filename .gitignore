@@ -116,3 +116,4 @@ tests/resources/conf.d/**/conf.yaml
 .python-version
 .agent/
 .mypy_cache/
+.vagrant/
