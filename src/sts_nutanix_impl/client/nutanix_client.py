@@ -4,8 +4,9 @@ from typing import Any, Dict, List, Union
 import requests
 from requests.adapters import HTTPAdapter
 from requests.structures import CaseInsensitiveDict
-from sts_nutanix_impl.model.instance import NutanixSpec
 from urllib3.util import Retry
+
+from sts_nutanix_impl.model.instance import NutanixSpec
 
 
 class NutanixClient(object):

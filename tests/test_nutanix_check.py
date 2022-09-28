@@ -3,7 +3,7 @@ import json
 from typing import List, Dict, Any
 
 from sts_nutanix_impl.model.instance import InstanceInfo
-from sts_nutanix_impl.client.nutanix_client import NutanixClient
+from sts_nutanix_impl.client import NutanixClient
 from nutanix import NutanixCheck
 
 from stackstate_checks.stubs import topology, health, aggregator
@@ -36,7 +36,7 @@ def test_check(m: requests_mock.Mocker = None):
     components = snapshot["components"]
     relations = snapshot["relations"]
     assert len(components) == 170, "Number of Components does not match"
-    assert len(relations) == 288, "Number of Relations does not match"
+    assert len(relations) == 261, "Number of Relations does not match"
     assert len(health_check_states) == 8, "Number of Health does not match"
     assert len(metric_names) == 4, "Number of Metrics does not match"
 
@@ -80,8 +80,8 @@ def _setup_request_mocks(instance, m):
 
 
 def setup_test_instance() -> Dict[str, Any]:
-    with open("tests/resources/conf.d/nutanix.d/conf.yaml.example") as f:
-        config = yaml.load(f)
+    with open("src/data/conf.d/nutanix.d/conf.yaml.example") as f:
+        config = yaml.safe_load(f)
         instance_dict = config["instances"][0]
     return instance_dict
 
