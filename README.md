@@ -17,7 +17,7 @@ See [StackState ETL documentation](https://stackstate-lab.github.io/stackstate-e
 From the StackState Agent 2 linux machine, run
 
 ```bash 
-curl -L https://github.com/stackstate-lab/sts-nutanix-agent-checks/releases/download/v0.1.1/sts_nutanix-0.1.1.zip -o sts_nutanix.zip
+curl -L https://github.com/stackstate-lab/sts-nutanix-agent-checks/releases/download/v0.1.1/sts_nutanix-agent-check-0.1.1.zip -o sts_nutanix.zip
 tar -xvf sts_nutanix.zip
 ./install.sh
 ```
